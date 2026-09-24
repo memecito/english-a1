@@ -110,6 +110,11 @@ th:first-child,td:first-child{text-align:left}
 .topic:hover{border-color:var(--brand)}
 #topicBody{line-height:1.6}
 #topicBody p{margin:0 0 10px}
+.wordlist{list-style:none;padding:0;margin:8px 0 0;display:grid;gap:6px}
+.wordlist li{background:var(--brand-soft);border-radius:12px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.wordlist b{font-size:1.05rem}
+.wordlist span{flex:1;color:var(--muted);padding:0 8px}
+.wordlist button{background:none;border:0;font-size:1.2rem;cursor:pointer;flex-shrink:0;padding:2px 4px}
 canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:10}
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
@@ -258,15 +263,42 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
 
   <!-- ESTUDIAR -->
   <section id="study" class="hidden">
-    <div class="card" id="studyList">
-      <h2>📖 Teoría por temas</h2>
-      <p class="hint" style="margin-top:-4px">Un apoyo a lo que dais en la academia — repásalo antes de hacer los ejercicios de ese tema.</p>
-      <div id="topicsBox"></div>
+    <div class="card">
+      <div class="seg" id="studySeg">
+        <button class="opt" data-view="theory" aria-pressed="true">📖 Teoría</button>
+        <button class="opt" data-view="vocab" aria-pressed="false">📚 Vocabulario</button>
+      </div>
     </div>
-    <div class="card hidden" id="studyDetail">
-      <button class="link" id="studyBack">← Volver a los temas</button>
-      <h2 id="topicTitle"></h2>
-      <div id="topicBody"></div>
+
+    <div id="studyTheory">
+      <div class="card" id="studyList">
+        <h2>📖 Teoría por temas</h2>
+        <p class="hint" style="margin-top:-4px">Un apoyo a lo que dais en la academia — repásalo antes de hacer los ejercicios de ese tema.</p>
+        <div id="topicsBox"></div>
+      </div>
+      <div class="card hidden" id="studyDetail">
+        <button class="link" id="studyBack">← Volver a los temas</button>
+        <h2 id="topicTitle"></h2>
+        <div id="topicBody"></div>
+      </div>
+    </div>
+
+    <div id="studyVocab" class="hidden">
+      <div class="card" id="vocabLettersBox">
+        <h2>📚 Vocabulario por letra</h2>
+        <p class="hint" style="margin-top:-4px">Elige una letra y después un bloque de 10 palabras para repasarlas antes de jugar.</p>
+        <div class="letters" id="vocabLetters"></div>
+      </div>
+      <div class="card hidden" id="vocabBlocksBox">
+        <button class="link" id="vocabBlocksBack">← Volver a las letras</button>
+        <h2 id="vocabBlocksTitle"></h2>
+        <div class="seg" id="vocabBlocks"></div>
+      </div>
+      <div class="card hidden" id="vocabWordsBox">
+        <button class="link" id="vocabWordsBack">← Volver a los bloques</button>
+        <h2 id="vocabWordsTitle"></h2>
+        <ul class="wordlist" id="vocabWordsList"></ul>
+      </div>
     </div>
   </section>
 </main>
@@ -727,6 +759,9 @@ $("resetBtn").onclick = () => {
 
 /* ====================== Estudiar ====================== */
 function renderStudy() {
+  document.querySelectorAll("#studySeg .opt").forEach(b => b.setAttribute("aria-pressed", b.dataset.view === "theory"));
+  $("studyTheory").classList.remove("hidden");
+  $("studyVocab").classList.add("hidden");
   $("studyDetail").classList.add("hidden");
   $("studyList").classList.remove("hidden");
   const box = $("topicsBox"); box.textContent = "";
@@ -751,6 +786,67 @@ function openTopic(t) {
   window.scrollTo(0, 0);
 }
 $("studyBack").onclick = renderStudy;
+document.querySelectorAll("#studySeg .opt").forEach(b => b.onclick = () => {
+  document.querySelectorAll("#studySeg .opt").forEach(x => x.setAttribute("aria-pressed", x === b));
+  $("studyTheory").classList.toggle("hidden", b.dataset.view !== "theory");
+  $("studyVocab").classList.toggle("hidden", b.dataset.view !== "vocab");
+  if (b.dataset.view === "vocab") renderVocabLetters();
+});
+
+// Vocabulario para repasar (solo lectura, sin puntos): letra -> bloque de 10 -> palabras
+let vocabCurLetter = null;
+function renderVocabLetters() {
+  $("vocabBlocksBox").classList.add("hidden");
+  $("vocabWordsBox").classList.add("hidden");
+  $("vocabLettersBox").classList.remove("hidden");
+  const box = $("vocabLetters"); box.textContent = "";
+  LETTERS.forEach(L => {
+    const n = WORDS.filter(w => letterOf(w) === L).length;
+    const b = document.createElement("button");
+    b.className = "letter"; b.type = "button";
+    b.append(L); const s = document.createElement("small"); s.textContent = n; b.append(s);
+    b.onclick = () => renderVocabBlocks(L);
+    box.append(b);
+  });
+}
+function renderVocabBlocks(L) {
+  vocabCurLetter = L;
+  $("vocabLettersBox").classList.add("hidden");
+  $("vocabWordsBox").classList.add("hidden");
+  $("vocabBlocksBox").classList.remove("hidden");
+  $("vocabBlocksTitle").textContent = `Letra ${L}`;
+  const words = WORDS.filter(w => letterOf(w) === L);
+  const box = $("vocabBlocks"); box.textContent = "";
+  for (let i = 0; i < words.length; i += 10) {
+    const n = Math.min(10, words.length - i);
+    const b = document.createElement("button");
+    b.className = "opt"; b.type = "button";
+    b.innerHTML = `${i + 1}–${i + n}<small>${n} palabras</small>`;
+    b.onclick = () => renderVocabWords(L, i);
+    box.append(b);
+  }
+}
+function renderVocabWords(L, start) {
+  $("vocabBlocksBox").classList.add("hidden");
+  $("vocabWordsBox").classList.remove("hidden");
+  const words = WORDS.filter(w => letterOf(w) === L);
+  const chunk = words.slice(start, start + 10);
+  $("vocabWordsTitle").textContent = `Letra ${L} · palabras ${start + 1}–${start + chunk.length}`;
+  const list = $("vocabWordsList"); list.textContent = "";
+  chunk.forEach(w => {
+    const li = document.createElement("li");
+    const a = document.createElement("b"); a.textContent = w.en[0];
+    const sp = document.createElement("span"); sp.textContent = w.es.slice(0, 2).join(" / ");
+    const btn = document.createElement("button"); btn.type = "button"; btn.textContent = "🔊";
+    btn.setAttribute("aria-label", `Escuchar ${w.en[0]}`);
+    btn.onclick = () => say(w.en[0]);
+    li.append(a, sp, btn);
+    list.append(li);
+  });
+  window.scrollTo(0, 0);
+}
+$("vocabBlocksBack").onclick = renderVocabLetters;
+$("vocabWordsBack").onclick = () => renderVocabBlocks(vocabCurLetter);
 
 /* ====================== Arranque ====================== */
 buildLetters(); buildCategories(); buildGrammarTopics(); refreshHome();
