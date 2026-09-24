@@ -24,8 +24,12 @@ body{margin:0;background:var(--bg);color:var(--ink);
 main{max-width:720px;margin:0 auto;padding:16px 16px 48px}
 h1{font-size:1.6rem;margin:0}
 h2{font-size:1.15rem;margin:0 0 10px}
-.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px}
-.tabs{display:flex;gap:6px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:14px;flex-wrap:wrap}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+@media (max-width:420px){
+  h1{font-size:1.3rem}
+  .tab{padding:7px 10px;font-size:.85rem}
+}
 button{font:inherit;color:inherit;cursor:pointer}
 .tab{border:2px solid var(--line);background:var(--card);border-radius:999px;padding:8px 14px;font-weight:700}
 .tab[aria-selected="true"]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
@@ -99,6 +103,11 @@ th:first-child,td:first-child{text-align:left}
 .badge.on{border:2px solid var(--gold);opacity:1;background:var(--brand-soft)}
 .badge b{display:block;font-size:1.8rem}
 .danger{background:none;border:0;color:var(--bad);text-decoration:underline;font-weight:700}
+.topic{display:block;width:100%;text-align:left;border:2px solid var(--line);background:var(--card);
+  border-radius:14px;padding:12px 14px;font-weight:700;margin-bottom:8px}
+.topic:hover{border-color:var(--brand)}
+#topicBody{line-height:1.6}
+#topicBody p{margin:0 0 10px}
 canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:10}
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
@@ -109,7 +118,8 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
   <div class="top">
     <h1>🌟 English Quest</h1>
     <div class="tabs" role="tablist">
-      <button class="tab" role="tab" id="tab-play" aria-selected="true">Jugar</button>
+      <button class="tab" role="tab" id="tab-study" aria-selected="false">📖 Estudiar</button>
+      <button class="tab" role="tab" id="tab-exercises" aria-selected="true">🎮 Ejercicios</button>
       <button class="tab" role="tab" id="tab-hist" aria-selected="false">Historial</button>
     </div>
   </div>
@@ -226,10 +236,25 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
     </div>
     <p class="center"><button class="danger" id="resetBtn">Borrar todo el historial</button></p>
   </section>
+
+  <!-- ESTUDIAR -->
+  <section id="study" class="hidden">
+    <div class="card" id="studyList">
+      <h2>📖 Teoría por temas</h2>
+      <p class="hint" style="margin-top:-4px">Un apoyo a lo que dais en la academia — repásalo antes de hacer los ejercicios de ese tema.</p>
+      <div id="topicsBox"></div>
+    </div>
+    <div class="card hidden" id="studyDetail">
+      <button class="link" id="studyBack">← Volver a los temas</button>
+      <h2 id="topicTitle"></h2>
+      <div id="topicBody"></div>
+    </div>
+  </section>
 </main>
 <canvas id="confetti"></canvas>
 
 <script src="words.js"></script>
+<script src="topics.js"></script>
 <script>
 "use strict";
 /* ====================== Utilidades ====================== */
@@ -386,12 +411,15 @@ $("optSound").onchange = e => { db.opts.sound = e.target.checked; save(); };
 
 /* ====================== Navegación ====================== */
 function show(id) {
-  ["home", "game", "end", "history"].forEach(s => $(s).classList.toggle("hidden", s !== id));
-  const tab = id === "history" ? "hist" : "play";
-  $("tab-play").setAttribute("aria-selected", tab === "play"); $("tab-hist").setAttribute("aria-selected", tab === "hist");
+  ["home", "game", "end", "history", "study"].forEach(s => $(s).classList.toggle("hidden", s !== id));
+  const tab = id === "history" ? "hist" : id === "study" ? "study" : "exercises";
+  $("tab-exercises").setAttribute("aria-selected", tab === "exercises");
+  $("tab-study").setAttribute("aria-selected", tab === "study");
+  $("tab-hist").setAttribute("aria-selected", tab === "hist");
   window.scrollTo(0, 0);
 }
-$("tab-play").onclick = () => { if (G.active && !confirm("¿Salir de la partida?")) return; G.active = false; refreshHome(); show("home"); };
+$("tab-exercises").onclick = () => { if (G.active && !confirm("¿Salir de la partida?")) return; G.active = false; refreshHome(); show("home"); };
+$("tab-study").onclick = () => { if (G.active && !confirm("¿Salir de la partida?")) return; G.active = false; renderStudy(); show("study"); };
 $("tab-hist").onclick = () => { if (G.active && !confirm("¿Salir de la partida?")) return; G.active = false; renderHistory(); show("history"); };
 $("homeBtn").onclick = () => { refreshHome(); show("home"); };
 $("histBtn2").onclick = () => { renderHistory(); show("history"); };
@@ -589,6 +617,33 @@ $("resetBtn").onclick = () => {
     save(); renderHistory();
   }
 };
+
+/* ====================== Estudiar ====================== */
+function renderStudy() {
+  $("studyDetail").classList.add("hidden");
+  $("studyList").classList.remove("hidden");
+  const box = $("topicsBox"); box.textContent = "";
+  if (!TOPICS.length) {
+    const p = document.createElement("p"); p.className = "hint";
+    p.textContent = "Todavía no hay temas de teoría — ¡muy pronto empezamos con gramática!";
+    box.append(p); return;
+  }
+  TOPICS.forEach(t => {
+    const b = document.createElement("button");
+    b.className = "topic"; b.type = "button";
+    b.textContent = `${t.emoji || "📘"} ${t.title}`;
+    b.onclick = () => openTopic(t);
+    box.append(b);
+  });
+}
+function openTopic(t) {
+  $("studyList").classList.add("hidden");
+  $("studyDetail").classList.remove("hidden");
+  $("topicTitle").textContent = `${t.emoji || "📘"} ${t.title}`;
+  $("topicBody").innerHTML = t.html || "";
+  window.scrollTo(0, 0);
+}
+$("studyBack").onclick = renderStudy;
 
 /* ====================== Arranque ====================== */
 buildLetters(); refreshHome();
