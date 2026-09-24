@@ -1,0 +1,1561 @@
+a.m.|de la mañana,am
+able|capaz
+about|sobre,acerca de,alrededor de
+above|encima,por encima de,arriba
+accident|accidente
+across|a través de,al otro lado
+act|actuar,acto
+action|acción
+activity|actividad
+actor|actor
+actually|en realidad,realmente
+ad|anuncio
+add|añadir,sumar,agregar
+address|dirección
+adult|adulto
+advanced|avanzado
+adventure|aventura
+advert|anuncio
+advertisement|anuncio
+advice|consejo
+aeroplane|avión
+afraid|asustado,miedoso
+after|después,después de
+afternoon|tarde
+afterwards|después,luego
+again|otra vez,de nuevo
+against|contra
+age|edad
+aged|de edad
+ago|hace
+agree|estar de acuerdo
+air|aire
+airport|aeropuerto
+alarm clock|despertador
+album|álbum
+all|todo,todos
+all kinds of|todo tipo de
+all right/alright|de acuerdo,bien,vale
+all sorts of|todo tipo de
+all the time|todo el tiempo,siempre
+allow|permitir
+almost|casi
+alone|solo,sola
+along|a lo largo de
+already|ya
+alright|de acuerdo,bien
+also|también
+always|siempre
+amazing|increíble,asombroso
+ambulance|ambulancia
+among|entre
+and|y
+angry|enfadado,enojado
+animal|animal
+another|otro
+answer|respuesta,responder,contestar
+any|algún,cualquier
+anybody|alguien,nadie,cualquiera
+anymore|ya no
+anyone|alguien,nadie,cualquiera
+anything|algo,nada,cualquier cosa
+anyway|de todos modos
+anywhere|en cualquier sitio,en algún sitio
+apartment|apartamento,piso
+apartment building|bloque de pisos,edificio de apartamentos
+app|aplicación,app
+apple|manzana
+appointment|cita
+area|zona,área
+arm|brazo
+armchair|sillón
+around|alrededor
+arrive|llegar
+art|arte
+article|artículo
+artist|artista
+as|como
+as well|también
+ask|preguntar,pedir
+assistant|ayudante,asistente
+attractive|atractivo,atractiva
+aunt|tía
+autumn|otoño
+available|disponible
+away|lejos,fuera
+awesome|genial,impresionante
+awful|horrible,terrible
+baby|bebé
+back|espalda,atrás,de vuelta
+backpack|mochila
+bad|malo,mala
+badly|mal
+badminton|bádminton
+bag|bolsa,bolso
+bake|hornear
+ball|pelota,balón
+balloon|globo
+banana|plátano,banana
+band|banda,grupo
+bank|banco
+barbecue/ barbeque|barbacoa
+baseball|béisbol
+basketball|baloncesto
+bat|bate
+bath|baño,bañera
+bathing suit|bañador,traje de baño
+bathroom|cuarto de baño,baño
+bathtub|bañera
+battery|batería,pila
+be|ser,estar
+beach|playa
+bean|judía,alubia,frijol
+bear|oso
+beard|barba
+beautiful|bonito,hermoso,bello,guapa
+because|porque
+become|convertirse en,llegar a ser,hacerse
+bed|cama
+bedroom|dormitorio,habitación
+bee|abeja
+before|antes,antes de
+begin|empezar,comenzar
+beginner|principiante
+beginning|principio,comienzo
+behind|detrás,detrás de
+believe|creer
+belong|pertenecer
+below|debajo,abajo
+belt|cinturón
+beside|al lado de,junto a
+best|mejor
+better|mejor
+between|entre
+bicycle|bicicleta
+big|grande
+bike|bici,bicicleta
+bill|cuenta,factura
+bin|papelera,cubo de basura
+biology|biología
+bird|pájaro,ave
+birth|nacimiento
+birthday|cumpleaños
+bit|poco,trozo
+black|negro
+blackboard|pizarra
+blanket|manta
+block|bloque
+blog|blog
+blood|sangre
+blouse|blusa
+blue|azul
+board|pizarra,tablero
+board game|juego de mesa
+boat|barco,bote
+body|cuerpo
+boil|hervir
+boiled|hervido,cocido
+book|libro
+bookcase|librería,estantería
+bookshelf|estantería
+boot|bota
+bored|aburrido
+boring|aburrido
+born|nacido
+borrow|pedir prestado
+boss|jefe,jefa
+both|ambos,los dos
+bother|molestar
+bottle|botella
+bottom|fondo,parte de abajo
+bowl|cuenco,bol,tazón
+box|caja
+boy|chico,niño
+boyfriend|novio
+bracelet|pulsera
+brain|cerebro
+brave|valiente
+bread|pan
+break|romper,descanso
+breakfast|desayuno
+bridge|puente
+bright|brillante,luminoso
+brilliant|genial,brillante
+bring|traer
+bring back|devolver,traer de vuelta
+broken|roto
+brother|hermano
+brown|marrón,café
+brush|cepillo
+build|construir
+building|edificio
+burger|hamburguesa
+bus|autobús
+bus station|estación de autobuses
+bus stop|parada de autobús
+business|negocio,empresa
+business person|empresario,empresaria
+businessman|hombre de negocios,empresario
+businesswoman|mujer de negocios,empresaria
+busy|ocupado
+but|pero
+butter|mantequilla
+butterfly|mariposa
+buy|comprar
+by|por
+by the way|por cierto
+bye|adiós
+cabinet|armario,gabinete
+cafe/café|cafetería,café
+cafeteria|cafetería
+cake|tarta,pastel
+calendar|calendario
+call|llamar,llamada
+camel|camello
+camera|cámara
+camp|campamento,acampar
+camping|camping,acampada
+campsite|camping,zona de acampada
+can|poder,lata
+candy|caramelo,dulce
+cannot|no poder
+cap|gorra
+capital|capital
+car|coche,carro
+card|tarjeta,carta
+career|carrera,profesión
+careful|cuidadoso,cuidado
+carefully|con cuidado,cuidadosamente
+carpet|alfombra
+carrot|zanahoria
+carry|llevar,cargar
+cartoon|dibujos animados
+case|caso,maleta
+cash|efectivo,dinero en efectivo
+castle|castillo
+cat|gato
+catch|atrapar,coger
+CD|cd,disco compacto
+CD player|reproductor de cd
+ceiling|techo
+cell phone|teléfono móvil,móvil,celular
+cent|céntimo,centavo
+centre/center|centro
+century|siglo
+cereal|cereales
+certainly|por supuesto,ciertamente
+chain|cadena
+chair|silla
+change|cambiar,cambio
+channel|canal
+chat|charlar,charla,chatear
+chatroom|sala de chat
+cheap|barato
+check|comprobar,revisar
+cheese|queso
+chef|cocinero,chef
+chemist|farmacéutico,farmacia
+chemistry|química
+cheque|cheque,talón
+chess|ajedrez
+chicken|pollo
+child|niño,niña
+chilli|chile,guindilla
+chips|patatas fritas,papas fritas
+chocolate|chocolate
+choose|elegir
+cinema|cine
+circle|círculo
+circus|circo
+city|ciudad
+class|clase
+classical|clásico,clásica
+classmate|compañero de clase,compañera de clase
+classroom|aula,clase
+clean|limpio,limpiar
+cleaner|limpiador,persona de la limpieza
+clear|claro,despejado
+clearly|claramente
+clever|listo,inteligente
+click|hacer clic,clic
+climb|escalar,trepar
+climbing|escalada
+clock|reloj
+close|cerrar,cerca
+close to|cerca de
+closed|cerrado
+closet|armario
+clothes|ropa
+cloud|nube
+cloudy|nublado
+clown|payaso
+club|club
+coach|entrenador,autocar
+coat|abrigo
+coffee|café
+cola|cola,refresco de cola
+cold|frío,resfriado
+colleague|colega,compañero de trabajo
+collect|coleccionar,recoger
+college|universidad,colegio universitario
+colour|color
+comb|peine
+come|venir
+come back|volver,regresar
+comedy|comedia
+comfortable|cómodo
+comic|cómic,tebeo
+company|empresa,compañía
+competition|competición,concurso,competencia
+complete|completo,completar
+computer|ordenador,computadora
+concert|concierto
+congratulations!|¡felicidades!,¡enhorabuena!,felicidades,enhorabuena
+contact|contacto,contactar
+continue|continuar,seguir
+conversation|conversación
+cook|cocinar,cocinero
+cooker|cocina,fogón
+cooking|cocina,cocinar
+cool|genial,fresco
+copy|copiar,copia
+corner|esquina,rincón
+correct|correcto,corregir
+cost|costar,coste
+costume|disfraz,traje
+could|podría,pudo
+country|país,campo
+countryside|campo,campiña
+course|curso
+cousin|primo,prima
+cover|cubrir,tapar,cubierta
+cow|vaca
+crazy|loco
+cream|nata,crema
+credit card|tarjeta de crédito
+cricket|críquet,grillo
+cross|cruz,cruzar
+crossing|cruce,paso de peatones
+crowd|multitud
+crowded|abarrotado,lleno de gente
+cry|llorar
+cup|taza
+cupboard|armario
+curry|curry
+curtain|cortina
+customer|cliente
+cut|cortar
+cycle|ir en bici,ciclo
+cycling|ciclismo
+dad|papá
+daily|diario,diariamente
+dance|bailar,baile
+dancer|bailarín,bailarina
+dancing|baile,bailar
+danger|peligro
+dangerous|peligroso
+dark|oscuro
+date|fecha,cita
+daughter|hija
+day|día
+dead|muerto
+dear|querido
+decide|decidir
+deep|profundo
+degree|título,grado
+delay|retraso
+delicious|delicioso,rico
+dentist|dentista
+department|departamento,sección
+department store|grandes almacenes
+describe|describir
+desert|desierto
+desk|escritorio,pupitre
+dessert|postre
+details|detalles
+diary|diario
+dictionary|diccionario
+die|morir
+difference|diferencia
+different|diferente,distinto
+difficult|difícil
+digital|digital
+digital camera|cámara digital
+dining room|comedor
+dinner|cena
+dinosaur|dinosaurio
+diploma|diploma
+directions|indicaciones,direcciones
+dirty|sucio
+disco|discoteca,disco
+discount|descuento
+discuss|discutir,hablar de
+dish|plato
+dive|bucear,zambullirse
+diving|buceo
+do|hacer
+doctor|médico,doctor,doctora
+document|documento
+dog|perro
+doll|muñeca
+dollar|dólar
+dolphin|delfín
+door|puerta
+dot|punto
+double|doble
+down|abajo,hacia abajo
+download|descargar
+downstairs|abajo,piso de abajo
+Dr|doctor,doctora
+draw|dibujar
+drawer|cajón
+drawing|dibujo
+dream|sueño,soñar
+dress|vestido,vestir
+dressed|vestido
+drink|beber,bebida
+drive|conducir,manejar
+driver|conductor,conductora
+driving licence|carné de conducir,permiso de conducir
+drum|tambor,batería
+dry|seco,secar
+duck|pato
+during|durante
+DVD|dvd
+DVD player|reproductor de dvd
+each|cada
+each other|el uno al otro,unos a otros
+ear|oreja,oído
+early|temprano
+earn|ganar
+earring|pendiente,arete
+easily|fácilmente
+east|este
+easy|fácil
+eat|comer
+egg|huevo
+electric|eléctrico
+electricity|electricidad
+elephant|elefante
+else|más,otro
+email|correo electrónico,email
+empty|vacío
+end|final,fin,terminar
+engine|motor
+engineer|ingeniero,ingeniera
+enjoy|disfrutar
+enough|suficiente,bastante
+enter|entrar
+entrance|entrada
+envelope|sobre
+equipment|equipo,material
+eraser|goma de borrar,borrador
+especially|especialmente
+euro|euro
+even|incluso,hasta
+evening|tarde,noche
+event|evento,acontecimiento
+ever|alguna vez,nunca
+every|cada,todos
+everybody|todo el mundo,todos
+everyone|todo el mundo,todos
+everything|todo
+everywhere|en todas partes
+exactly|exactamente
+examination/exam|examen
+example|ejemplo
+excellent|excelente
+except|excepto,salvo
+excited|emocionado,entusiasmado
+exciting|emocionante
+excuse|excusa,disculpar
+exercise|ejercicio
+exhibition|exposición
+exit|salida
+expensive|caro
+experience|experiencia
+explain|explicar
+explore|explorar
+explorer|explorador,exploradora
+extra|extra,adicional
+eye|ojo
+face|cara,rostro
+fact|hecho,dato
+factory|fábrica
+fail|suspender,fallar
+fair|justo,feria
+fall|caer,caída,otoño
+family|familia
+famous|famoso
+fan|aficionado,fan,ventilador
+fantastic|fantástico
+far|lejos
+farm|granja
+farmer|granjero,agricultor
+fashion|moda
+fast|rápido
+fast food|comida rápida
+fat|gordo,grasa
+father|padre
+favourite|favorito
+feel|sentir
+feelings|sentimientos
+festival|festival
+few|pocos
+field|campo
+file|archivo,carpeta
+fill|llenar
+fill in|rellenar
+film|película
+final|final
+finally|finalmente,por fin
+find|encontrar
+find out|descubrir,averiguar
+fine|bien,multa
+finger|dedo
+finish|terminar,acabar
+fire|fuego,incendio
+first|primero
+first name|nombre de pila,nombre
+first of all|en primer lugar,antes que nada
+fish|pez,pescado
+fishing|pesca
+fit|en forma,ajustarse
+flat|piso,apartamento,plano
+flight|vuelo
+floor|suelo,piso
+flower|flor
+fly|volar,mosca
+fog|niebla
+foggy|con niebla,brumoso
+folder|carpeta
+follow|seguir
+food|comida
+foot|pie
+football|fútbol
+footballer|futbolista
+for|para,por
+foreign|extranjero
+forest|bosque
+forget|olvidar
+fork|tenedor
+form|formulario,forma
+free|gratis,libre
+fresh|fresco
+fridge|nevera,frigorífico
+fried|frito
+friend|amigo,amiga
+friendly|amable,simpático
+frightened|asustado
+from|de,desde
+front|frente,delantera
+fruit|fruta
+full|lleno
+fun|diversión,divertido
+funny|gracioso,divertido
+furniture|muebles
+further|más lejos
+future|futuro
+game|juego,partido
+garage|garaje
+garden|jardín
+garlic|ajo
+gate|puerta,verja
+geography|geografía
+get|conseguir,obtener,recibir
+get back|volver,regresar
+get dressed|vestirse
+get fit|ponerse en forma
+get married|casarse
+get off|bajarse
+get on|subirse
+get up|levantarse
+gift|regalo
+girl|chica,niña
+girlfriend|novia
+give|dar
+give back|devolver
+glad|contento,alegre
+glass|vaso,cristal
+glasses|gafas
+glove|guante
+go|ir
+go out|salir
+goal|gol,meta,objetivo
+gold|oro
+golden|dorado,de oro
+golf|golf
+good|bueno
+good afternoon|buenas tardes
+good evening|buenas tardes,buenas noches
+good morning|buenos días
+good night|buenas noches
+good-looking|guapo,atractivo
+goodbye|adiós
+grade|nota,curso
+grandchild|nieto,nieta
+granddaughter|nieta
+grandfather|abuelo
+grandma|abuela
+grandmother|abuela
+grandpa|abuelo
+grandparent|abuelo,abuela
+grandson|nieto
+granny|abuela
+grape|uva
+grass|hierba,césped
+great|genial,estupendo,gran
+green|verde
+grilled|a la parrilla,a la plancha
+group|grupo
+grow|crecer
+grow up|crecer,hacerse mayor
+guess|adivinar,suponer
+Guess what?|¿adivina qué?,adivina qué
+guest|invitado,huésped
+guest-house|casa de huéspedes,pensión
+guide|guía
+guidebook|guía de viaje
+guitar|guitarra
+guy|chico,tío
+gym|gimnasio
+hair|pelo,cabello
+half|mitad,medio
+half-price|mitad de precio
+hall|vestíbulo,sala
+hand|mano
+handbag|bolso
+happen|pasar,ocurrir,suceder
+happy|feliz,contento
+harbour|puerto
+hard|duro,difícil
+hat|sombrero,gorro
+hate|odiar
+have|tener,haber
+have got to|tener que
+have to|tener que
+he|él
+head|cabeza
+headache|dolor de cabeza
+headteacher|director,directora
+health|salud
+healthy|sano,saludable
+hear|oír,escuchar
+heart|corazón
+heating|calefacción
+heavy|pesado
+helicopter|helicóptero
+hello|hola
+help|ayuda,ayudar
+her|su,ella,la
+here|aquí
+hers|suyo,el suyo
+herself|ella misma,se
+hey|eh,oye,hola
+hi|hola
+high|alto
+hill|colina,cerro
+him|él,lo,le
+himself|él mismo,se
+hip hop|hip hop
+his|su,suyo
+history|historia
+hit|golpear,pegar
+hobby|afición,pasatiempo,hobby
+hockey|hockey
+hold|sostener,agarrar,tener
+holiday|vacaciones,fiesta
+home|casa,hogar
+homework|deberes,tarea
+honey|miel
+hope|esperar,esperanza
+horrible|horrible
+horror|terror,horror
+horse|caballo
+hospital|hospital
+hot|caliente,caluroso
+hotel|hotel
+hour|hora
+house|casa
+housewife|ama de casa
+how|cómo
+however|sin embargo
+hungry|hambriento,con hambre
+hurry|darse prisa,prisa
+hurt|hacer daño,doler
+husband|marido,esposo
+I|yo
+ice|hielo
+ice cream|helado
+ice skating|patinaje sobre hielo
+ID|identificación,documento de identidad
+ID card|carné de identidad,documento de identidad
+idea|idea
+identification|identificación
+if|si
+ill|enfermo
+immediately|inmediatamente,enseguida
+important|importante
+improve|mejorar
+in|en,dentro
+in front of|delante de,enfrente de
+include|incluir
+including|incluyendo,incluido
+indoor|de interior,cubierto
+indoors|dentro,en interior
+information|información
+insect|insecto
+inside|dentro,adentro
+instead|en su lugar,en vez de
+instructions|instrucciones
+instrument|instrumento
+interested|interesado
+interesting|interesante
+international|internacional
+internet|internet
+into|en,dentro de
+invitation|invitación
+invite|invitar
+island|isla
+it|ello,lo
+its|su
+itself|sí mismo,se
+jacket|chaqueta
+jam|mermelada
+jazz|jazz
+jeans|vaqueros,jeans
+job|trabajo,empleo
+join|unirse,juntar
+journalist|periodista
+journey|viaje
+juice|zumo,jugo
+jump|saltar
+jumper|jersey,suéter
+just|justo,solo,solamente
+keep|guardar,mantener,quedarse
+key|llave,tecla
+keyboard|teclado
+kick|patear,dar una patada
+kind|amable,tipo
+king|rey
+kiss|beso,besar
+kit|equipo,kit
+kitchen|cocina
+kite|cometa
+knife|cuchillo
+know|saber,conocer
+lake|lago
+lamp|lámpara
+language|idioma,lengua
+large|grande
+last|último,pasado
+late|tarde
+later|más tarde
+latest|último,más reciente
+laugh|reír,risa
+lazy|perezoso,vago
+learn|aprender
+least|menos
+leather|cuero,piel
+leave|dejar,salir,irse
+left|izquierda,izquierdo
+left-hand|de la izquierda
+leg|pierna
+lemon|limón
+lemonade|limonada
+lend|prestar
+length|longitud,largo
+less|menos
+lesson|lección,clase
+let|dejar,permitir
+letter|carta,letra
+level|nivel
+library|biblioteca
+licence|licencia,permiso
+lie down|acostarse,tumbarse
+life|vida
+lift|ascensor,levantar
+light|luz,ligero
+like|gustar,como
+line|línea,fila
+lion|león
+list|lista
+listen|escuchar
+little|pequeño,poco
+live|vivir
+living room|sala de estar,salón
+local|local
+long|largo
+look|mirar
+look after|cuidar
+look at|mirar
+look for|buscar
+look out|ten cuidado,cuidado
+lorry|camión
+lose|perder
+lost|perdido
+lots / a lot|mucho
+loud|fuerte,alto
+love|amor,amar,querer
+lovely|encantador,precioso
+low|bajo
+luck|suerte
+lucky|afortunado,con suerte
+luggage|equipaje
+lunch|almuerzo,comida
+lunchtime|hora de comer,hora del almuerzo
+machine|máquina
+mad|loco,enfadado
+magazine|revista
+mail|correo
+main course|plato principal
+make|hacer
+make-up|maquillaje
+man|hombre
+manager|director,gerente,jefe
+mango|mango
+many|muchos
+map|mapa
+mark|nota,marca
+market|mercado
+married|casado
+match|partido,cerilla
+matter|importar,asunto
+may|poder,puede
+maybe|quizás,tal vez
+me|me,mí
+meal|comida
+mean|significar,querer decir
+meat|carne
+mechanic|mecánico
+medicine|medicina
+meet|conocer,encontrarse
+meeting|reunión
+melon|melón
+member|miembro,socio
+memory|memoria,recuerdo
+menu|menú,carta
+message|mensaje
+metal|metal
+midday|mediodía
+middle|medio,centro
+midnight|medianoche
+might|podría,quizá
+mile|milla
+milk|leche
+million|millón
+mind|mente,importar
+mine|mío,mina
+mineral water|agua mineral
+minus|menos
+minute|minuto
+mirror|espejo
+Miss|señorita
+missing|perdido,desaparecido,que falta
+mistake|error,fallo
+mix|mezclar
+model|modelo
+modern|moderno
+moment|momento
+money|dinero
+monkey|mono
+month|mes
+monthly|mensual,mensualmente
+moon|luna
+more|más
+morning|mañana
+most|la mayoría,más
+mother|madre
+motorbike|moto,motocicleta
+motorway|autopista
+mountain|montaña
+mouse|ratón
+mouth|boca
+move|mover,mudarse
+MP3 player|reproductor de mp3
+Mr|señor
+Mrs|señora
+Ms|señora,señorita
+much|mucho
+mug|taza,tazón
+museum|museo
+mushroom|seta,champiñón
+music|música
+musical|musical
+musician|músico
+must|deber,tener que
+my|mi,mis
+myself|yo mismo,me
+name|nombre
+national|nacional
+nationality|nacionalidad
+nature|naturaleza
+near|cerca
+nearly|casi
+neck|cuello
+necklace|collar
+need|necesitar
+neighbour|vecino,vecina
+net|red
+never|nunca
+new|nuevo
+news|noticias
+newspaper|periódico
+next|siguiente,próximo
+next to|al lado de,junto a
+nice|agradable,simpático,bonito
+night|noche
+no|no
+no one|nadie
+nobody|nadie
+noise|ruido
+noisy|ruidoso
+noon|mediodía
+normal|normal
+north|norte
+nose|nariz
+not|no
+note|nota,apunte
+notebook|cuaderno,libreta
+nothing|nada
+notice|darse cuenta,fijarse,aviso
+now|ahora
+number|número
+nurse|enfermero,enfermera
+o'clock|en punto
+occupation|ocupación,profesión
+of|de
+off|apagado,fuera
+offer|ofrecer,oferta
+office|oficina
+often|a menudo,frecuentemente
+oh|oh,ah
+oh dear!|¡vaya!,¡ay, madre!
+oil|aceite,petróleo
+OK/okay|vale,de acuerdo,bien
+old|viejo,mayor
+Olympic|olímpico
+omelette|tortilla
+on|sobre,encima de,en
+once|una vez
+one|uno
+onion|cebolla
+online|en línea,en internet
+only|solo,solamente,único
+open|abrir,abierto
+opera|ópera
+opinion|opinión
+opposite|opuesto,enfrente
+or|o
+orange|naranja
+order|pedir,orden,pedido
+other|otro
+our|nuestro
+ours|nuestro,el nuestro
+ourselves|nosotros mismos,nos
+out|fuera,afuera
+out of|fuera de,sin
+outdoor|al aire libre,exterior
+outdoors|al aire libre,fuera
+outside|fuera,afuera,exterior
+oven|horno
+over|sobre,encima
+own|propio
+p.m.|de la tarde,pm
+pack|paquete,hacer la maleta
+page|página
+pain|dolor
+paint|pintar,pintura
+painter|pintor,pintora
+painting|pintura,cuadro
+pair|par,pareja
+pale|pálido
+paper|papel
+paragraph|párrafo
+pardon|perdón,disculpe
+parent|padre,madre
+park|parque,aparcar
+part|parte
+partner|pareja,compañero,socio
+party|fiesta
+pass|pasar,aprobar
+passenger|pasajero
+passport|pasaporte
+password|contraseña
+past|pasado
+pasta|pasta
+path|camino,sendero
+pay|pagar
+pear|pera
+pen|bolígrafo
+pence|peniques
+pencil|lápiz
+pencil case|estuche
+penfriend|amigo por correspondencia
+penny|penique
+people|gente,personas
+pepper|pimienta,pimiento
+per|por
+perfect|perfecto
+perfume|perfume
+perhaps|quizás,tal vez
+person|persona
+pet|mascota
+petrol|gasolina
+petrol station|gasolinera
+pharmacy|farmacia
+phone|teléfono
+photographer|fotógrafo
+photography|fotografía
+physics|física
+piano|piano
+pick up|recoger,coger
+picnic|picnic
+picture|imagen,foto,dibujo
+piece|trozo,pieza
+pillow|almohada
+pilot|piloto
+pink|rosa
+pity|lástima,pena
+pizza|pizza
+place|lugar,sitio
+plan|plan,planear
+plane|avión
+plant|planta
+plastic|plástico
+plate|plato
+platform|andén,plataforma
+play|jugar,tocar
+player|jugador,jugadora
+playground|patio de recreo,parque infantil
+pleasant|agradable
+please|por favor
+pleased|contento,satisfecho
+plus|más
+pocket|bolsillo
+point|punto,señalar
+police|policía
+police car|coche de policía
+police officer|agente de policía,policía
+police station|comisaría
+polite|educado,cortés
+pool|piscina
+poor|pobre
+pop|pop
+popular|popular
+port|puerto
+possible|posible
+possibly|posiblemente
+post|correo,enviar por correo
+post office|oficina de correos,correos
+postcard|postal
+poster|póster,cartel
+potato|patata,papa
+practise|practicar
+prepare|preparar
+present|regalo,presente
+pretty|bonito,guapa
+price|precio
+print|imprimir
+printer|impresora
+prize|premio
+probably|probablemente
+problem|problema
+program|programa
+programme|programa
+project|proyecto
+pull|tirar,jalar
+pupil|alumno,alumna
+purple|morado,púrpura
+purse|monedero
+push|empujar
+put|poner
+put on|ponerse
+puzzle|rompecabezas,puzle
+quarter|cuarto
+queen|reina
+question|pregunta
+quick|rápido
+quickly|rápidamente,deprisa
+quiet|tranquilo,callado
+quite|bastante
+quiz|concurso,cuestionario
+rabbit|conejo
+race|carrera
+racket|raqueta
+radio|radio
+railway|ferrocarril,vía del tren
+rain|lluvia,llover
+raincoat|impermeable
+rap|rap
+read|leer
+reading|lectura
+ready|listo,preparado
+real|real,verdadero
+really|realmente,de verdad
+reason|razón,motivo
+receipt|recibo,ticket
+receive|recibir
+receptionist|recepcionista
+record|grabar,récord,disco
+red|rojo
+refrigerator|nevera,frigorífico
+remember|recordar
+rent|alquilar,alquiler
+repair|reparar,arreglar
+repeat|repetir
+rest|descansar,descanso,resto
+restaurant|restaurante
+return|volver,regresar,devolver
+rice|arroz
+rich|rico
+ride|montar,paseo
+right|derecha,correcto
+right hand|mano derecha
+ring|anillo,sonar,llamar
+river|río
+road|carretera,calle
+roast|asado,asar
+rock|roca,rock,piedra
+roof|tejado,techo
+room|habitación,sala
+round|redondo,alrededor
+roundabout|rotonda
+rubber|goma,caucho
+rugby|rugby
+ruler|regla
+run|correr
+runner|corredor,corredora
+running|correr,carrera
+sad|triste
+safe|seguro
+sail|navegar,vela
+sailing|vela,navegación
+salad|ensalada
+sale|venta,rebajas
+salt|sal
+same|mismo,igual
+sandwich|bocadillo,sándwich
+sauce|salsa
+sausage|salchicha
+save|guardar,ahorrar,salvar
+say|decir
+scared|asustado
+scarf|bufanda
+scary|de miedo,que da miedo
+school|colegio,escuela
+schoolchild|escolar,colegial
+science|ciencia,ciencias
+scissors|tijeras
+scooter|patinete,moto
+screen|pantalla
+sea|mar
+seat|asiento
+second|segundo
+secretary|secretario,secretaria
+see|ver
+seem|parecer
+sell|vender
+send|enviar,mandar
+sentence|frase,oración
+serve|servir
+set|conjunto,juego,poner
+several|varios
+shall|deber,debería
+shame|vergüenza,lástima
+shampoo|champú
+share|compartir
+she|ella
+sheep|oveja
+sheet|sábana,hoja
+shelf|estante,balda
+ship|barco,buque
+shirt|camisa
+shoe|zapato
+shop|tienda
+shop assistant|dependiente,dependienta
+shopping|compras
+short|corto,bajo
+shorts|pantalones cortos
+should|debería
+shout|gritar
+show|mostrar,enseñar,espectáculo
+shower|ducha
+shut|cerrar
+sick|enfermo
+side|lado
+sightseeing|turismo,visitas turísticas
+sign|señal,cartel,firmar
+silver|plata,plateado
+simple|simple,sencillo
+since|desde
+sing|cantar
+singer|cantante
+singing|canto,cantar
+single|soltero,individual,solo
+sink|fregadero,lavabo
+sister|hermana
+sit|sentarse
+sit down|sentarse
+site|sitio,lugar
+sitting room|sala de estar,salón
+size|tamaño,talla
+skate|patinar,patín
+skateboard|monopatín,skate
+skateboarding|monopatín,skate
+skating|patinaje
+ski|esquiar,esquí
+skiing|esquí
+skirt|falda
+sky|cielo
+sleep|dormir
+slice|rebanada,trozo,loncha
+slim|delgado
+slow|lento
+slowly|despacio,lentamente
+small|pequeño
+smoke|humo,fumar
+smoking|fumar
+snack|tentempié,aperitivo,merienda
+snake|serpiente
+snow|nieve,nevar
+snowboard|snowboard,tabla de snowboard
+snowboarding|snowboard
+so|así que,tan
+soap|jabón
+soccer|fútbol
+sock|calcetín
+sofa|sofá
+soft|suave,blando
+software|software,programa
+some|algunos,algo de
+somebody|alguien
+someone|alguien
+something|algo
+sometimes|a veces
+somewhere|en algún sitio
+son|hijo
+song|canción
+soon|pronto
+sorry|lo siento,perdón
+sort|tipo,clase
+sound|sonido,sonar
+soup|sopa
+south|sur
+space|espacio
+spare|de repuesto,libre
+speak|hablar
+speaker|altavoz,hablante
+special|especial
+spell|deletrear
+spelling|ortografía,deletreo
+spend|gastar,pasar
+spoon|cuchara
+sport|deporte
+sports centre|polideportivo,centro deportivo
+spring|primavera
+square|cuadrado,plaza
+stadium|estadio
+staff|personal,plantilla
+stage|escenario,etapa
+stairs|escaleras
+stamp|sello
+stand|estar de pie,ponerse de pie
+star|estrella
+start|empezar,comenzar
+station|estación
+stay|quedarse,alojarse
+steak|filete,bistec
+steal|robar
+still|todavía,aún
+stomach|estómago
+stomach ache|dolor de estómago
+stop|parar,detener
+store|tienda,almacenar
+storm|tormenta
+story|historia,cuento
+straight|recto,derecho
+strange|raro,extraño
+strawberry|fresa
+street|calle
+striped|de rayas,a rayas
+stripes|rayas
+strong|fuerte
+student|estudiante,alumno
+studies|estudios
+study|estudiar
+stuff|cosas
+subject|asignatura,tema
+success|éxito
+successful|exitoso,con éxito
+such|tal,tan
+suddenly|de repente,de pronto
+sugar|azúcar
+suit|traje
+suitcase|maleta
+summer|verano
+sun|sol
+sunglasses|gafas de sol
+sunny|soleado
+supermarket|supermercado
+supper|cena
+suppose|suponer
+sure|seguro
+surf|surfear
+surfboard|tabla de surf
+surfing|surf
+surname|apellido
+surprise|sorpresa,sorprender
+surprised|sorprendido
+sweater|suéter,jersey
+sweet|dulce,caramelo
+swim|nadar
+swimming|natación
+swimming pool|piscina
+swimsuit|bañador,traje de baño
+T-shirt|camiseta
+table|mesa
+table tennis|tenis de mesa,ping pong
+tablet|tableta,pastilla
+take|coger,tomar,llevar
+take off|quitarse,despegar
+take part|participar
+talk|hablar,charla
+tall|alto
+taxi|taxi
+tea|té
+teach|enseñar
+teacher|profesor,profesora,maestro,maestra
+team|equipo
+teenager|adolescente
+telephone|teléfono
+tell|decir,contar
+temperature|temperatura
+tennis|tenis
+tent|tienda de campaña
+term|trimestre,término
+terrible|terrible
+test|prueba,examen
+text|texto
+text message|mensaje de texto
+textbook|libro de texto
+than|que
+thank|agradecer
+thank you|gracias
+thanks|gracias
+that|eso,ese,que
+the|el,la,los,las
+their|su,sus
+theirs|suyo,el suyo
+them|ellos,los,les
+themselves|ellos mismos,se
+then|entonces,luego
+there|allí,ahí,allá
+these|estos,estas
+they|ellos,ellas
+thin|delgado,fino
+thing|cosa
+think|pensar
+thirsty|sediento,con sed
+this|esto,este
+those|esos,aquellos
+through|a través de
+throw|lanzar,tirar
+thunderstorm|tormenta
+ticket|entrada,billete,boleto
+tidy|ordenado,ordenar
+tidy up|ordenar,recoger
+tie|corbata,atar
+tiger|tigre
+tights|medias,leotardos
+till|hasta
+time|tiempo,hora,vez
+timetable|horario
+tired|cansado
+title|título
+to|a,para
+toast|tostada,brindis
+today|hoy
+toe|dedo del pie
+together|juntos
+toilet|váter,inodoro,baño
+tomato|tomate
+tomorrow|mañana
+tonight|esta noche
+too|también,demasiado
+tooth|diente
+toothache|dolor de muelas,dolor de dientes
+toothbrush|cepillo de dientes
+top|parte de arriba,cima
+total|total
+tour|visita,excursión,gira
+tour guide|guía turístico,guía turística
+tourist|turista
+tourist information centre|oficina de turismo
+towel|toalla
+town|pueblo,ciudad
+toy|juguete
+traffic|tráfico
+traffic light|semáforo
+train|tren
+trainer|entrenador,zapatilla deportiva
+tram|tranvía
+transport|transporte
+travel|viajar
+tree|árbol
+trip|viaje,excursión
+trouble|problema,lío
+trousers|pantalones
+true|verdadero,cierto
+try|intentar,probar
+try on|probarse
+turn|girar,turno
+turn off|apagar
+turn on|encender
+twice|dos veces
+type|tipo,escribir a máquina
+umbrella|paraguas
+uncle|tío
+under|debajo de,bajo
+underground|metro,subterráneo
+understand|entender,comprender
+unfortunately|desafortunadamente,por desgracia
+unhappy|infeliz,triste
+uniform|uniforme
+university|universidad
+until|hasta
+unusual|inusual,raro
+up|arriba,hacia arriba
+upload|subir,cargar
+upset|disgustado,molesto
+upstairs|arriba,piso de arriba
+us|nosotros,nos
+use|usar,utilizar
+useful|útil
+usual|habitual,usual
+usually|normalmente,generalmente
+variety|variedad
+various|varios
+vegetable|verdura,vegetal
+very|muy
+video|vídeo,video
+video game|videojuego
+view|vista
+village|pueblo,aldea
+violin|violín
+visit|visitar,visita
+visitor|visitante
+vocabulary|vocabulario
+volleyball|voleibol,balonvolea
+wait|esperar
+waiter|camarero
+waitress|camarera
+wake|despertar
+wake up|despertarse,despertar
+walk|caminar,andar,paseo
+walking|caminar,senderismo
+wall|pared,muro
+wallet|cartera
+want|querer
+wardrobe|armario,ropero
+warm|cálido,templado,caliente
+wash|lavar
+wash up|fregar los platos,lavar los platos
+washing machine|lavadora
+washing-up|fregar los platos,platos sucios
+watch|mirar,reloj,ver
+water|agua
+way|camino,manera,forma
+we|nosotros
+wear|llevar puesto,vestir
+weather|tiempo,clima
+web|web,red
+web page|página web
+website|sitio web,página web
+week|semana
+weekday|día laborable,día de semana
+weekend|fin de semana
+weekly|semanal,semanalmente
+welcome|bienvenido,bienvenida
+well|bien,pozo
+well known|conocido,famoso
+west|oeste
+wet|mojado
+whale|ballena
+what|qué,lo que
+wheel|rueda
+when|cuándo,cuando
+where|dónde,donde
+which|cuál,cuáles,que
+while|mientras
+white|blanco
+who|quién,quiénes
+whole|entero,todo
+whose|de quién,cuyo
+why|por qué
+wide|ancho
+wife|esposa,mujer
+wifi|wifi
+wild|salvaje
+win|ganar
+wind|viento
+window|ventana
+windsurfing|windsurf
+windy|ventoso,con viento
+winner|ganador,ganadora
+winter|invierno
+wish|desear,deseo
+with|con
+without|sin
+woman|mujer
+wonderful|maravilloso
+wood|madera,bosque
+wooden|de madera
+wool|lana
+word|palabra
+work|trabajar,trabajo
+worker|trabajador,trabajadora
+world|mundo
+worried|preocupado
+worry|preocuparse,preocupación
+worse|peor
+worst|peor
+would|condicional,sería
+wow|guau,vaya
+write|escribir
+write down|apuntar,anotar
+writer|escritor,escritora
+writing|escritura,escribir
+wrong|equivocado,incorrecto,mal
+Yeah!|¡sí!,sí
+year|año
+yellow|amarillo
+yes|sí
+yesterday|ayer
+yet|todavía,aún,ya
+yogurt|yogur
+you|tú,usted,vosotros,ustedes
+young|joven
+your|tu,tus,su,vuestro
+yours|tuyo,el tuyo
+yourself|tú mismo,te
+zero|cero
+zoo|zoo,zoológico
+car park|aparcamiento,estacionamiento
+elevator|ascensor
+gas|gasolina,gas
+gas station|gasolinera
+grey|gris
+grocery store|tienda de comestibles,tienda de alimentación
+jewellery|joyas,joyería
+litre|litro
+metre|metro
+mom|mamá
+mum|mamá
+movie|película
+movie star|estrella de cine,actor de cine
+movie theater|cine
+theatre|teatro
+of course|por supuesto,claro
+French fries|patatas fritas,papas fritas
+at|en,a

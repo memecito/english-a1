@@ -1,0 +1,10 @@
+# Escaneos del libro de texto: ficheros muy grandes y con copyright
+# comercial (Cambridge). No hacen falta para que el juego funcione,
+# solo son fuente para extraer contenido más adelante — se quedan en
+# disco, fuera del repo.
+documents/Cambridge - Complete Key for Schools Student_s Book 2nd Edition (1).pdf
+documents/Complete Key for Schools 2ª edition (2).pdf
+
+# Backup zip redundante: mismo contenido que ya está versionado suelto
+# en el propio repo (data/, index.html, tools/, words.js).
+vocabulari.zip
