@@ -67,6 +67,8 @@ button{font:inherit;color:inherit;cursor:pointer}
 .question{text-align:center;padding:26px 16px}
 .dir{display:inline-block;background:var(--brand-soft);color:var(--brand);border-radius:99px;padding:4px 12px;font-weight:800;font-size:.85rem}
 .word{font-size:clamp(2rem,9vw,3.2rem);font-weight:900;margin:14px 0 6px;overflow-wrap:anywhere}
+.sentence{font-size:clamp(1.15rem,4.2vw,1.5rem);font-weight:700;margin:14px 0 6px;line-height:1.5}
+.sentence b{color:var(--brand)}
 .mascot{font-size:2.4rem;transition:transform .2s}
 .mascot.pop{transform:scale(1.35) rotate(-8deg)}
 .answer-row{display:flex;gap:8px;margin-top:8px}
@@ -143,30 +145,42 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
     </div>
 
     <div class="card">
-      <h2>1. ¿Qué palabras quieres?</h2>
-      <div class="seg" id="modeSeg">
-        <button class="opt" data-mode="letters" aria-pressed="true">🔤 Por letra<small>fácil</small></button>
-        <button class="opt" data-mode="mixed" aria-pressed="false">🔀 Mezcladas<small>difícil</small></button>
-        <button class="opt" data-mode="review" aria-pressed="false">🔁 Repaso<small id="dueCount">0 palabras</small></button>
+      <h2>1. ¿Qué quieres practicar?</h2>
+      <div class="seg" id="categorySeg">
+        <button class="opt" data-category="vocab" aria-pressed="true">🔤 Vocabulario</button>
+        <button class="opt" data-category="grammar" aria-pressed="false">✏️ Gramática</button>
       </div>
-      <div id="lettersBox">
-        <div class="letters" id="letters"></div>
-        <button class="link" id="allLetters">Todas las letras</button>
-        <button class="link" id="noLetters">Quitar todas</button>
+
+      <div id="vocabConfig">
+        <div class="seg" id="modeSeg">
+          <button class="opt" data-mode="letters" aria-pressed="true">🔤 Por letra<small>fácil</small></button>
+          <button class="opt" data-mode="mixed" aria-pressed="false">🔀 Mezcladas<small>difícil</small></button>
+          <button class="opt" data-mode="review" aria-pressed="false">🔁 Repaso<small id="dueCount">0 palabras</small></button>
+        </div>
+        <div id="lettersBox">
+          <div class="letters" id="letters"></div>
+          <button class="link" id="allLetters">Todas las letras</button>
+          <button class="link" id="noLetters">Quitar todas</button>
+        </div>
       </div>
+
+      <div id="grammarConfig" class="hidden">
+        <div class="seg" id="grammarSeg"></div>
+      </div>
+
       <div class="hint" id="poolInfo"></div>
     </div>
 
-    <div class="card">
+    <div class="card" id="dirCard">
       <h2>2. ¿En qué idioma te pregunto?</h2>
       <div class="seg" id="dirSeg">
         <button class="opt" data-dir="en-es" aria-pressed="true">🇬🇧 → 🇪🇸<small>me dan inglés</small></button>
         <button class="opt" data-dir="es-en" aria-pressed="false">🇪🇸 → 🇬🇧<small>me dan español</small></button>
         <button class="opt" data-dir="mix" aria-pressed="false">🎲 Mezclado<small>de todo un poco</small></button>
       </div>
-      <p class="hint" style="margin:0">Tienes 3 vidas ❤️. Acierto = 10 puntos (de español a inglés, 15). ¡Las rachas dan puntos extra!</p>
     </div>
 
+    <p class="hint center">Tienes 3 vidas ❤️. ¡Las rachas de aciertos dan puntos extra!</p>
     <button class="primary" id="startBtn">¡Jugar! 🚀</button>
     <p class="hint center"><label><input type="checkbox" id="optSpeak" checked> Leer las palabras en inglés en voz alta</label>
       &nbsp; <label><input type="checkbox" id="optSound" checked> Sonidos</label></p>
@@ -183,6 +197,7 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
     <div class="card question" id="qCard">
       <span class="dir" id="dir"></span>
       <div class="word" id="word"></div>
+      <p class="sentence hidden" id="sentence"></p>
       <div class="mascot" id="mascot">🦊</div>
       <form id="form" autocomplete="off">
         <div class="answer-row">
@@ -210,9 +225,9 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
       <p class="big" id="endScore"></p>
       <p class="center hint" id="endInfo"></p>
       <div id="endMissedBox" class="hidden">
-        <h2>Repasa estas palabras</h2>
+        <h2 id="endMissedTitle">Repasa esto</h2>
         <ul class="missed" id="endMissed"></ul>
-        <p class="hint">Se han guardado en «Repaso» para que las practiques luego.</p>
+        <p class="hint" id="endMissedHint"></p>
       </div>
     </div>
     <button class="primary" id="againBtn">Jugar otra vez 🔁</button>
@@ -255,6 +270,7 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
 
 <script src="words.js"></script>
 <script src="topics.js"></script>
+<script src="grammar.js"></script>
 <script>
 "use strict";
 /* ====================== Utilidades ====================== */
@@ -353,8 +369,20 @@ function confetti() {
 }
 
 /* ====================== Pantalla de inicio ====================== */
-const cfg = { mode: "letters", dir: "en-es", letters: new Set(["A"]) };
+const cfg = { category: "vocab", mode: "letters", dir: "en-es", letters: new Set(["A"]), topic: Object.keys(GRAMMAR)[0] };
 const LETTERS = [...new Set(WORDS.map(letterOf))].sort();
+
+function buildGrammarTopics() {
+  const box = $("grammarSeg"); box.textContent = "";
+  Object.entries(GRAMMAR).forEach(([key, g]) => {
+    const b = document.createElement("button");
+    b.className = "opt"; b.type = "button"; b.dataset.topic = key;
+    b.setAttribute("aria-pressed", cfg.topic === key);
+    b.innerHTML = `${g.emoji || "✏️"} ${g.title}<small>${g.items.length} frases</small>`;
+    b.onclick = () => { cfg.topic = key; refreshHome(); };
+    box.append(b);
+  });
+}
 
 function buildLetters() {
   const box = $("letters"); box.textContent = "";
@@ -382,6 +410,7 @@ function leitnerReview(enKey, ok, hinted) {
   db.leitner[enKey] = { box, due: dayKey(due) };
 }
 function pool() {
+  if (cfg.category === "grammar") return GRAMMAR[cfg.topic].items;
   if (cfg.mode === "mixed") return WORDS;
   if (cfg.mode === "review") return dueWords();
   return WORDS.filter(w => cfg.letters.has(letterOf(w)));
@@ -393,15 +422,25 @@ function refreshHome() {
   $("lvBar").style.width = (nx ? (db.total - lv[0]) / (nx[0] - lv[0]) * 100 : 100) + "%";
   $("stToday").textContent = t.points; $("stStreak").textContent = streakDays(); $("stBest").textContent = db.best;
   $("dueCount").textContent = `${dueWords().length} palabras`;
+  document.querySelectorAll("#categorySeg .opt").forEach(b => b.setAttribute("aria-pressed", b.dataset.category === cfg.category));
   document.querySelectorAll("#modeSeg .opt").forEach(b => b.setAttribute("aria-pressed", b.dataset.mode === cfg.mode));
   document.querySelectorAll("#dirSeg .opt").forEach(b => b.setAttribute("aria-pressed", b.dataset.dir === cfg.dir));
   document.querySelectorAll("#letters .letter").forEach(b => b.setAttribute("aria-pressed", cfg.letters.has(b.dataset.l)));
-  $("lettersBox").classList.toggle("hidden", cfg.mode !== "letters");
+  document.querySelectorAll("#grammarSeg .opt").forEach(b => b.setAttribute("aria-pressed", b.dataset.topic === cfg.topic));
+  $("vocabConfig").classList.toggle("hidden", cfg.category !== "vocab");
+  $("grammarConfig").classList.toggle("hidden", cfg.category !== "grammar");
+  $("dirCard").classList.toggle("hidden", cfg.category === "grammar");
+  $("lettersBox").classList.toggle("hidden", cfg.category !== "vocab" || cfg.mode !== "letters");
   const n = pool().length;
-  $("poolInfo").textContent = cfg.mode === "review" && !n ? "No tienes palabras pendientes de repaso hoy. ¡Vuelve mañana o sigue practicando otras!" : `${n} palabras para practicar`;
+  if (cfg.category === "grammar") {
+    $("poolInfo").textContent = `${n} frases para practicar`;
+  } else {
+    $("poolInfo").textContent = cfg.mode === "review" && !n ? "No tienes palabras pendientes de repaso hoy. ¡Vuelve mañana o sigue practicando otras!" : `${n} palabras para practicar`;
+  }
   $("startBtn").disabled = n < 1;
   $("optSpeak").checked = db.opts.speak; $("optSound").checked = db.opts.sound;
 }
+document.querySelectorAll("#categorySeg .opt").forEach(b => b.onclick = () => { cfg.category = b.dataset.category; refreshHome(); });
 document.querySelectorAll("#modeSeg .opt").forEach(b => b.onclick = () => { cfg.mode = b.dataset.mode; refreshHome(); });
 document.querySelectorAll("#dirSeg .opt").forEach(b => b.onclick = () => { cfg.dir = b.dataset.dir; refreshHome(); });
 $("allLetters").onclick = () => { LETTERS.forEach(l => cfg.letters.add(l)); refreshHome(); };
@@ -430,7 +469,7 @@ const G = { active: false };
 
 function startGame() {
   const words = shuffle(pool().slice());
-  Object.assign(G, { active: true, queue: words, i: 0, lives: MAX_LIVES, score: 0, streak: 0, right: 0, wrong: 0,
+  Object.assign(G, { active: true, kind: cfg.category, queue: words, i: 0, lives: MAX_LIVES, score: 0, streak: 0, right: 0, wrong: 0,
     missedList: [], askedEs: new Set(), answered: false, hinted: false, cur: null });
   show("game"); nextQuestion();
 }
@@ -444,6 +483,7 @@ function renderHearts() {
 function setMascot(e) { const m = $("mascot"); m.textContent = e; m.classList.add("pop"); setTimeout(() => m.classList.remove("pop"), 250); }
 
 function nextQuestion() {
+  if (G.kind === "grammar") return nextGrammarQuestion();
   // busca la siguiente palabra evitando repetir el mismo enunciado en español
   let q = null, dir;
   while (G.i < G.queue.length) {
@@ -457,6 +497,7 @@ function nextQuestion() {
   G.cur = { w: q, dir }; G.answered = false; G.hinted = false;
   $("dir").textContent = dir === "en-es" ? "🇬🇧 Inglés → Español 🇪🇸" : "🇪🇸 Español → Inglés 🇬🇧";
   $("word").textContent = dir === "en-es" ? q.en[0] : q.es[0];
+  $("word").classList.remove("hidden"); $("sentence").classList.add("hidden");
   $("input").value = ""; $("input").disabled = false; $("input").placeholder = dir === "en-es" ? "Escribe en español…" : "Escribe en inglés…";
   $("checkBtn").disabled = false; $("hintBtn").disabled = false; $("skipBtn").disabled = false;
   $("speakBtn").classList.toggle("hidden", dir !== "en-es");
@@ -468,8 +509,26 @@ function nextQuestion() {
   $("input").focus();
 }
 
+function nextGrammarQuestion() {
+  if (G.i >= G.queue.length) return finish(false);
+  const item = G.queue[G.i++];
+  G.cur = { item }; G.answered = false; G.hinted = false;
+  $("dir").textContent = "✏️ " + GRAMMAR[cfg.topic].title;
+  $("word").classList.add("hidden"); $("sentence").classList.remove("hidden");
+  $("sentence").innerHTML = item.text.replace("___", "<b>___</b>");
+  $("input").value = ""; $("input").disabled = false; $("input").placeholder = "Escribe la palabra que falta…";
+  $("checkBtn").disabled = false; $("hintBtn").disabled = false; $("skipBtn").disabled = false;
+  $("speakBtn").classList.add("hidden");
+  $("feedback").classList.add("hidden"); $("nextBtn").classList.add("hidden"); $("actions").classList.remove("hidden");
+  $("streak").textContent = G.streak; $("score").textContent = G.score; renderHearts();
+  $("progress").textContent = `Frase ${G.i} de ${G.queue.length}`;
+  setMascot("🦊");
+  $("input").focus();
+}
+
 // Respuestas válidas para la pregunta actual
 function accepted() {
+  if (G.kind === "grammar") return G.cur.item.answers.map(norm);
   const { w, dir } = G.cur;
   if (dir === "en-es") return w.es.map(norm);
   // ES→EN: cualquier palabra inglesa que comparta ese español (p. ej. big/large -> grande)
@@ -478,36 +537,48 @@ function accepted() {
   return [...out];
 }
 function solutionText() {
+  if (G.kind === "grammar") return G.cur.item.answers.join(" / ");
   const { w, dir } = G.cur;
   return dir === "en-es" ? w.es.slice(0, 3).join(" / ") : w.en.join(" / ");
 }
+// Lo que se muestra en la lista de "para repasar" de la pantalla de fin
+function questionDisplay() {
+  if (G.kind === "grammar") {
+    const it = G.cur.item;
+    return { title: it.text.replace("___", it.answers[0]), sub: "" };
+  }
+  const { w } = G.cur;
+  return { title: w.en[0], sub: w.es.slice(0, 2).join(" / ") };
+}
 
-function answer(kind) { // kind: "check" | "skip"
+function answer(action) { // action: "check" | "skip"
   if (!G.active || G.answered) return;
   const raw = $("input").value;
-  if (kind === "check" && !norm(raw)) { $("input").focus(); return; }
+  if (action === "check" && !norm(raw)) { $("input").focus(); return; }
   G.answered = true;
-  const ok = kind === "check" && accepted().includes(norm(raw));
+  const ok = action === "check" && accepted().includes(norm(raw));
   const fb = $("feedback"); fb.classList.remove("hidden", "ok", "ko");
   $("input").disabled = true; $("checkBtn").disabled = true; $("hintBtn").disabled = true; $("skipBtn").disabled = true;
   fb.textContent = "";
   const sol = document.createElement("span"); sol.className = "sol"; sol.textContent = solutionText();
+  const leitKey = G.kind === "grammar" ? `gr:${cfg.topic}:${G.cur.item.id}` : G.cur.w.en[0];
 
   if (ok) {
     G.streak++; G.right++;
-    const base = G.cur.dir === "es-en" ? 15 : 10;
+    const base = G.kind === "grammar" ? 10 : (G.cur.dir === "es-en" ? 15 : 10);
     const pts = Math.max(1, base + Math.min(Math.floor(G.streak / 3) * 2, 10) - (G.hinted ? 5 : 0));
-    G.score += pts; leitnerReview(G.cur.w.en[0], true, G.hinted);
+    G.score += pts; leitnerReview(leitKey, true, G.hinted);
     fb.classList.add("ok"); fb.append(`✅ ¡Correcto! +${pts}${G.streak >= 3 ? ` (racha ×${G.streak} 🔥)` : ""}`, sol);
     setMascot(G.streak >= 3 ? "🤩" : "😄"); sndOk(); floatText(`+${pts}`);
-    if (G.cur.dir === "es-en" && db.opts.speak) say(G.cur.w.en[0]);
+    if (G.kind === "vocab" && G.cur.dir === "es-en" && db.opts.speak) say(G.cur.w.en[0]);
   } else {
     G.streak = 0; G.wrong++; G.lives--;
-    leitnerReview(G.cur.w.en[0], false, G.hinted);
-    if (!G.missedList.includes(G.cur.w)) G.missedList.push(G.cur.w);
-    fb.classList.add("ko"); fb.append(kind === "skip" ? "Esta era:" : "❌ Casi… la respuesta era:", sol);
+    leitnerReview(leitKey, false, G.hinted);
+    const disp = questionDisplay();
+    if (!G.missedList.some(m => m.title === disp.title)) G.missedList.push(disp);
+    fb.classList.add("ko"); fb.append(action === "skip" ? "Esta era:" : "❌ Casi… la respuesta era:", sol);
     setMascot("😿"); sndKo(); $("qCard").classList.remove("shake"); void $("qCard").offsetWidth; $("qCard").classList.add("shake");
-    if (db.opts.speak) say(G.cur.w.en[0]);
+    if (G.kind === "vocab" && db.opts.speak) say(G.cur.w.en[0]);
   }
   $("score").textContent = G.score; $("streak").textContent = G.streak; renderHearts();
   $("actions").classList.add("hidden");
@@ -524,7 +595,7 @@ $("skipBtn").onclick = () => answer("skip");
 $("speakBtn").onclick = () => { say(G.cur.w.en[0]); $("input").focus(); };
 $("hintBtn").onclick = () => {
   if (G.answered) return;
-  const sol = (G.cur.dir === "en-es" ? G.cur.w.es[0] : G.cur.w.en[0]);
+  const sol = G.kind === "grammar" ? G.cur.item.answers[0] : (G.cur.dir === "en-es" ? G.cur.w.es[0] : G.cur.w.en[0]);
   G.hinted = true; $("input").placeholder = `Empieza por «${sol[0]}» y tiene ${sol.length} letras`; $("input").focus();
 };
 $("nextBtn").onclick = () => { if (G.lives <= 0) finish(false); else nextQuestion(); };
@@ -553,10 +624,14 @@ function finish(quit) {
   $("endScore").textContent = `${G.score} pts`;
   $("endInfo").textContent = `${G.right} aciertos · ${G.wrong} fallos · hoy llevas ${d.points} puntos`;
   const list = $("endMissed"); list.textContent = "";
-  G.missedList.forEach(w => {
+  G.missedList.forEach(m => {
     const li = document.createElement("li"), a = document.createElement("b"), b = document.createElement("span");
-    a.textContent = w.en[0]; b.textContent = w.es.slice(0, 2).join(" / "); li.append(a, b); list.append(li);
+    a.textContent = m.title; b.textContent = m.sub; li.append(a, b); list.append(li);
   });
+  $("endMissedTitle").textContent = G.kind === "grammar" ? "Repasa estas frases" : "Repasa estas palabras";
+  $("endMissedHint").textContent = G.kind === "grammar"
+    ? "Vuelve a practicar este tema en «Gramática» cuando quieras."
+    : "Se han guardado en «Repaso» para que las practiques luego.";
   $("endMissedBox").classList.toggle("hidden", !G.missedList.length);
   show("end");
   if (record || cleared) { sndWin(); confetti(); }
@@ -646,7 +721,7 @@ function openTopic(t) {
 $("studyBack").onclick = renderStudy;
 
 /* ====================== Arranque ====================== */
-buildLetters(); refreshHome();
+buildLetters(); buildGrammarTopics(); refreshHome();
 </script>
 </body>
 </html>
