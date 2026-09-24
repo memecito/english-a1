@@ -35,5 +35,44 @@ const GRAMMAR = {
       { id: "ppron4", text: "This isn't your ball. It's ___, said Thiago and Sophie.", answers: ["ours"] },
       { id: "ppron5", text: "The blue car is Mr. Smith's. It's ___.", answers: ["his"] },
     ]
+  },
+  pastSimple: {
+    title: "Pasado simple",
+    emoji: "⏳",
+    topicId: "pastSimple",
+    items: [
+      // be: was/were
+      { id: "be1", text: "Yesterday, Sophie ___ at school.", answers: ["was"] },
+      { id: "be2", text: "Thiago and Laura ___ at the museum last week.", answers: ["were"] },
+      { id: "be3", text: "___ you at home last night?", answers: ["were"] },
+      // regulares: las 4 reglas de ortografía
+      { id: "reg1", text: "Ellie ___ (watch) a film last night.", answers: ["watched"] },
+      { id: "reg2", text: "Chloe ___ (like) the music at the party.", answers: ["liked"] },
+      { id: "reg3", text: "They ___ (stop) the car near the school.", answers: ["stopped"] },
+      { id: "reg4", text: "Laura ___ (study) for the exam yesterday.", answers: ["studied"] },
+      { id: "reg5", text: "We ___ (play) football on Saturday.", answers: ["played"] },
+      // did / didn't
+      { id: "did1", text: "___ you finish your homework?", answers: ["did"] },
+      { id: "did2", text: "Sophie ___ like the film. She thought it was boring.", answers: ["didn't"] },
+      { id: "did3", text: "What ___ Thiago do after school yesterday?", answers: ["did"] },
+      { id: "did4", text: "We ___ go to the party — we were too tired.", answers: ["didn't"] },
+      // irregulares
+      { id: "irr1", text: "Yesterday, Ellie ___ (go) to the museum.", answers: ["went"] },
+      { id: "irr2", text: "Thiago ___ (have) a great time at the party.", answers: ["had"] },
+      { id: "irr3", text: "Sophie ___ (see) her friend at the shop.", answers: ["saw"] },
+      { id: "irr4", text: "I ___ (eat) a big breakfast this morning.", answers: ["ate"] },
+      { id: "irr5", text: "Laura ___ (take) lots of photos on holiday.", answers: ["took"] },
+      { id: "irr6", text: "Chloe ___ (get) a new phone for her birthday.", answers: ["got"] },
+      { id: "irr7", text: "My parents ___ (give) me a bike last year.", answers: ["gave"] },
+      { id: "irr8", text: "Thiago ___ (come) to school late yesterday.", answers: ["came"] },
+      { id: "irr9", text: "We ___ (do) our homework together.", answers: ["did"] },
+      { id: "irr10", text: "Sophie ___ (drink) a glass of orange juice.", answers: ["drank"] },
+      { id: "irr11", text: "Ellie ___ (buy) a new dress for the party.", answers: ["bought"] },
+      { id: "irr12", text: "Laura ___ (make) a cake for her mum.", answers: ["made"] },
+      { id: "irr13", text: "Thiago ___ (write) a letter to his cousin.", answers: ["wrote"] },
+      { id: "irr14", text: "Chloe ___ (break) her phone yesterday.", answers: ["broke"] },
+      { id: "irr15", text: "Sophie ___ (find) her keys under the sofa.", answers: ["found"] },
+      { id: "irr16", text: "Yesterday, we ___ (meet) our new teacher.", answers: ["met"] },
+    ]
   }
 };

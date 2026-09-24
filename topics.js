@@ -75,5 +75,72 @@ const TOPICS = [
 
       <p><b>Truco para no liarte:</b> si después de la palabra va un nombre (<i>my dog</i>), es adjetivo posesivo. Si no va nada detrás (<i>it's mine</i>), es pronombre posesivo.</p>
     `
+  },
+  {
+    id: "pastSimple",
+    emoji: "⏳",
+    title: "Pasado simple (Past Simple)",
+    html: `
+      <p>El <b>pasado simple</b> se usa para hablar de acciones terminadas en el pasado: <i>yesterday, last year, a week ago, last night</i>…</p>
+
+      <h3>1. El verbo "be" (ser/estar) en pasado</h3>
+      <table>
+        <thead><tr><th>Sujeto</th><th>Afirmativa</th><th>Negativa</th></tr></thead>
+        <tbody>
+          <tr><td>I / he / she / it</td><td><b>was</b></td><td>wasn't</td></tr>
+          <tr><td>you / we / they</td><td><b>were</b></td><td>weren't</td></tr>
+        </tbody>
+      </table>
+      <p><i>We <b>were</b> at school yesterday. Our teacher <b>was</b> very nice.</i></p>
+
+      <h3>2. Verbos regulares — se les añade "-ed"</h3>
+      <p>La ortografía cambia un poco según cómo termine el verbo:</p>
+      <table>
+        <thead><tr><th>Regla</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td>La mayoría: + <b>-ed</b></td><td>watch → <b>watched</b></td></tr>
+          <tr><td>Acaba en <b>-e</b>: solo + <b>-d</b></td><td>like → <b>liked</b></td></tr>
+          <tr><td>Una sílaba, vocal+consonante: dobla la consonante + <b>-ed</b></td><td>stop → <b>stopped</b></td></tr>
+          <tr><td>Consonante + <b>-y</b>: cambia a <b>-ied</b></td><td>study → <b>studied</b></td></tr>
+        </tbody>
+      </table>
+
+      <h3>3. Preguntas y negaciones — con "did / didn't"</h3>
+      <p>Con <b>did</b> o <b>didn't</b>, el verbo va en infinitivo (sin "to" y sin "-ed"): <i>Did you go?</i> ✅ — <i>Did you went?</i> ❌</p>
+      <table>
+        <thead><tr><th></th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td>Pregunta</td><td><b>Did</b> you <b>enjoy</b> the film?</td></tr>
+          <tr><td>Respuesta corta</td><td>Yes, I <b>did</b>. / No, I <b>didn't</b>.</td></tr>
+          <tr><td>Negativa</td><td>I <b>didn't watch</b> TV last night.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>4. Verbos irregulares — no siguen ninguna regla, hay que aprenderlos</h3>
+      <p>Estos son algunos de los más comunes del libro (hay muchos más en la lista de verbos irregulares del libro, página 134 — estos son un buen punto de partida):</p>
+      <table>
+        <thead><tr><th>Presente</th><th>Pasado</th></tr></thead>
+        <tbody>
+          <tr><td>go</td><td><b>went</b></td></tr>
+          <tr><td>have</td><td><b>had</b></td></tr>
+          <tr><td>see</td><td><b>saw</b></td></tr>
+          <tr><td>eat</td><td><b>ate</b></td></tr>
+          <tr><td>take</td><td><b>took</b></td></tr>
+          <tr><td>get</td><td><b>got</b></td></tr>
+          <tr><td>give</td><td><b>gave</b></td></tr>
+          <tr><td>come</td><td><b>came</b></td></tr>
+          <tr><td>do</td><td><b>did</b></td></tr>
+          <tr><td>drink</td><td><b>drank</b></td></tr>
+          <tr><td>buy</td><td><b>bought</b></td></tr>
+          <tr><td>make</td><td><b>made</b></td></tr>
+          <tr><td>write</td><td><b>wrote</b></td></tr>
+          <tr><td>break</td><td><b>broke</b></td></tr>
+          <tr><td>find</td><td><b>found</b></td></tr>
+          <tr><td>meet</td><td><b>met</b></td></tr>
+        </tbody>
+      </table>
+
+      <p><b>Truco para no liarte:</b> si el verbo es regular, casi siempre suena a "-d" al final (watched, liked). Si al decirlo en pasado no suena así (go→went, see→saw), seguramente es irregular — toca memorizarlo.</p>
+    `
   }
 ];
