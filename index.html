@@ -154,6 +154,7 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
       <div id="vocabConfig">
         <div class="seg" id="modeSeg">
           <button class="opt" data-mode="letters" aria-pressed="true">🔤 Por letra<small>fácil</small></button>
+          <button class="opt" data-mode="category" aria-pressed="false">🏷️ Por tema<small>7 temas</small></button>
           <button class="opt" data-mode="mixed" aria-pressed="false">🔀 Mezcladas<small>difícil</small></button>
           <button class="opt" data-mode="review" aria-pressed="false">🔁 Repaso<small id="dueCount">0 palabras</small></button>
         </div>
@@ -161,6 +162,9 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
           <div class="letters" id="letters"></div>
           <button class="link" id="allLetters">Todas las letras</button>
           <button class="link" id="noLetters">Quitar todas</button>
+        </div>
+        <div id="categoriesBox" class="hidden">
+          <div class="seg" id="categories"></div>
         </div>
       </div>
 
@@ -369,8 +373,33 @@ function confetti() {
 }
 
 /* ====================== Pantalla de inicio ====================== */
-const cfg = { category: "vocab", mode: "letters", dir: "en-es", letters: new Set(["A"]), topic: Object.keys(GRAMMAR)[0] };
+const cfg = { category: "vocab", mode: "letters", dir: "en-es", letters: new Set(["A"]), categories: new Set(), topic: Object.keys(GRAMMAR)[0] };
 const LETTERS = [...new Set(WORDS.map(letterOf))].sort();
+const CATEGORIES = [...new Set(WORDS.filter(w => w.cat).map(w => w.cat))].sort();
+cfg.categories = new Set(CATEGORIES.slice(0, 1));
+const CATEGORY_META = {
+  animals: { emoji: "🐾", label: "Animales" },
+  food: { emoji: "🍎", label: "Comida y bebida" },
+  clothes: { emoji: "👕", label: "Ropa" },
+  sport: { emoji: "⚽", label: "Deporte" },
+  family: { emoji: "👪", label: "Familia" },
+  house: { emoji: "🏠", label: "Casa" },
+  colours: { emoji: "🎨", label: "Colores" },
+};
+
+function buildCategories() {
+  const box = $("categories"); box.textContent = "";
+  CATEGORIES.forEach(c => {
+    const n = WORDS.filter(w => w.cat === c).length;
+    const meta = CATEGORY_META[c] || { emoji: "🏷️", label: c };
+    const b = document.createElement("button");
+    b.className = "opt"; b.type = "button"; b.dataset.cat = c;
+    b.setAttribute("aria-pressed", cfg.categories.has(c));
+    b.innerHTML = `${meta.emoji} ${meta.label}<small>${n}</small>`;
+    b.onclick = () => { cfg.categories.has(c) ? cfg.categories.delete(c) : cfg.categories.add(c); refreshHome(); };
+    box.append(b);
+  });
+}
 
 function buildGrammarTopics() {
   const box = $("grammarSeg"); box.textContent = "";
@@ -413,6 +442,7 @@ function pool() {
   if (cfg.category === "grammar") return GRAMMAR[cfg.topic].items;
   if (cfg.mode === "mixed") return WORDS;
   if (cfg.mode === "review") return dueWords();
+  if (cfg.mode === "category") return WORDS.filter(w => w.cat && cfg.categories.has(w.cat));
   return WORDS.filter(w => cfg.letters.has(letterOf(w)));
 }
 function refreshHome() {
@@ -426,11 +456,13 @@ function refreshHome() {
   document.querySelectorAll("#modeSeg .opt").forEach(b => b.setAttribute("aria-pressed", b.dataset.mode === cfg.mode));
   document.querySelectorAll("#dirSeg .opt").forEach(b => b.setAttribute("aria-pressed", b.dataset.dir === cfg.dir));
   document.querySelectorAll("#letters .letter").forEach(b => b.setAttribute("aria-pressed", cfg.letters.has(b.dataset.l)));
+  document.querySelectorAll("#categories .opt").forEach(b => b.setAttribute("aria-pressed", cfg.categories.has(b.dataset.cat)));
   document.querySelectorAll("#grammarSeg .opt").forEach(b => b.setAttribute("aria-pressed", b.dataset.topic === cfg.topic));
   $("vocabConfig").classList.toggle("hidden", cfg.category !== "vocab");
   $("grammarConfig").classList.toggle("hidden", cfg.category !== "grammar");
   $("dirCard").classList.toggle("hidden", cfg.category === "grammar");
   $("lettersBox").classList.toggle("hidden", cfg.category !== "vocab" || cfg.mode !== "letters");
+  $("categoriesBox").classList.toggle("hidden", cfg.category !== "vocab" || cfg.mode !== "category");
   const n = pool().length;
   if (cfg.category === "grammar") {
     $("poolInfo").textContent = `${n} frases para practicar`;
@@ -721,7 +753,7 @@ function openTopic(t) {
 $("studyBack").onclick = renderStudy;
 
 /* ====================== Arranque ====================== */
-buildLetters(); buildGrammarTopics(); refreshHome();
+buildLetters(); buildCategories(); buildGrammarTopics(); refreshHome();
 </script>
 </body>
 </html>

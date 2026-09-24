@@ -64,7 +64,7 @@ anywhere|en cualquier sitio,en algún sitio
 apartment|apartamento,piso
 apartment building|bloque de pisos,edificio de apartamentos
 app|aplicación,app
-apple|manzana
+apple|manzana|food
 appointment|cita
 area|zona,área
 arm|brazo
@@ -79,7 +79,7 @@ as well|también
 ask|preguntar,pedir
 assistant|ayudante,asistente
 attractive|atractivo,atractiva
-aunt|tía
+aunt|tía|family
 autumn|otoño
 available|disponible
 away|lejos,fuera
@@ -95,28 +95,28 @@ bag|bolsa,bolso
 bake|hornear
 ball|pelota,balón
 balloon|globo
-banana|plátano,banana
+banana|plátano,banana|food
 band|banda,grupo
 bank|banco
 barbecue/ barbeque|barbacoa
 baseball|béisbol
-basketball|baloncesto
+basketball|baloncesto|sport
 bat|bate
 bath|baño,bañera
 bathing suit|bañador,traje de baño
-bathroom|cuarto de baño,baño
+bathroom|cuarto de baño,baño|house
 bathtub|bañera
 battery|batería,pila
 be|ser,estar
 beach|playa
 bean|judía,alubia,frijol
-bear|oso
+bear|oso|animals
 beard|barba
 beautiful|bonito,hermoso,bello,guapa
 because|porque
 become|convertirse en,llegar a ser,hacerse
-bed|cama
-bedroom|dormitorio,habitación
+bed|cama|house
+bedroom|dormitorio,habitación|house
 bee|abeja
 before|antes,antes de
 begin|empezar,comenzar
@@ -126,7 +126,7 @@ behind|detrás,detrás de
 believe|creer
 belong|pertenecer
 below|debajo,abajo
-belt|cinturón
+belt|cinturón|clothes
 beside|al lado de,junto a
 best|mejor
 better|mejor
@@ -137,18 +137,18 @@ bike|bici,bicicleta
 bill|cuenta,factura
 bin|papelera,cubo de basura
 biology|biología
-bird|pájaro,ave
+bird|pájaro,ave|animals
 birth|nacimiento
 birthday|cumpleaños
 bit|poco,trozo
-black|negro
+black|negro|colours
 blackboard|pizarra
 blanket|manta
 block|bloque
 blog|blog
 blood|sangre
 blouse|blusa
-blue|azul
+blue|azul|colours
 board|pizarra,tablero
 board game|juego de mesa
 boat|barco,bote
@@ -158,7 +158,7 @@ boiled|hervido,cocido
 book|libro
 bookcase|librería,estantería
 bookshelf|estantería
-boot|bota
+boot|bota|clothes
 bored|aburrido
 boring|aburrido
 born|nacido
@@ -175,7 +175,7 @@ boyfriend|novio
 bracelet|pulsera
 brain|cerebro
 brave|valiente
-bread|pan
+bread|pan|food
 break|romper,descanso
 breakfast|desayuno
 bridge|puente
@@ -184,8 +184,8 @@ brilliant|genial,brillante
 bring|traer
 bring back|devolver,traer de vuelta
 broken|roto
-brother|hermano
-brown|marrón,café
+brother|hermano|family
+brown|marrón,café|colours
 brush|cepillo
 build|construir
 building|edificio
@@ -199,7 +199,7 @@ businessman|hombre de negocios,empresario
 businesswoman|mujer de negocios,empresaria
 busy|ocupado
 but|pero
-butter|mantequilla
+butter|mantequilla|food
 butterfly|mariposa
 buy|comprar
 by|por
@@ -208,7 +208,7 @@ bye|adiós
 cabinet|armario,gabinete
 cafe/café|cafetería,café
 cafeteria|cafetería
-cake|tarta,pastel
+cake|tarta,pastel|food
 calendar|calendario
 call|llamar,llamada
 camel|camello
@@ -219,7 +219,7 @@ campsite|camping,zona de acampada
 can|poder,lata
 candy|caramelo,dulce
 cannot|no poder
-cap|gorra
+cap|gorra|clothes
 capital|capital
 car|coche,carro
 card|tarjeta,carta
@@ -227,13 +227,13 @@ career|carrera,profesión
 careful|cuidadoso,cuidado
 carefully|con cuidado,cuidadosamente
 carpet|alfombra
-carrot|zanahoria
+carrot|zanahoria|food
 carry|llevar,cargar
 cartoon|dibujos animados
 case|caso,maleta
 cash|efectivo,dinero en efectivo
 castle|castillo
-cat|gato
+cat|gato|animals
 catch|atrapar,coger
 CD|cd,disco compacto
 CD player|reproductor de cd
@@ -242,27 +242,27 @@ cell phone|teléfono móvil,móvil,celular
 cent|céntimo,centavo
 centre/center|centro
 century|siglo
-cereal|cereales
+cereal|cereales|food
 certainly|por supuesto,ciertamente
 chain|cadena
-chair|silla
+chair|silla|house
 change|cambiar,cambio
 channel|canal
 chat|charlar,charla,chatear
 chatroom|sala de chat
 cheap|barato
 check|comprobar,revisar
-cheese|queso
+cheese|queso|food
 chef|cocinero,chef
 chemist|farmacéutico,farmacia
 chemistry|química
 cheque|cheque,talón
 chess|ajedrez
-chicken|pollo
+chicken|pollo|food
 child|niño,niña
 chilli|chile,guindilla
 chips|patatas fritas,papas fritas
-chocolate|chocolate
+chocolate|chocolate|food
 choose|elegir
 cinema|cine
 circle|círculo
@@ -291,8 +291,8 @@ cloudy|nublado
 clown|payaso
 club|club
 coach|entrenador,autocar
-coat|abrigo
-coffee|café
+coat|abrigo|clothes
+coffee|café|food
 cola|cola,refresco de cola
 cold|frío,resfriado
 colleague|colega,compañero de trabajo
@@ -327,9 +327,9 @@ could|podría,pudo
 country|país,campo
 countryside|campo,campiña
 course|curso
-cousin|primo,prima
+cousin|primo,prima|family
 cover|cubrir,tapar,cubierta
-cow|vaca
+cow|vaca|animals
 crazy|loco
 cream|nata,crema
 credit card|tarjeta de crédito
@@ -346,7 +346,7 @@ curtain|cortina
 customer|cliente
 cut|cortar
 cycle|ir en bici,ciclo
-cycling|ciclismo
+cycling|ciclismo|sport
 dad|papá
 daily|diario,diariamente
 dance|bailar,baile
@@ -356,7 +356,7 @@ danger|peligro
 dangerous|peligroso
 dark|oscuro
 date|fecha,cita
-daughter|hija
+daughter|hija|family
 day|día
 dead|muerto
 dear|querido
@@ -396,11 +396,11 @@ diving|buceo
 do|hacer
 doctor|médico,doctor,doctora
 document|documento
-dog|perro
+dog|perro|animals
 doll|muñeca
 dollar|dólar
 dolphin|delfín
-door|puerta
+door|puerta|house
 dot|punto
 double|doble
 down|abajo,hacia abajo
@@ -411,7 +411,7 @@ draw|dibujar
 drawer|cajón
 drawing|dibujo
 dream|sueño,soñar
-dress|vestido,vestir
+dress|vestido,vestir|clothes
 dressed|vestido
 drink|beber,bebida
 drive|conducir,manejar
@@ -419,7 +419,7 @@ driver|conductor,conductora
 driving licence|carné de conducir,permiso de conducir
 drum|tambor,batería
 dry|seco,secar
-duck|pato
+duck|pato|animals
 during|durante
 DVD|dvd
 DVD player|reproductor de dvd
@@ -433,10 +433,10 @@ easily|fácilmente
 east|este
 easy|fácil
 eat|comer
-egg|huevo
+egg|huevo|food
 electric|eléctrico
 electricity|electricidad
-elephant|elefante
+elephant|elefante|animals
 else|más,otro
 email|correo electrónico,email
 empty|vacío
@@ -485,7 +485,7 @@ factory|fábrica
 fail|suspender,fallar
 fair|justo,feria
 fall|caer,caída,otoño
-family|familia
+family|familia|family
 famous|famoso
 fan|aficionado,fan,ventilador
 fantastic|fantástico
@@ -496,7 +496,7 @@ fashion|moda
 fast|rápido
 fast food|comida rápida
 fat|gordo,grasa
-father|padre
+father|padre|family
 favourite|favorito
 feel|sentir
 feelings|sentimientos
@@ -518,10 +518,10 @@ fire|fuego,incendio
 first|primero
 first name|nombre de pila,nombre
 first of all|en primer lugar,antes que nada
-fish|pez,pescado
+fish|pez,pescado|animals
 fishing|pesca
 fit|en forma,ajustarse
-flat|piso,apartamento,plano
+flat|piso,apartamento,plano|house
 flight|vuelo
 floor|suelo,piso
 flower|flor
@@ -532,7 +532,7 @@ folder|carpeta
 follow|seguir
 food|comida
 foot|pie
-football|fútbol
+football|fútbol|sport
 footballer|futbolista
 for|para,por
 foreign|extranjero
@@ -549,7 +549,7 @@ friendly|amable,simpático
 frightened|asustado
 from|de,desde
 front|frente,delantera
-fruit|fruta
+fruit|fruta|food
 full|lleno
 fun|diversión,divertido
 funny|gracioso,divertido
@@ -558,7 +558,7 @@ further|más lejos
 future|futuro
 game|juego,partido
 garage|garaje
-garden|jardín
+garden|jardín|house
 garlic|ajo
 gate|puerta,verja
 geography|geografía
@@ -578,13 +578,13 @@ give back|devolver
 glad|contento,alegre
 glass|vaso,cristal
 glasses|gafas
-glove|guante
+glove|guante|clothes
 go|ir
 go out|salir
 goal|gol,meta,objetivo
 gold|oro
 golden|dorado,de oro
-golf|golf
+golf|golf|sport
 good|bueno
 good afternoon|buenas tardes
 good evening|buenas tardes,buenas noches
@@ -595,9 +595,9 @@ goodbye|adiós
 grade|nota,curso
 grandchild|nieto,nieta
 granddaughter|nieta
-grandfather|abuelo
+grandfather|abuelo|family
 grandma|abuela
-grandmother|abuela
+grandmother|abuela|family
 grandpa|abuelo
 grandparent|abuelo,abuela
 grandson|nieto
@@ -605,7 +605,7 @@ granny|abuela
 grape|uva
 grass|hierba,césped
 great|genial,estupendo,gran
-green|verde
+green|verde|colours
 grilled|a la parrilla,a la plancha
 group|grupo
 grow|crecer
@@ -618,7 +618,7 @@ guide|guía
 guidebook|guía de viaje
 guitar|guitarra
 guy|chico,tío
-gym|gimnasio
+gym|gimnasio|sport
 hair|pelo,cabello
 half|mitad,medio
 half-price|mitad de precio
@@ -629,7 +629,7 @@ happen|pasar,ocurrir,suceder
 happy|feliz,contento
 harbour|puerto
 hard|duro,difícil
-hat|sombrero,gorro
+hat|sombrero,gorro|clothes
 hate|odiar
 have|tener,haber
 have got to|tener que
@@ -662,28 +662,28 @@ his|su,suyo
 history|historia
 hit|golpear,pegar
 hobby|afición,pasatiempo,hobby
-hockey|hockey
+hockey|hockey|sport
 hold|sostener,agarrar,tener
 holiday|vacaciones,fiesta
 home|casa,hogar
 homework|deberes,tarea
-honey|miel
+honey|miel|food
 hope|esperar,esperanza
 horrible|horrible
 horror|terror,horror
-horse|caballo
+horse|caballo|animals
 hospital|hospital
 hot|caliente,caluroso
 hotel|hotel
 hour|hora
-house|casa
+house|casa|house
 housewife|ama de casa
 how|cómo
 however|sin embargo
 hungry|hambriento,con hambre
 hurry|darse prisa,prisa
 hurt|hacer daño,doler
-husband|marido,esposo
+husband|marido,esposo|family
 I|yo
 ice|hielo
 ice cream|helado
@@ -704,7 +704,7 @@ including|incluyendo,incluido
 indoor|de interior,cubierto
 indoors|dentro,en interior
 information|información
-insect|insecto
+insect|insecto|animals
 inside|dentro,adentro
 instead|en su lugar,en vez de
 instructions|instrucciones
@@ -720,17 +720,17 @@ island|isla
 it|ello,lo
 its|su
 itself|sí mismo,se
-jacket|chaqueta
-jam|mermelada
+jacket|chaqueta|clothes
+jam|mermelada|food
 jazz|jazz
-jeans|vaqueros,jeans
+jeans|vaqueros,jeans|clothes
 job|trabajo,empleo
 join|unirse,juntar
 journalist|periodista
 journey|viaje
-juice|zumo,jugo
-jump|saltar
-jumper|jersey,suéter
+juice|zumo,jugo|food
+jump|saltar|sport
+jumper|jersey,suéter|clothes
 just|justo,solo,solamente
 keep|guardar,mantener,quedarse
 key|llave,tecla
@@ -740,7 +740,7 @@ kind|amable,tipo
 king|rey
 kiss|beso,besar
 kit|equipo,kit
-kitchen|cocina
+kitchen|cocina|house
 kite|cometa
 knife|cuchillo
 know|saber,conocer
@@ -761,7 +761,7 @@ leave|dejar,salir,irse
 left|izquierda,izquierdo
 left-hand|de la izquierda
 leg|pierna
-lemon|limón
+lemon|limón|food
 lemonade|limonada
 lend|prestar
 length|longitud,largo
@@ -778,12 +778,12 @@ lift|ascensor,levantar
 light|luz,ligero
 like|gustar,como
 line|línea,fila
-lion|león
+lion|león|animals
 list|lista
 listen|escuchar
 little|pequeño,poco
 live|vivir
-living room|sala de estar,salón
+living room|sala de estar,salón|house
 local|local
 long|largo
 look|mirar
@@ -819,14 +819,14 @@ map|mapa
 mark|nota,marca
 market|mercado
 married|casado
-match|partido,cerilla
+match|partido,cerilla|sport
 matter|importar,asunto
 may|poder,puede
 maybe|quizás,tal vez
 me|me,mí
 meal|comida
 mean|significar,querer decir
-meat|carne
+meat|carne|food
 mechanic|mecánico
 medicine|medicina
 meet|conocer,encontrarse
@@ -842,7 +842,7 @@ middle|medio,centro
 midnight|medianoche
 might|podría,quizá
 mile|milla
-milk|leche
+milk|leche|food
 million|millón
 mind|mente,importar
 mine|mío,mina
@@ -858,18 +858,18 @@ model|modelo
 modern|moderno
 moment|momento
 money|dinero
-monkey|mono
+monkey|mono|animals
 month|mes
 monthly|mensual,mensualmente
 moon|luna
 more|más
 morning|mañana
 most|la mayoría,más
-mother|madre
+mother|madre|family
 motorbike|moto,motocicleta
 motorway|autopista
 mountain|montaña
-mouse|ratón
+mouse|ratón|animals
 mouth|boca
 move|mover,mudarse
 MP3 player|reproductor de mp3
@@ -939,7 +939,7 @@ omelette|tortilla
 on|sobre,encima de,en
 once|una vez
 one|uno
-onion|cebolla
+onion|cebolla|food
 online|en línea,en internet
 only|solo,solamente,único
 open|abrir,abierto
@@ -947,7 +947,7 @@ opera|ópera
 opinion|opinión
 opposite|opuesto,enfrente
 or|o
-orange|naranja
+orange|naranja|food
 order|pedir,orden,pedido
 other|otro
 our|nuestro
@@ -973,7 +973,7 @@ pale|pálido
 paper|papel
 paragraph|párrafo
 pardon|perdón,disculpe
-parent|padre,madre
+parent|padre,madre|family
 park|parque,aparcar
 part|parte
 partner|pareja,compañero,socio
@@ -983,7 +983,7 @@ passenger|pasajero
 passport|pasaporte
 password|contraseña
 past|pasado
-pasta|pasta
+pasta|pasta|food
 path|camino,sendero
 pay|pagar
 pear|pera
@@ -1015,9 +1015,9 @@ picture|imagen,foto,dibujo
 piece|trozo,pieza
 pillow|almohada
 pilot|piloto
-pink|rosa
+pink|rosa|colours
 pity|lástima,pena
-pizza|pizza
+pizza|pizza|food
 place|lugar,sitio
 plan|plan,planear
 plane|avión
@@ -1050,7 +1050,7 @@ post|correo,enviar por correo
 post office|oficina de correos,correos
 postcard|postal
 poster|póster,cartel
-potato|patata,papa
+potato|patata,papa|food
 practise|practicar
 prepare|preparar
 present|regalo,presente
@@ -1066,7 +1066,7 @@ programme|programa
 project|proyecto
 pull|tirar,jalar
 pupil|alumno,alumna
-purple|morado,púrpura
+purple|morado,púrpura|colours
 purse|monedero
 push|empujar
 put|poner
@@ -1080,8 +1080,8 @@ quickly|rápidamente,deprisa
 quiet|tranquilo,callado
 quite|bastante
 quiz|concurso,cuestionario
-rabbit|conejo
-race|carrera
+rabbit|conejo|animals
+race|carrera|sport
 racket|raqueta
 radio|radio
 railway|ferrocarril,vía del tren
@@ -1098,7 +1098,7 @@ receipt|recibo,ticket
 receive|recibir
 receptionist|recepcionista
 record|grabar,récord,disco
-red|rojo
+red|rojo|colours
 refrigerator|nevera,frigorífico
 remember|recordar
 rent|alquilar,alquiler
@@ -1107,7 +1107,7 @@ repeat|repetir
 rest|descansar,descanso,resto
 restaurant|restaurante
 return|volver,regresar,devolver
-rice|arroz
+rice|arroz|food
 rich|rico
 ride|montar,paseo
 right|derecha,correcto
@@ -1122,26 +1122,26 @@ room|habitación,sala
 round|redondo,alrededor
 roundabout|rotonda
 rubber|goma,caucho
-rugby|rugby
+rugby|rugby|sport
 ruler|regla
-run|correr
+run|correr|sport
 runner|corredor,corredora
-running|correr,carrera
+running|correr,carrera|sport
 sad|triste
 safe|seguro
 sail|navegar,vela
 sailing|vela,navegación
-salad|ensalada
+salad|ensalada|food
 sale|venta,rebajas
 salt|sal
 same|mismo,igual
-sandwich|bocadillo,sándwich
+sandwich|bocadillo,sándwich|food
 sauce|salsa
 sausage|salchicha
 save|guardar,ahorrar,salvar
 say|decir
 scared|asustado
-scarf|bufanda
+scarf|bufanda|clothes
 scary|de miedo,que da miedo
 school|colegio,escuela
 schoolchild|escolar,colegial
@@ -1166,12 +1166,12 @@ shame|vergüenza,lástima
 shampoo|champú
 share|compartir
 she|ella
-sheep|oveja
+sheep|oveja|animals
 sheet|sábana,hoja
 shelf|estante,balda
 ship|barco,buque
-shirt|camisa
-shoe|zapato
+shirt|camisa|clothes
+shoe|zapato|clothes
 shop|tienda
 shop assistant|dependiente,dependienta
 shopping|compras
@@ -1194,19 +1194,19 @@ singer|cantante
 singing|canto,cantar
 single|soltero,individual,solo
 sink|fregadero,lavabo
-sister|hermana
+sister|hermana|family
 sit|sentarse
 sit down|sentarse
 site|sitio,lugar
 sitting room|sala de estar,salón
 size|tamaño,talla
-skate|patinar,patín
-skateboard|monopatín,skate
+skate|patinar,patín|sport
+skateboard|monopatín,skate|sport
 skateboarding|monopatín,skate
 skating|patinaje
-ski|esquiar,esquí
-skiing|esquí
-skirt|falda
+ski|esquiar,esquí|sport
+skiing|esquí|sport
+skirt|falda|clothes
 sky|cielo
 sleep|dormir
 slice|rebanada,trozo,loncha
@@ -1217,15 +1217,15 @@ small|pequeño
 smoke|humo,fumar
 smoking|fumar
 snack|tentempié,aperitivo,merienda
-snake|serpiente
+snake|serpiente|animals
 snow|nieve,nevar
 snowboard|snowboard,tabla de snowboard
 snowboarding|snowboard
 so|así que,tan
 soap|jabón
 soccer|fútbol
-sock|calcetín
-sofa|sofá
+sock|calcetín|clothes
+sofa|sofá|house
 soft|suave,blando
 software|software,programa
 some|algunos,algo de
@@ -1234,13 +1234,13 @@ someone|alguien
 something|algo
 sometimes|a veces
 somewhere|en algún sitio
-son|hijo
+son|hijo|family
 song|canción
 soon|pronto
 sorry|lo siento,perdón
 sort|tipo,clase
 sound|sonido,sonar
-soup|sopa
+soup|sopa|food
 south|sur
 space|espacio
 spare|de repuesto,libre
@@ -1251,7 +1251,7 @@ spell|deletrear
 spelling|ortografía,deletreo
 spend|gastar,pasar
 spoon|cuchara
-sport|deporte
+sport|deporte|sport
 sports centre|polideportivo,centro deportivo
 spring|primavera
 square|cuadrado,plaza
@@ -1290,7 +1290,7 @@ success|éxito
 successful|exitoso,con éxito
 such|tal,tan
 suddenly|de repente,de pronto
-sugar|azúcar
+sugar|azúcar|food
 suit|traje
 suitcase|maleta
 summer|verano
@@ -1307,14 +1307,14 @@ surfing|surf
 surname|apellido
 surprise|sorpresa,sorprender
 surprised|sorprendido
-sweater|suéter,jersey
+sweater|suéter,jersey|clothes
 sweet|dulce,caramelo
-swim|nadar
-swimming|natación
+swim|nadar|sport
+swimming|natación|sport
 swimming pool|piscina
 swimsuit|bañador,traje de baño
-T-shirt|camiseta
-table|mesa
+T-shirt|camiseta|clothes
+table|mesa|house
 table tennis|tenis de mesa,ping pong
 tablet|tableta,pastilla
 take|coger,tomar,llevar
@@ -1323,15 +1323,15 @@ take part|participar
 talk|hablar,charla
 tall|alto
 taxi|taxi
-tea|té
+tea|té|food
 teach|enseñar
 teacher|profesor,profesora,maestro,maestra
-team|equipo
+team|equipo|sport
 teenager|adolescente
 telephone|teléfono
 tell|decir,contar
 temperature|temperatura
-tennis|tenis
+tennis|tenis|sport
 tent|tienda de campaña
 term|trimestre,término
 terrible|terrible
@@ -1366,7 +1366,7 @@ ticket|entrada,billete,boleto
 tidy|ordenado,ordenar
 tidy up|ordenar,recoger
 tie|corbata,atar
-tiger|tigre
+tiger|tigre|animals
 tights|medias,leotardos
 till|hasta
 time|tiempo,hora,vez
@@ -1379,7 +1379,7 @@ today|hoy
 toe|dedo del pie
 together|juntos
 toilet|váter,inodoro,baño
-tomato|tomate
+tomato|tomate|food
 tomorrow|mañana
 tonight|esta noche
 too|también,demasiado
@@ -1405,7 +1405,7 @@ travel|viajar
 tree|árbol
 trip|viaje,excursión
 trouble|problema,lío
-trousers|pantalones
+trousers|pantalones|clothes
 true|verdadero,cierto
 try|intentar,probar
 try on|probarse
@@ -1415,13 +1415,13 @@ turn on|encender
 twice|dos veces
 type|tipo,escribir a máquina
 umbrella|paraguas
-uncle|tío
+uncle|tío|family
 under|debajo de,bajo
 underground|metro,subterráneo
 understand|entender,comprender
 unfortunately|desafortunadamente,por desgracia
 unhappy|infeliz,triste
-uniform|uniforme
+uniform|uniforme|clothes
 university|universidad
 until|hasta
 unusual|inusual,raro
@@ -1436,7 +1436,7 @@ usual|habitual,usual
 usually|normalmente,generalmente
 variety|variedad
 various|varios
-vegetable|verdura,vegetal
+vegetable|verdura,vegetal|food
 very|muy
 video|vídeo,video
 video game|videojuego
@@ -1446,7 +1446,7 @@ violin|violín
 visit|visitar,visita
 visitor|visitante
 vocabulary|vocabulario
-volleyball|voleibol,balonvolea
+volleyball|voleibol,balonvolea|sport
 wait|esperar
 waiter|camarero
 waitress|camarera
@@ -1464,7 +1464,7 @@ wash up|fregar los platos,lavar los platos
 washing machine|lavadora
 washing-up|fregar los platos,platos sucios
 watch|mirar,reloj,ver
-water|agua
+water|agua|food
 way|camino,manera,forma
 we|nosotros
 wear|llevar puesto,vestir
@@ -1488,18 +1488,18 @@ when|cuándo,cuando
 where|dónde,donde
 which|cuál,cuáles,que
 while|mientras
-white|blanco
+white|blanco|colours
 who|quién,quiénes
 whole|entero,todo
 whose|de quién,cuyo
 why|por qué
 wide|ancho
-wife|esposa,mujer
+wife|esposa,mujer|family
 wifi|wifi
 wild|salvaje
 win|ganar
 wind|viento
-window|ventana
+window|ventana|house
 windsurfing|windsurf
 windy|ventoso,con viento
 winner|ganador,ganadora
@@ -1529,7 +1529,7 @@ writing|escritura,escribir
 wrong|equivocado,incorrecto,mal
 Yeah!|¡sí!,sí
 year|año
-yellow|amarillo
+yellow|amarillo|colours
 yes|sí
 yesterday|ayer
 yet|todavía,aún,ya
@@ -1545,7 +1545,7 @@ car park|aparcamiento,estacionamiento
 elevator|ascensor
 gas|gasolina,gas
 gas station|gasolinera
-grey|gris
+grey|gris|colours
 grocery store|tienda de comestibles,tienda de alimentación
 jewellery|joyas,joyería
 litre|litro

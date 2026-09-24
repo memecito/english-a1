@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
-"""Genera words.js a partir de data/translations.txt (formato: ingles|es1,es2,...).
+"""Genera words.js a partir de data/translations.txt
+(formato: ingles|es1,es2,...  o  ingles|es1,es2,...|categoria).
 
 Las palabras en inglés salen de documents/vocabulary-list.pdf (Cambridge A2 Key);
 la lista original solo trae inglés, las traducciones son de data/translations.txt.
 Palabras puramente gramaticales o ambiguas se excluyen (SKIP).
+La categoría (3er campo) es opcional: solo algunas palabras la tienen,
+sirve para el filtro "por temática" del juego.
 """
 import json, pathlib
 
@@ -16,13 +19,18 @@ words, seen = [], set()
 for line in (ROOT / "data/translations.txt").read_text(encoding="utf8").splitlines():
     if "|" not in line:
         continue
-    raw, es = line.split("|", 1)
+    parts = line.split("|")
+    raw, es = parts[0], parts[1]
+    cat = parts[2].strip() if len(parts) > 2 and parts[2].strip() else None
     key = raw.strip().lower()
     if key in SKIP or key in seen:
         continue
     seen.add(key)
     en = ORDER.get(key) or [v.strip() for v in raw.split("/") if v.strip()]
-    words.append({"en": en, "es": [v.strip() for v in es.split(",") if v.strip()]})
+    entry = {"en": en, "es": [v.strip() for v in es.split(",") if v.strip()]}
+    if cat:
+        entry["cat"] = cat
+    words.append(entry)
 
 words.sort(key=lambda w: w["en"][0].lower())
 out = ROOT / "words.js"
