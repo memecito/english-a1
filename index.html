@@ -137,7 +137,7 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
       <div class="seg" id="modeSeg">
         <button class="opt" data-mode="letters" aria-pressed="true">🔤 Por letra<small>fácil</small></button>
         <button class="opt" data-mode="mixed" aria-pressed="false">🔀 Mezcladas<small>difícil</small></button>
-        <button class="opt" data-mode="missed" aria-pressed="false">🔁 Mis fallos<small id="missedCount">0 palabras</small></button>
+        <button class="opt" data-mode="review" aria-pressed="false">🔁 Repaso<small id="dueCount">0 palabras</small></button>
       </div>
       <div id="lettersBox">
         <div class="letters" id="letters"></div>
@@ -202,7 +202,7 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
       <div id="endMissedBox" class="hidden">
         <h2>Repasa estas palabras</h2>
         <ul class="missed" id="endMissed"></ul>
-        <p class="hint">Se han guardado en «Mis fallos» para que las practiques luego.</p>
+        <p class="hint">Se han guardado en «Repaso» para que las practiques luego.</p>
       </div>
     </div>
     <button class="primary" id="againBtn">Jugar otra vez 🔁</button>
@@ -240,6 +240,8 @@ const LEVELS = [
   [1500, "🦄", "Unicornio"], [3000, "🐉", "Dragón del inglés"], [6000, "👑", "Reina del vocabulario"]
 ];
 const MAX_LIVES = 3;
+// Sistema Leitner: caja 0-4, días hasta la próxima revisión por caja
+const BOX_INTERVALS = [0, 1, 3, 7, 16];
 
 const pad = n => String(n).padStart(2, "0");
 const dayKey = (d = new Date()) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`; // fecha LOCAL
@@ -258,10 +260,25 @@ const letterOf = w => w.en[0][0].toUpperCase();
 
 /* ====================== Almacenamiento ====================== */
 function load() {
-  const base = { days: {}, missed: {}, total: 0, best: 0, correct: 0, opts: { speak: true, sound: true } };
+  const base = { days: {}, leitner: {}, total: 0, best: 0, correct: 0, opts: { speak: true, sound: true } };
   try {
     const raw = localStorage.getItem(KEY);
-    if (raw) return Object.assign(base, JSON.parse(raw));
+    if (raw) {
+      const saved = JSON.parse(raw);
+      const db = Object.assign(base, saved);
+      if (saved.missed && !saved.leitner) {
+        // migración desde el contador plano de fallos al sistema Leitner:
+        // las palabras que fallaban antes entran hoy mismo en caja 0
+        const today = dayKey();
+        db.leitner = {};
+        Object.keys(saved.missed).forEach(k => { db.leitner[k] = { box: 0, due: today }; });
+        delete db.missed;
+        try { localStorage.setItem(KEY, JSON.stringify(db)); } catch (e) {} // persistir la migración ya, no esperar al próximo save()
+        return db;
+      }
+      delete db.missed;
+      return db;
+    }
   } catch (e) { /* almacenamiento bloqueado: seguimos sin guardar */ }
   return base;
 }
@@ -326,10 +343,22 @@ function buildLetters() {
     box.append(b);
   });
 }
-function missedWords() { return WORDS.filter(w => db.missed[w.en[0]]); }
+function dueWords() {
+  const t = dayKey();
+  return WORDS.filter(w => { const r = db.leitner[w.en[0]]; return r && r.due <= t; });
+}
+// Actualiza la caja Leitner de una palabra tras responder.
+// ok=false -> vuelve a caja 0. ok=true con pista -> se queda en su caja (no cuenta como recuerdo real).
+// ok=true sin pista -> sube de caja (máx. la última) y se aleja la próxima revisión.
+function leitnerReview(enKey, ok, hinted) {
+  const cur = db.leitner[enKey] || { box: 0 };
+  const box = !ok ? 0 : (hinted ? cur.box : Math.min(cur.box + 1, BOX_INTERVALS.length - 1));
+  const due = new Date(); due.setDate(due.getDate() + BOX_INTERVALS[box]);
+  db.leitner[enKey] = { box, due: dayKey(due) };
+}
 function pool() {
   if (cfg.mode === "mixed") return WORDS;
-  if (cfg.mode === "missed") return missedWords();
+  if (cfg.mode === "review") return dueWords();
   return WORDS.filter(w => cfg.letters.has(letterOf(w)));
 }
 function refreshHome() {
@@ -338,13 +367,13 @@ function refreshHome() {
   $("lvNext").textContent = nx ? `${db.total} pts · faltan ${nx[0] - db.total} para ${nx[1]} ${nx[2]}` : `${db.total} pts · ¡nivel máximo!`;
   $("lvBar").style.width = (nx ? (db.total - lv[0]) / (nx[0] - lv[0]) * 100 : 100) + "%";
   $("stToday").textContent = t.points; $("stStreak").textContent = streakDays(); $("stBest").textContent = db.best;
-  $("missedCount").textContent = `${missedWords().length} palabras`;
+  $("dueCount").textContent = `${dueWords().length} palabras`;
   document.querySelectorAll("#modeSeg .opt").forEach(b => b.setAttribute("aria-pressed", b.dataset.mode === cfg.mode));
   document.querySelectorAll("#dirSeg .opt").forEach(b => b.setAttribute("aria-pressed", b.dataset.dir === cfg.dir));
   document.querySelectorAll("#letters .letter").forEach(b => b.setAttribute("aria-pressed", cfg.letters.has(b.dataset.l)));
   $("lettersBox").classList.toggle("hidden", cfg.mode !== "letters");
   const n = pool().length;
-  $("poolInfo").textContent = cfg.mode === "missed" && !n ? "Aún no tienes fallos guardados. ¡Juega y vuelve a repasarlos!" : `${n} palabras para practicar`;
+  $("poolInfo").textContent = cfg.mode === "review" && !n ? "No tienes palabras pendientes de repaso hoy. ¡Vuelve mañana o sigue practicando otras!" : `${n} palabras para practicar`;
   $("startBtn").disabled = n < 1;
   $("optSpeak").checked = db.opts.speak; $("optSound").checked = db.opts.sound;
 }
@@ -440,13 +469,13 @@ function answer(kind) { // kind: "check" | "skip"
     G.streak++; G.right++;
     const base = G.cur.dir === "es-en" ? 15 : 10;
     const pts = Math.max(1, base + Math.min(Math.floor(G.streak / 3) * 2, 10) - (G.hinted ? 5 : 0));
-    G.score += pts; delete db.missed[G.cur.w.en[0]];
+    G.score += pts; leitnerReview(G.cur.w.en[0], true, G.hinted);
     fb.classList.add("ok"); fb.append(`✅ ¡Correcto! +${pts}${G.streak >= 3 ? ` (racha ×${G.streak} 🔥)` : ""}`, sol);
     setMascot(G.streak >= 3 ? "🤩" : "😄"); sndOk(); floatText(`+${pts}`);
     if (G.cur.dir === "es-en" && db.opts.speak) say(G.cur.w.en[0]);
   } else {
     G.streak = 0; G.wrong++; G.lives--;
-    db.missed[G.cur.w.en[0]] = (db.missed[G.cur.w.en[0]] || 0) + 1;
+    leitnerReview(G.cur.w.en[0], false, G.hinted);
     if (!G.missedList.includes(G.cur.w)) G.missedList.push(G.cur.w);
     fb.classList.add("ko"); fb.append(kind === "skip" ? "Esta era:" : "❌ Casi… la respuesta era:", sol);
     setMascot("😿"); sndKo(); $("qCard").classList.remove("shake"); void $("qCard").offsetWidth; $("qCard").classList.add("shake");
@@ -556,7 +585,7 @@ function maxStreak() {
 }
 $("resetBtn").onclick = () => {
   if (confirm("¿Seguro que quieres borrar TODO el historial y los puntos? No se puede deshacer.")) {
-    db = { days: {}, missed: {}, total: 0, best: 0, correct: 0, opts: db.opts };
+    db = { days: {}, leitner: {}, total: 0, best: 0, correct: 0, opts: db.opts };
     save(); renderHistory();
   }
 };
