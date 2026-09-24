@@ -142,5 +142,41 @@ const TOPICS = [
 
       <p><b>Truco para no liarte:</b> si el verbo es regular, casi siempre suena a "-d" al final (watched, liked). Si al decirlo en pasado no suena así (go→went, see→saw), seguramente es irregular — toca memorizarlo.</p>
     `
+  },
+  {
+    id: "adverbsFrequency",
+    emoji: "🔁",
+    title: "Adverbios de frecuencia",
+    html: `
+      <p>Los <b>adverbios de frecuencia</b> dicen con qué frecuencia pasa algo.</p>
+
+      <table>
+        <thead><tr><th>Inglés</th><th>Español</th><th>Frecuencia</th></tr></thead>
+        <tbody>
+          <tr><td><b>always</b></td><td>siempre</td><td>100%</td></tr>
+          <tr><td><b>usually</b></td><td>normalmente</td><td>~90%</td></tr>
+          <tr><td><b>often</b></td><td>a menudo</td><td>~70%</td></tr>
+          <tr><td><b>sometimes</b></td><td>a veces</td><td>~30%</td></tr>
+          <tr><td><b>never</b></td><td>nunca</td><td>0%</td></tr>
+        </tbody>
+      </table>
+
+      <p>Lo importante de estos adverbios no es solo su significado — ya los conoces de vocabulario — sino <b>dónde van en la frase</b>. Ahí es donde suelen fallar los exámenes.</p>
+
+      <h3>Regla 1 — Después del verbo "be"</h3>
+      <p><i>They are <b>always</b> happy at the weekend.</i></p>
+
+      <h3>Regla 2 — Antes de los demás verbos</h3>
+      <p><i>I <b>often</b> get home at 5 o'clock.</i></p>
+
+      <h3>Regla 3 — En negativas, entre "don't/doesn't" y el verbo</h3>
+      <p><i>We don't <b>always</b> get up early at the weekend.</i> (= no siempre, a veces sí)</p>
+
+      <h3>Expresiones de tiempo (every day, once a week…)</h3>
+      <p>Van al principio o al final de la frase, nunca en medio:</p>
+      <p><i><b>Every year</b>, we go on holiday to Italy.</i> / <i>I have piano lessons <b>once a week</b>.</i></p>
+
+      <p><b>Truco para no liarte:</b> pregúntate primero si la frase tiene el verbo <i>be</i> (am/is/are) o no. Si SÍ lo tiene, el adverbio va justo después. Si NO (cualquier otro verbo), el adverbio va justo antes.</p>
+    `
   }
 ];

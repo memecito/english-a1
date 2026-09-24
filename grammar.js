@@ -74,5 +74,32 @@ const GRAMMAR = {
       { id: "irr15", text: "Sophie ___ (find) her keys under the sofa.", answers: ["found"] },
       { id: "irr16", text: "Yesterday, we ___ (meet) our new teacher.", answers: ["met"] },
     ]
+  },
+  adverbsFrequency: {
+    title: "Adverbios de frecuencia",
+    emoji: "🔁",
+    topicId: "adverbsFrequency",
+    items: [
+      // regla 1: después de "be"
+      { id: "be1", text: "Sophie is ___ (100%) happy on her birthday.", answers: ["always"] },
+      { id: "be2", text: "The shop is ___ (0%) open on Sundays.", answers: ["never"] },
+      { id: "be3", text: "My grandparents are ___ (90%) tired after a long trip.", answers: ["usually"] },
+      { id: "be4", text: "Thiago is ___ (30%) late for school.", answers: ["sometimes"] },
+      { id: "be5", text: "The bus is ___ (70%) full in the morning.", answers: ["often"] },
+      // regla 2: antes de otros verbos
+      { id: "verb1", text: "Laura ___ (100%) walks to school.", answers: ["always"] },
+      { id: "verb2", text: "Chloe ___ (90%) does her homework after dinner.", answers: ["usually"] },
+      { id: "verb3", text: "We ___ (70%) go to the cinema on Saturdays.", answers: ["often"] },
+      { id: "verb4", text: "Ellie ___ (30%) plays tennis with her dad.", answers: ["sometimes"] },
+      { id: "verb5", text: "Thiago ___ (0%) eats vegetables.", answers: ["never"] },
+      { id: "verb6", text: "The teacher is ___ (70%) strict about homework.", answers: ["often"] },
+      // regla 3: negativas, entre don't/doesn't y el verbo
+      { id: "neg1", text: "I don't ___ get up early at the weekend, but sometimes I do.", answers: ["always"] },
+      { id: "neg2", text: "Sophie doesn't ___ have lunch at school — only on Mondays.", answers: ["usually"] },
+      // expresiones de tiempo (principio o final de la frase)
+      { id: "time1", text: "Laura has piano lessons ___ (1 time per week).", answers: ["once a week"] },
+      { id: "time2", text: "___ (1 time per year), we go on holiday to Spain.", answers: ["every year"] },
+      { id: "time3", text: "Thiago visits his cousins ___ (2 times a year).", answers: ["twice a year"] },
+    ]
   }
 };
