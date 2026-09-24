@@ -221,6 +221,7 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
         <button class="secondary" id="skipBtn" type="button">🤷 No lo sé</button>
       </div>
       <div class="feedback hidden" id="feedback" role="status" aria-live="polite"></div>
+      <div class="actions"><button class="secondary hidden" id="reviewTheoryBtn" type="button">📖 Repasar teoría de este tema</button></div>
       <div class="actions"><button class="primary hidden" id="nextBtn" type="button" style="max-width:320px">Siguiente ➜</button></div>
     </div>
     <p class="hint center" id="progress"></p>
@@ -534,7 +535,7 @@ const G = { active: false };
 function startGame() {
   const words = shuffle(pool().slice());
   Object.assign(G, { active: true, kind: cfg.category, queue: words, i: 0, lives: MAX_LIVES, score: 0, streak: 0, right: 0, wrong: 0,
-    missedList: [], askedEs: new Set(), answered: false, hinted: false, cur: null });
+    wrongStreak: 0, missedList: [], askedEs: new Set(), answered: false, hinted: false, cur: null });
   show("game"); nextQuestion();
 }
 $("startBtn").onclick = startGame;
@@ -547,6 +548,7 @@ function renderHearts() {
 function setMascot(e) { const m = $("mascot"); m.textContent = e; m.classList.add("pop"); setTimeout(() => m.classList.remove("pop"), 250); }
 
 function nextQuestion() {
+  $("reviewTheoryBtn").classList.add("hidden");
   if (G.kind === "grammar") return nextGrammarQuestion();
   // busca la siguiente palabra evitando repetir el mismo enunciado en español
   let q = null, dir;
@@ -628,7 +630,7 @@ function answer(action) { // action: "check" | "skip"
   const leitKey = G.kind === "grammar" ? `gr:${cfg.topic}:${G.cur.item.id}` : G.cur.w.en[0];
 
   if (ok) {
-    G.streak++; G.right++;
+    G.streak++; G.right++; G.wrongStreak = 0;
     const base = G.kind === "grammar" ? 10 : (G.cur.dir === "es-en" ? 15 : 10);
     const pts = Math.max(1, base + Math.min(Math.floor(G.streak / 3) * 2, 10) - (G.hinted ? 5 : 0));
     G.score += pts; leitnerReview(leitKey, true, G.hinted);
@@ -636,7 +638,7 @@ function answer(action) { // action: "check" | "skip"
     setMascot(G.streak >= 3 ? "🤩" : "😄"); sndOk(); floatText(`+${pts}`);
     if (G.kind === "vocab" && G.cur.dir === "es-en" && db.opts.speak) say(G.cur.w.en[0]);
   } else {
-    G.streak = 0; G.wrong++; G.lives--;
+    G.streak = 0; G.wrong++; G.lives--; G.wrongStreak++;
     leitnerReview(leitKey, false, G.hinted);
     const disp = questionDisplay();
     if (!G.missedList.some(m => m.title === disp.title)) G.missedList.push(disp);
@@ -646,6 +648,8 @@ function answer(action) { // action: "check" | "skip"
   }
   $("score").textContent = G.score; $("streak").textContent = G.streak; renderHearts();
   $("actions").classList.add("hidden");
+  const canReview = G.kind === "grammar" && G.wrongStreak >= 2 && TOPICS.some(t => t.id === GRAMMAR[cfg.topic].topicId);
+  $("reviewTheoryBtn").classList.toggle("hidden", !canReview);
   const nb = $("nextBtn"); nb.classList.remove("hidden");
   nb.textContent = G.lives <= 0 ? "Ver resultado 🏁" : "Siguiente ➜"; nb.focus();
 }
@@ -670,8 +674,9 @@ document.addEventListener("keydown", e => {
   }
 });
 
-function finish(quit) {
-  G.active = false;
+// Guarda el resultado de la partida en curso (puntos, historial del día) sin
+// mostrar la pantalla de fin — lo usan tanto finish() como reviewTheory().
+function saveGameResult() {
   const k = dayKey(), d = today(), before = db.best;
   const played = G.right + G.wrong > 0;
   if (played) {
@@ -681,7 +686,12 @@ function finish(quit) {
   const record = played && G.score > before && G.score > 0;
   if (record) db.best = G.score;
   save();
+  return { d, record };
+}
 
+function finish(quit) {
+  G.active = false;
+  const { d, record } = saveGameResult();
   const cleared = !quit && G.lives > 0; // se acabaron las palabras sin perder las 3 vidas
   $("endEmoji").textContent = cleared ? "🏆" : record ? "🎉" : G.right >= 10 ? "😎" : "💪";
   $("endTitle").textContent = cleared ? "¡Te las sabes todas!" : record ? "¡Nuevo récord!" : quit ? "Partida terminada" : "¡Buen intento!";
@@ -700,6 +710,18 @@ function finish(quit) {
   show("end");
   if (record || cleared) { sndWin(); confetti(); }
 }
+
+// Botón contextual tras 2 fallos seguidos en gramática: guarda la partida
+// (como al salir) y va directo a la teoría del tema, sin pasar por "fin".
+function reviewTheory() {
+  G.active = false;
+  saveGameResult();
+  const topic = TOPICS.find(t => t.id === GRAMMAR[cfg.topic].topicId);
+  renderStudy(); // deja la sección Estudiar en su estado normal (pestaña Teoría, lista de temas)
+  show("study");
+  if (topic) openTopic(topic);
+}
+$("reviewTheoryBtn").onclick = reviewTheory;
 
 /* ====================== Historial ====================== */
 function renderHistory() {
