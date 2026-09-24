@@ -299,6 +299,10 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
         <button class="link" id="vocabWordsBack">← Volver a los bloques</button>
         <h2 id="vocabWordsTitle"></h2>
         <ul class="wordlist" id="vocabWordsList"></ul>
+        <div class="actions">
+          <button class="secondary" id="vocabPrevBlock" type="button">← Bloque anterior</button>
+          <button class="secondary" id="vocabNextBlock" type="button">Siguiente bloque →</button>
+        </div>
       </div>
     </div>
   </section>
@@ -865,6 +869,10 @@ function renderVocabWords(L, start) {
     li.append(a, sp, btn);
     list.append(li);
   });
+  $("vocabPrevBlock").classList.toggle("hidden", start <= 0);
+  $("vocabNextBlock").classList.toggle("hidden", start + 10 >= words.length);
+  $("vocabPrevBlock").onclick = () => renderVocabWords(L, start - 10);
+  $("vocabNextBlock").onclick = () => renderVocabWords(L, start + 10);
   window.scrollTo(0, 0);
 }
 $("vocabBlocksBack").onclick = renderVocabLetters;
