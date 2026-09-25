@@ -476,7 +476,7 @@ function leitnerReview(enKey, ok, hinted) {
   db.leitner[enKey] = { box, due: dayKey(due) };
 }
 function pool() {
-  if (cfg.category === "grammar") return GRAMMAR[cfg.topic].items;
+  if (cfg.category === "grammar") return (GRAMMAR[cfg.topic] || {}).items || [];
   if (cfg.mode === "mixed") return WORDS;
   if (cfg.mode === "review") return dueWords();
   if (cfg.mode === "category") return WORDS.filter(w => w.cat && cfg.categories.has(w.cat));
