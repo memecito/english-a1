@@ -101,5 +101,95 @@ const GRAMMAR = {
       { id: "time2", text: "___ (1 time per year), we go on holiday to Spain.", answers: ["every year"] },
       { id: "time3", text: "Thiago visits his cousins ___ (2 times a year).", answers: ["twice a year"] },
     ]
+  },
+  irregularVerbs1: {
+    title: "Irregulares 1: sin cambios",
+    emoji: "🟢",
+    topicId: "irregularVerbPatterns",
+    items: [
+      { id: "v1", text: "The tickets ___ (cost) £10 each.", answers: ["cost"] },
+      { id: "v2", text: "Thiago ___ (cut) the paper with scissors.", answers: ["cut"] },
+      { id: "v3", text: "The ball ___ (hit) the window and broke it.", answers: ["hit"] },
+      { id: "v4", text: "Sophie ___ (hurt) her leg playing football.", answers: ["hurt"] },
+      { id: "v5", text: "My mum ___ (let) me go to the party.", answers: ["let"] },
+      { id: "v6", text: "Laura ___ (put) her books on the table.", answers: ["put"] },
+      { id: "v7", text: "Ellie ___ (read) a great book last weekend.", answers: ["read"] },
+      { id: "v8", text: "Chloe ___ (shut) the door before the film started.", answers: ["shut"] },
+    ]
+  },
+  irregularVerbs2: {
+    title: "Irregulares 2: acaban en -t",
+    emoji: "🟡",
+    topicId: "irregularVerbPatterns",
+    items: [
+      { id: "v1", text: "They ___ (build) a new school in our town.", answers: ["built"] },
+      { id: "v2", text: "Sophie ___ (burn) the toast this morning.", answers: ["burnt", "burned"] },
+      { id: "v3", text: "Thiago ___ (dream) about flying last night.", answers: ["dreamt", "dreamed"] },
+      { id: "v4", text: "Laura ___ (feel) tired after the match.", answers: ["felt"] },
+      { id: "v5", text: "Ellie ___ (keep) all her old photos.", answers: ["kept"] },
+      { id: "v6", text: "Chloe ___ (learn) to swim when she was six.", answers: ["learnt", "learned"] },
+      { id: "v7", text: "Thiago ___ (leave) his phone at home.", answers: ["left"] },
+      { id: "v8", text: "I didn't understand what she ___ (mean).", answers: ["meant"] },
+      { id: "v9", text: "Sophie ___ (send) me a message yesterday.", answers: ["sent"] },
+      { id: "v10", text: "Laura ___ (sleep) for nine hours last night.", answers: ["slept"] },
+      { id: "v11", text: "Can you tell me how you ___ (spell) that word?", answers: ["spelt", "spelled"] },
+      { id: "v12", text: "Thiago ___ (spend) all his money on comics.", answers: ["spent"] },
+    ]
+  },
+  irregularVerbs3: {
+    title: "Irregulares 3: mismo pasado y participio",
+    emoji: "🟠",
+    topicId: "irregularVerbPatterns",
+    items: [
+      { id: "v1", text: "Ellie ___ (catch) the ball with one hand.", answers: ["caught"] },
+      { id: "v2", text: "I ___ (hear) a strange noise last night.", answers: ["heard"] },
+      { id: "v3", text: "Thiago ___ (lie) about his age.", answers: ["lied"] },
+      { id: "v4", text: "Sophie ___ (lose) her keys again.", answers: ["lost"] },
+      { id: "v5", text: "Laura ___ (pay) for the tickets.", answers: ["paid"] },
+      { id: "v6", text: "Chloe ___ (say) she was busy.", answers: ["said"] },
+      { id: "v7", text: "They ___ (sell) their old car last month.", answers: ["sold"] },
+      { id: "v8", text: "Ellie ___ (sit) next to her best friend.", answers: ["sat"] },
+      { id: "v9", text: "We ___ (stand) in the queue for an hour.", answers: ["stood"] },
+      { id: "v10", text: "Our teacher ___ (teach) us how to draw.", answers: ["taught"] },
+      { id: "v11", text: "Thiago ___ (tell) everyone about the trip.", answers: ["told"] },
+      { id: "v12", text: "I ___ (think) it was a great film.", answers: ["thought"] },
+      { id: "v13", text: "Laura ___ (understand) the joke immediately.", answers: ["understood"] },
+      { id: "v14", text: "Chloe ___ (win) the school competition.", answers: ["won"] },
+    ]
+  },
+  irregularVerbs4: {
+    title: "Irregulares 4: tres formas (I)",
+    emoji: "🔴",
+    topicId: "irregularVerbPatterns",
+    items: [
+      { id: "v1", text: "Sophie ___ (be) very happy yesterday.", answers: ["was"] },
+      { id: "v2", text: "Thiago ___ (become) the captain of the team last year.", answers: ["became"] },
+      { id: "v3", text: "The film ___ (begin) at 7 o'clock.", answers: ["began"] },
+      { id: "v4", text: "Laura ___ (choose) the blue dress.", answers: ["chose"] },
+      { id: "v5", text: "Ellie ___ (draw) a picture of her dog.", answers: ["drew"] },
+      { id: "v6", text: "My dad ___ (drive) us to the airport.", answers: ["drove"] },
+      { id: "v7", text: "Thiago ___ (fall) off his bike yesterday.", answers: ["fell"] },
+      { id: "v8", text: "We ___ (fly) to Italy last summer.", answers: ["flew"] },
+      { id: "v9", text: "Sophie ___ (forget) her homework at home.", answers: ["forgot"] },
+      { id: "v10", text: "That tree ___ (grow) very fast this year.", answers: ["grew"] },
+      { id: "v11", text: "I ___ (know) the answer, but I didn't say it.", answers: ["knew"] },
+    ]
+  },
+  irregularVerbs5: {
+    title: "Irregulares 5: tres formas (II)",
+    emoji: "🔴",
+    topicId: "irregularVerbPatterns",
+    items: [
+      { id: "v1", text: "Laura ___ (ride) her bike to school.", answers: ["rode"] },
+      { id: "v2", text: "Thiago ___ (run) five kilometres yesterday.", answers: ["ran"] },
+      { id: "v3", text: "Chloe ___ (show) me her new phone.", answers: ["showed"] },
+      { id: "v4", text: "Ellie ___ (sing) a song at the party.", answers: ["sang"] },
+      { id: "v5", text: "Sophie ___ (speak) to her teacher after class.", answers: ["spoke"] },
+      { id: "v6", text: "Somebody ___ (steal) Thiago's bike last week.", answers: ["stole"] },
+      { id: "v7", text: "We ___ (swim) in the sea on holiday.", answers: ["swam"] },
+      { id: "v8", text: "Laura ___ (throw) the ball to her friend.", answers: ["threw"] },
+      { id: "v9", text: "I ___ (wake) up early this morning.", answers: ["woke"] },
+      { id: "v10", text: "Chloe ___ (wear) a red dress to the party.", answers: ["wore"] },
+    ]
   }
 };

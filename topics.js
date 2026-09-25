@@ -178,5 +178,64 @@ const TOPICS = [
 
       <p><b>Truco para no liarte:</b> pregúntate primero si la frase tiene el verbo <i>be</i> (am/is/are) o no. Si SÍ lo tiene, el adverbio va justo después. Si NO (cualquier otro verbo), el adverbio va justo antes.</p>
     `
+  },
+  {
+    id: "irregularVerbPatterns",
+    emoji: "🧩",
+    title: "Verbos irregulares: patrones para memorizar",
+    html: `
+      <p>Los verbos irregulares no siguen ninguna regla de ortografía (a diferencia de los regulares, que siempre añaden <i>-ed</i>) — hay que memorizarlos uno a uno. Pero memorizar 55 palabras sueltas es muy difícil. <b>Truco:</b> si los agrupas por patrón, aprendes varios a la vez en vez de uno por uno.</p>
+
+      <p>Por eso los ejercicios están en <b>5 lotes</b>, del más fácil al más difícil.</p>
+
+      <h3>Lote 1 — No cambian nada 🟢</h3>
+      <p>El pasado y el participio son <b>iguales que el infinitivo</b>. Solo tienes que aprender que NO cambian.</p>
+      <table>
+        <thead><tr><th>Verbo</th><th>Pasado</th></tr></thead>
+        <tbody>
+          <tr><td>cut</td><td><b>cut</b></td></tr>
+          <tr><td>hit</td><td><b>hit</b></td></tr>
+          <tr><td>put</td><td><b>put</b></td></tr>
+          <tr><td>read</td><td><b>read</b> (se escribe igual, ¡pero se pronuncia distinto!)</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Lote 2 — Pasado y participio iguales, acaban en "-t" 🟡</h3>
+      <p>Solo hay que aprender UNA forma nueva (sirve para pasado y para participio a la vez).</p>
+      <table>
+        <thead><tr><th>Verbo</th><th>Pasado = Participio</th></tr></thead>
+        <tbody>
+          <tr><td>feel</td><td><b>felt</b></td></tr>
+          <tr><td>keep</td><td><b>kept</b></td></tr>
+          <tr><td>sleep</td><td><b>slept</b></td></tr>
+          <tr><td>leave</td><td><b>left</b></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Lote 3 — Pasado y participio iguales, otras terminaciones 🟠</h3>
+      <p>Mismo truco que el lote 2 (una sola forma nueva), solo que no acaban en "-t".</p>
+      <table>
+        <thead><tr><th>Verbo</th><th>Pasado = Participio</th></tr></thead>
+        <tbody>
+          <tr><td>say</td><td><b>said</b></td></tr>
+          <tr><td>tell</td><td><b>told</b></td></tr>
+          <tr><td>sit</td><td><b>sat</b></td></tr>
+          <tr><td>win</td><td><b>won</b></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Lotes 4 y 5 — Tres formas distintas 🔴</h3>
+      <p>Los más difíciles: el infinitivo, el pasado y el participio son <b>tres palabras diferentes</b>. Aquí no hay atajo — toca memorizar las tres, pero como ya dominas los otros lotes, solo quedan estos.</p>
+      <table>
+        <thead><tr><th>Verbo</th><th>Pasado</th><th>Participio</th></tr></thead>
+        <tbody>
+          <tr><td>go</td><td>went</td><td>gone/been</td></tr>
+          <tr><td>speak</td><td>spoke</td><td>spoken</td></tr>
+          <tr><td>swim</td><td>swam</td><td>swum</td></tr>
+        </tbody>
+      </table>
+
+      <p><b>Consejo:</b> haz los lotes en orden (1→5) — cada uno te prepara un poco para el siguiente.</p>
+    `
   }
 ];
