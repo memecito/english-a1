@@ -191,5 +191,32 @@ const GRAMMAR = {
       { id: "v9", text: "I ___ (wake) up early this morning.", answers: ["woke"] },
       { id: "v10", text: "Chloe ___ (wear) a red dress to the party.", answers: ["wore"] },
     ]
+  },
+  haveGot: {
+    title: "Have got",
+    emoji: "🎒",
+    topicId: "haveGot",
+    items: [
+      // afirmativa
+      { id: "aff1", text: "Sophie ___ got a big bedroom.", answers: ["has"] },
+      { id: "aff2", text: "Thiago and Laura ___ got a new house.", answers: ["have"] },
+      { id: "aff3", text: "I ___ got two brothers and a sister.", answers: ["have"] },
+      { id: "aff4", text: "Ellie ___ got blue eyes.", answers: ["has"] },
+      { id: "aff5", text: "My dad ___ got a car.", answers: ["has"] },
+      { id: "aff6", text: "We ___ got a big garden.", answers: ["have"] },
+      { id: "aff7", text: "My cat ___ got a long tail.", answers: ["has"] },
+      // negativa
+      { id: "neg1", text: "Chloe ___ got any homework today.", answers: ["hasn't"] },
+      { id: "neg2", text: "I ___ got a desk in my room.", answers: ["haven't"] },
+      { id: "neg3", text: "Thiago and Sophie ___ got a dog.", answers: ["haven't"] },
+      // pregunta
+      { id: "q1", text: "___ you got a bike, Thiago?", answers: ["have"] },
+      { id: "q2", text: "___ Sophie got a swimming pool?", answers: ["has"] },
+      // respuestas cortas (sin "got")
+      { id: "sa1", text: "Has your sister got a bike? Yes, she ___.", answers: ["has"] },
+      { id: "sa2", text: "Has Ellie got a cat? No, she ___.", answers: ["hasn't"] },
+      { id: "sa3", text: "Have you got a pet? No, I ___.", answers: ["haven't"] },
+      { id: "sa4", text: "Have your parents got a new car? Yes, they ___.", answers: ["have"] },
+    ]
   }
 };

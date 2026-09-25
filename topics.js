@@ -237,5 +237,45 @@ const TOPICS = [
 
       <p><b>Consejo:</b> haz los lotes en orden (1→5) — cada uno te prepara un poco para el siguiente.</p>
     `
+  },
+  {
+    id: "haveGot",
+    emoji: "🎒",
+    title: "Have got",
+    html: `
+      <p><b>Have got</b> significa "tener" — se usa muchísimo en inglés británico (el de los exámenes Cambridge) para hablar de posesión, familia y cómo es alguien físicamente.</p>
+
+      <table>
+        <thead><tr><th>Sujeto</th><th>Afirmativa</th><th>Negativa</th></tr></thead>
+        <tbody>
+          <tr><td>I / you / we / they</td><td><b>have got</b></td><td>haven't got</td></tr>
+          <tr><td>he / she / it</td><td><b>has got</b></td><td>hasn't got</td></tr>
+        </tbody>
+      </table>
+      <p><i>I<b>'ve got</b> a new bike. She<b>'s got</b> blue eyes.</i> (en inglés hablado casi siempre se contrae: 've got, 's got)</p>
+
+      <h3>Preguntas</h3>
+      <table>
+        <thead><tr><th></th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td>you/we/they</td><td><b>Have</b> you got a pet?</td></tr>
+          <tr><td>he/she/it</td><td><b>Has</b> she got a bike?</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Respuestas cortas — ¡sin "got"!</h3>
+      <p>Este es el error más típico en el examen: en la respuesta corta <b>NO se repite "got"</b>.</p>
+      <p><i>Have you got a dog? Yes, I <b>have</b>.</i> ✅ — <i>Yes, I have got.</i> ❌</p>
+      <p><i>Has he got a car? No, he <b>hasn't</b>.</i> ✅</p>
+
+      <h3>¿Para qué se usa?</h3>
+      <ul>
+        <li>Cosas que tienes: <i>I've got a new phone.</i></li>
+        <li>Cómo es alguien físicamente: <i>She's got brown hair.</i></li>
+        <li>Familia: <i>I've got two brothers.</i></li>
+      </ul>
+
+      <p><b>Truco para no liarte:</b> "got" nunca cambia — lo que cambia es have/has (afirmativa), haven't/hasn't (negativa) y Have/Has (pregunta). En la respuesta corta, "got" desaparece del todo.</p>
+    `
   }
 ];
