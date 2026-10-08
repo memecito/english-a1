@@ -1,10 +1,34 @@
-# Escaneos del libro de texto: ficheros muy grandes y con copyright
-# comercial (Cambridge). No hacen falta para que el juego funcione,
-# solo son fuente para extraer contenido más adelante — se quedan en
-# disco, fuera del repo.
-documents/Cambridge - Complete Key for Schools Student_s Book 2nd Edition (1).pdf
-documents/Complete Key for Schools 2ª edition (2).pdf
+# --- Material de terceros con derechos de autor ---------------------------
+# Escaneos y notas del libro de texto (Cambridge "Complete Key for Schools")
+# y la lista de vocabulario original. Son fuente de trabajo local: el juego
+# no los necesita (tools/build_words.py solo lee data/translations.txt) y
+# no se pueden redistribuir en un repo público.
+documents/
 
-# Backup zip redundante: mismo contenido que ya está versionado suelto
-# en el propio repo (data/, index.html, tools/, words.js).
-vocabulari.zip
+# --- Notas de trabajo locales ---------------------------------------------
+# Contexto para Claude Code con datos personales. Se queda en disco,
+# fuera del repo público.
+CLAUDE.md
+
+# --- Copias de seguridad y artefactos -------------------------------------
+# (vocabulari.zip: backup redundante de lo que ya está versionado suelto)
+*.zip
+*.bak
+*~
+*.swp
+
+# --- Python (tools/) ------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- Secretos y configuración local (por si acaso) ------------------------
+.env
+.env.*
+
+# --- Sistema operativo / editores -----------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
