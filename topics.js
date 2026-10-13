@@ -277,5 +277,49 @@ const TOPICS = [
 
       <p><b>Truco para no liarte:</b> "got" nunca cambia — lo que cambia es have/has (afirmativa), haven't/hasn't (negativa) y Have/Has (pregunta). En la respuesta corta, "got" desaparece del todo.</p>
     `
+  },
+  {
+    id: "toBe",
+    emoji: "🧍",
+    title: "El verbo to be (am / is / are)",
+    html: `
+      <p><b>To be</b> (ser/estar) es el verbo más básico — y el único que no usa "do/does" para preguntas o negativas. Tiene tres formas en presente: <b>am, is, are</b>.</p>
+
+      <table>
+        <thead><tr><th>Sujeto</th><th>Afirmativa</th><th>Negativa</th></tr></thead>
+        <tbody>
+          <tr><td>I</td><td><b>am</b> ('m)</td><td>am not ('m not)</td></tr>
+          <tr><td>you / we / they</td><td><b>are</b> ('re)</td><td>aren't</td></tr>
+          <tr><td>he / she / it</td><td><b>is</b> ('s)</td><td>isn't</td></tr>
+        </tbody>
+      </table>
+      <p><i>I<b>'m</b> 13. She<b>'s</b> from Spain. They<b>'re</b> good friends.</i></p>
+
+      <h3>Preguntas</h3>
+      <p>Para preguntar, el verbo <b>to be</b> se pone al principio — sin "do/does", a diferencia de casi todos los demás verbos.</p>
+      <table>
+        <thead><tr><th></th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td>I</td><td><b>Am</b> I right?</td></tr>
+          <tr><td>you/we/they</td><td><b>Are</b> you ready?</td></tr>
+          <tr><td>he/she/it</td><td><b>Is</b> he your brother?</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Respuestas cortas</h3>
+      <p><i>Are you hungry? Yes, I <b>am</b>.</i> / <i>Is it raining? No, it <b>isn't</b>.</i></p>
+
+      <h3>¿Para qué se usa?</h3>
+      <ul>
+        <li>Nacionalidad: <i>I'm Spanish.</i></li>
+        <li>Edad: <i>She's 11.</i></li>
+        <li>Profesión: <i>My mum is a teacher.</i></li>
+        <li>Sentimientos: <i>Are you happy?</i></li>
+        <li>La hora: <i>It's 9 o'clock.</i></li>
+        <li>Dónde están las cosas: <i>The books are on the table.</i></li>
+      </ul>
+
+      <p><b>Truco para no liarte:</b> si la frase habla de cómo ES o ESTÁ algo/alguien (no de una acción), casi seguro que necesitas "to be" — y nunca "do/does" a su lado.</p>
+    `
   }
 ];

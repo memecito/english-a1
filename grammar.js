@@ -218,5 +218,36 @@ const GRAMMAR = {
       { id: "sa3", text: "Have you got a pet? No, I ___.", answers: ["haven't"] },
       { id: "sa4", text: "Have your parents got a new car? Yes, they ___.", answers: ["have"] },
     ]
+  },
+  toBe: {
+    title: "El verbo to be",
+    emoji: "🧍",
+    topicId: "toBe",
+    items: [
+      // afirmativa
+      { id: "aff1", text: "I ___ 11 years old.", answers: ["am"] },
+      { id: "aff2", text: "Sophie ___ from Spain.", answers: ["is"] },
+      { id: "aff3", text: "Thiago and Laura ___ good friends.", answers: ["are"] },
+      { id: "aff4", text: "My mum ___ a teacher.", answers: ["is"] },
+      { id: "aff5", text: "We ___ happy today.", answers: ["are"] },
+      { id: "aff6", text: "It ___ 9 o'clock.", answers: ["is"] },
+      // negativa
+      { id: "neg1", text: "I ___ tired today.", answers: ["am not"] },
+      { id: "neg2", text: "Chloe ___ at school today. She's ill.", answers: ["isn't", "is not"] },
+      { id: "neg3", text: "Thiago and Ellie ___ at home — they're at the park.", answers: ["aren't", "are not"] },
+      { id: "neg4", text: "This exercise ___ difficult.", answers: ["isn't", "is not"] },
+      { id: "neg5", text: "We ___ late for the bus.", answers: ["aren't", "are not"] },
+      // pregunta
+      { id: "q1", text: "___ you ready, Sophie?", answers: ["are"] },
+      { id: "q2", text: "___ Thiago your brother?", answers: ["is"] },
+      { id: "q3", text: "___ I right?", answers: ["am"] },
+      { id: "q4", text: "___ your parents from London?", answers: ["are"] },
+      // respuestas cortas
+      { id: "sa1", text: "Are you hungry? Yes, I ___.", answers: ["am"] },
+      { id: "sa2", text: "Is Laura your friend? Yes, she ___.", answers: ["is"] },
+      { id: "sa3", text: "Are Chloe and Ellie sisters? No, they ___.", answers: ["aren't", "are not"] },
+      { id: "sa4", text: "Is it raining? No, it ___.", answers: ["isn't", "is not"] },
+      { id: "sa5", text: "Am I late? No, you ___.", answers: ["aren't", "are not"] },
+    ]
   }
 };
