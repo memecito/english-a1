@@ -140,6 +140,7 @@ biology|biología
 bird|pájaro,ave|animals
 birth|nacimiento
 birthday|cumpleaños
+biscuit|galleta|food
 bit|poco,trozo
 black|negro|colours
 blackboard|pizarra
@@ -686,7 +687,7 @@ hurt|hacer daño,doler
 husband|marido,esposo|family
 I|yo
 ice|hielo
-ice cream|helado
+ice cream|helado|food
 ice skating|patinaje sobre hielo
 ID|identificación,documento de identidad
 ID card|carné de identidad,documento de identidad
@@ -762,7 +763,7 @@ left|izquierda,izquierdo
 left-hand|de la izquierda
 leg|pierna
 lemon|limón|food
-lemonade|limonada
+lemonade|limonada|food
 lend|prestar
 length|longitud,largo
 less|menos
@@ -948,6 +949,7 @@ opinion|opinión
 opposite|opuesto,enfrente
 or|o
 orange|naranja|food
+orange juice|zumo de naranja,jugo de naranja|food
 order|pedir,orden,pedido
 other|otro
 our|nuestro

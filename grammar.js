@@ -249,5 +249,56 @@ const GRAMMAR = {
       { id: "sa4", text: "Is it raining? No, it ___.", answers: ["isn't", "is not"] },
       { id: "sa5", text: "Am I late? No, you ___.", answers: ["aren't", "are not"] },
     ]
+  },
+  countableUncountable: {
+    title: "Contables, incontables y some/any",
+    emoji: "🍚",
+    topicId: "countableUncountable",
+    items: [
+      // some: afirmativa, ofertas, peticiones
+      { id: "some1", text: "I've got ___ apples in my bag.", answers: ["some"] },
+      { id: "some2", text: "Would you like ___ coffee?", answers: ["some"] },
+      { id: "some3", text: "Can I have ___ sugar, please?", answers: ["some"] },
+      { id: "some4", text: "She's got ___ money in her pocket.", answers: ["some"] },
+      { id: "some5", text: "Could you buy ___ eggs, please?", answers: ["some"] },
+      { id: "some6", text: "We need ___ sandwiches for the party.", answers: ["some"] },
+      { id: "some7", text: "I've got ___ friends in London.", answers: ["some"] },
+      // any: negativa y pregunta
+      { id: "any1", text: "We haven't got ___ milk.", answers: ["any"] },
+      { id: "any2", text: "Have you got ___ brothers?", answers: ["any"] },
+      { id: "any3", text: "There isn't ___ bread in the kitchen.", answers: ["any"] },
+      { id: "any4", text: "Do you have ___ questions?", answers: ["any"] },
+      { id: "any5", text: "I don't want ___ chips.", answers: ["any"] },
+      { id: "any6", text: "I don't want ___ rice.", answers: ["any"] },
+      { id: "any7", text: "Is there ___ cheese in the fridge?", answers: ["any"] },
+      { id: "any8", text: "There aren't ___ eggs left.", answers: ["any"] },
+      // a / an con contables en singular
+      { id: "art1", text: "I'd like ___ orange, please.", answers: ["an"] },
+      { id: "art2", text: "Can I have ___ biscuit?", answers: ["a"] },
+      { id: "art3", text: "Would you like ___ apple?", answers: ["an"] },
+    ]
+  },
+  quantifiers: {
+    title: "How much / how many, a few / a little / a lot of",
+    emoji: "📏",
+    topicId: "quantifiers",
+    items: [
+      // how many / how much
+      { id: "hm1", text: "___ apples do you need for the cake?", answers: ["how many"] },
+      { id: "hm2", text: "___ milk do you need?", answers: ["how much"] },
+      { id: "hm3", text: "___ brothers have you got?", answers: ["how many"] },
+      { id: "hm4", text: "___ water is there in the bottle?", answers: ["how much"] },
+      { id: "hm5", text: "___ biscuits are in the box?", answers: ["how many"] },
+      { id: "hm6", text: "___ sugar do we need?", answers: ["how much"] },
+      // a few / a little / a lot of
+      { id: "q1", text: "I need ___ eggs — just three.", answers: ["a few"] },
+      { id: "q2", text: "Add ___ salt to the soup.", answers: ["a little"] },
+      { id: "q3", text: "She's got ___ friends — more than a hundred!", answers: ["a lot of"] },
+      { id: "q4", text: "There's ___ milk left — just enough for one cup.", answers: ["a little"] },
+      { id: "q5", text: "We've got ___ chairs — only two or three.", answers: ["a few"] },
+      { id: "q6", text: "He drinks ___ water every day — about two litres.", answers: ["a lot of"] },
+      { id: "q7", text: "I've got ___ money, so let's go to the cinema.", answers: ["a lot of"] },
+      { id: "q8", text: "There are ___ biscuits left — just two.", answers: ["a few"] },
+    ]
   }
 };

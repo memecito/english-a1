@@ -321,5 +321,75 @@ const TOPICS = [
 
       <p><b>Truco para no liarte:</b> si la frase habla de cómo ES o ESTÁ algo/alguien (no de una acción), casi seguro que necesitas "to be" — y nunca "do/does" a su lado.</p>
     `
+  },
+  {
+    id: "countableUncountable",
+    emoji: "🍚",
+    title: "Contables, incontables y some/any",
+    html: `
+      <p>En inglés, los nombres se dividen en dos tipos — y eso cambia cómo los usas.</p>
+
+      <table>
+        <thead><tr><th></th><th>Contables</th><th>Incontables</th></tr></thead>
+        <tbody>
+          <tr><td>¿Qué son?</td><td>Cosas que se pueden contar</td><td>Cosas que no se pueden contar</td></tr>
+          <tr><td>Ejemplos</td><td>an apple, two apples, a friend</td><td>water, milk, rice, money</td></tr>
+          <tr><td>¿Plural?</td><td>Sí: one apple → two apple<b>s</b></td><td>No existe plural: ~~waters~~, ~~informations~~</td></tr>
+          <tr><td>¿a/an o número?</td><td>Sí: <i>a</i> school, <i>three</i> students</td><td>No: <i>I like water</i> (nunca "a water")</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Plural de los contables</h3>
+      <table>
+        <thead><tr><th>Regla</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td>La mayoría: + <b>-s</b></td><td>student → students</td></tr>
+          <tr><td>Acaba en -s, -ch, -sh, -x: + <b>-es</b></td><td>bus → buses, match → matches</td></tr>
+          <tr><td>Acaba en -f/-fe: cambia a <b>-ves</b></td><td>knife → knives, wife → wives</td></tr>
+          <tr><td>Consonante + -y: cambia a <b>-ies</b></td><td>family → families</td></tr>
+          <tr><td>Irregulares</td><td>child → children, man → men, woman → women, person → people</td></tr>
+        </tbody>
+      </table>
+
+      <h3>some y any</h3>
+      <table>
+        <thead><tr><th>Se usa...</th><th>Con</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td><b>some</b></td><td>afirmativas (contables plural o incontables) y ofertas/peticiones</td><td><i>I've got <b>some</b> apples. Would you like <b>some</b> coffee?</i></td></tr>
+          <tr><td><b>any</b></td><td>negativas y preguntas (contables plural o incontables)</td><td><i>We haven't got <b>any</b> milk. Have you got <b>any</b> questions?</i></td></tr>
+        </tbody>
+      </table>
+
+      <p><b>Truco para no liarte:</b> con un incontable, nunca "a/an" (❌ <i>a water</i>, ❌ <i>a rice</i>). Para una unidad concreta de algo incontable que se cuenta en otra palabra: <i>a glass of water, a bowl of rice</i>.</p>
+    `
+  },
+  {
+    id: "quantifiers",
+    emoji: "📏",
+    title: "How much / how many, a few / a little / a lot of",
+    html: `
+      <p>Para preguntar "¿cuánto/a?" y para decir cantidades, el inglés usa palabras distintas según si el nombre es contable o incontable (ver el tema anterior).</p>
+
+      <h3>Preguntar cantidad</h3>
+      <table>
+        <thead><tr><th></th><th>Se usa con</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td><b>How many</b></td><td>contables (plural)</td><td><i><b>How many</b> eggs do you need?</i></td></tr>
+          <tr><td><b>How much</b></td><td>incontables</td><td><i><b>How much</b> milk do you need?</i></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Decir cantidades</h3>
+      <table>
+        <thead><tr><th></th><th>Se usa con</th><th>Significa</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td><b>a few</b></td><td>contables</td><td>pocos/as</td><td><i>I need <b>a few</b> eggs — just three.</i></td></tr>
+          <tr><td><b>a little</b></td><td>incontables</td><td>poco/a</td><td><i>Add <b>a little</b> salt.</i></td></tr>
+          <tr><td><b>a lot of</b></td><td>los dos</td><td>mucho/a/os/as</td><td><i>She's got <b>a lot of</b> friends. He drinks <b>a lot of</b> water.</i></td></tr>
+        </tbody>
+      </table>
+
+      <p><b>Truco para no liarte:</b> <i>many</i> va con cosas que se pueden contar (como "muchos/as" en plural); <i>much</i> va con lo que no se cuenta. Si dudas, piensa si podrías decir "two" delante de la palabra — si sí, es contable (many/a few); si no, es incontable (much/a little).</p>
+    `
   }
 ];
