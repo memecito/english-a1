@@ -115,6 +115,13 @@ th:first-child,td:first-child{text-align:left}
 .wordlist b{font-size:1.05rem}
 .wordlist span{flex:1;color:var(--muted);padding:0 8px}
 .wordlist button{background:none;border:0;font-size:1.2rem;cursor:pointer;flex-shrink:0;padding:2px 4px}
+.wordlist li.found{text-decoration:line-through;opacity:.5}
+.ws-grid{display:grid;gap:3px;margin:12px 0;touch-action:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.ws-cell{aspect-ratio:1;display:flex;align-items:center;justify-content:center;background:var(--card);
+  border:1px solid var(--line);border-radius:4px;font-weight:800;color:var(--ink);
+  font-size:clamp(.65rem,3vw,1.05rem)}
+.ws-cell.sel{background:var(--brand-soft);border-color:var(--brand)}
+.ws-cell.found{background:var(--good-soft);color:var(--good);border-color:var(--good)}
 canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:10}
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 @media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
@@ -127,6 +134,7 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
     <div class="tabs" role="tablist">
       <button class="tab" role="tab" id="tab-study" aria-selected="false">📖 Estudiar</button>
       <button class="tab" role="tab" id="tab-exercises" aria-selected="true">🎮 Ejercicios</button>
+      <button class="tab" role="tab" id="tab-wordsearch" aria-selected="false">🔍 Sopa</button>
       <button class="tab" role="tab" id="tab-hist" aria-selected="false">Historial</button>
     </div>
   </div>
@@ -304,6 +312,37 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
           <button class="secondary" id="vocabNextBlock" type="button">Siguiente bloque →</button>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- SOPA DE LETRAS -->
+  <section id="wordsearch" class="hidden">
+    <div class="card" id="wsConfig">
+      <h2>🔍 Sopa de letras</h2>
+      <p class="hint" style="margin-top:-4px">Elige de dónde salen las palabras — cada sopa es nueva y distinta.</p>
+      <div class="seg" id="wsModeSeg">
+        <button class="opt" data-mode="letters" aria-pressed="true">🔤 Por letra</button>
+        <button class="opt" data-mode="category" aria-pressed="false">🏷️ Por tema</button>
+      </div>
+      <div id="wsLettersBox">
+        <div class="letters" id="wsLetters"></div>
+      </div>
+      <div id="wsCategoriesBox" class="hidden">
+        <div class="seg" id="wsCategories"></div>
+      </div>
+      <p class="hint" id="wsPoolInfo"></p>
+      <button class="primary" id="wsStartBtn">¡Generar sopa! 🔍</button>
+    </div>
+    <div class="card hidden" id="wsPuzzleBox">
+      <div class="hud">
+        <div class="pill"><span id="wsFoundCount">0</span>/<span id="wsTotalCount">0</span></div>
+        <button class="link" id="wsNewBtn">🔁 Nueva</button>
+        <button class="link" id="wsBackBtn">⚙️ Opciones</button>
+      </div>
+      <p class="hint center" style="margin-top:0">Arrastra sobre las letras para formar la palabra en inglés de cada pista.</p>
+      <div id="wsGrid" class="ws-grid"></div>
+      <div class="hint" style="margin-top:10px">Pistas (en español):</div>
+      <ul class="wordlist" id="wsWordList"></ul>
     </div>
   </section>
 </main>
@@ -519,15 +558,17 @@ $("optSound").onchange = e => { db.opts.sound = e.target.checked; save(); };
 
 /* ====================== Navegación ====================== */
 function show(id) {
-  ["home", "game", "end", "history", "study"].forEach(s => $(s).classList.toggle("hidden", s !== id));
-  const tab = id === "history" ? "hist" : id === "study" ? "study" : "exercises";
+  ["home", "game", "end", "history", "study", "wordsearch"].forEach(s => $(s).classList.toggle("hidden", s !== id));
+  const tab = id === "history" ? "hist" : id === "study" ? "study" : id === "wordsearch" ? "wordsearch" : "exercises";
   $("tab-exercises").setAttribute("aria-selected", tab === "exercises");
   $("tab-study").setAttribute("aria-selected", tab === "study");
+  $("tab-wordsearch").setAttribute("aria-selected", tab === "wordsearch");
   $("tab-hist").setAttribute("aria-selected", tab === "hist");
   window.scrollTo(0, 0);
 }
 $("tab-exercises").onclick = () => { if (G.active && !confirm("¿Salir de la partida?")) return; G.active = false; refreshHome(); show("home"); };
 $("tab-study").onclick = () => { if (G.active && !confirm("¿Salir de la partida?")) return; G.active = false; renderStudy(); show("study"); };
+$("tab-wordsearch").onclick = () => { if (G.active && !confirm("¿Salir de la partida?")) return; G.active = false; wsShowConfig(); show("wordsearch"); };
 $("tab-hist").onclick = () => { if (G.active && !confirm("¿Salir de la partida?")) return; G.active = false; renderHistory(); show("history"); };
 $("homeBtn").onclick = () => { refreshHome(); show("home"); };
 $("histBtn2").onclick = () => { renderHistory(); show("history"); };
@@ -878,8 +919,211 @@ function renderVocabWords(L, start) {
 $("vocabBlocksBack").onclick = renderVocabLetters;
 $("vocabWordsBack").onclick = () => renderVocabBlocks(vocabCurLetter);
 
+/* ====================== Sopa de letras ====================== */
+// Config propia (wsCfg), separada de cfg de Ejercicios para no interferir.
+const wsCfg = { mode: "letters", letters: new Set(["A"]), categories: new Set(CATEGORIES.slice(0, 1)) };
+const WS_DIRS = [[1, 0], [-1, 0], [0, 1], [0, -1], [1, 1], [-1, -1], [1, -1], [-1, 1]];
+let wsState = null;
+
+// Solo palabras de una sola palabra (sin espacios) y de longitud razonable para la rejilla.
+function wsEligible(w) { return /^[a-zA-Z]+$/.test(w.en[0]) && w.en[0].length >= 3 && w.en[0].length <= 10; }
+function wsPool() {
+  const base = wsCfg.mode === "category"
+    ? WORDS.filter(w => w.cat && wsCfg.categories.has(w.cat))
+    : WORDS.filter(w => wsCfg.letters.has(letterOf(w)));
+  return base.filter(wsEligible);
+}
+
+function buildWsLetters() {
+  const box = $("wsLetters"); box.textContent = "";
+  LETTERS.forEach(L => {
+    const n = WORDS.filter(w => letterOf(w) === L && wsEligible(w)).length;
+    const b = document.createElement("button");
+    b.className = "letter"; b.type = "button"; b.dataset.l = L;
+    b.setAttribute("aria-pressed", wsCfg.letters.has(L));
+    b.append(L); const s = document.createElement("small"); s.textContent = n; b.append(s);
+    b.onclick = () => { wsCfg.letters.has(L) ? wsCfg.letters.delete(L) : wsCfg.letters.add(L); refreshWsConfig(); };
+    box.append(b);
+  });
+}
+function buildWsCategories() {
+  const box = $("wsCategories"); box.textContent = "";
+  CATEGORIES.forEach(c => {
+    const n = WORDS.filter(w => w.cat === c && wsEligible(w)).length;
+    const meta = CATEGORY_META[c] || { emoji: "🏷️", label: c };
+    const b = document.createElement("button");
+    b.className = "opt"; b.type = "button"; b.dataset.cat = c;
+    b.setAttribute("aria-pressed", wsCfg.categories.has(c));
+    b.innerHTML = `${meta.emoji} ${meta.label}<small>${n}</small>`;
+    b.onclick = () => { wsCfg.categories.has(c) ? wsCfg.categories.delete(c) : wsCfg.categories.add(c); refreshWsConfig(); };
+    box.append(b);
+  });
+}
+function refreshWsConfig() {
+  document.querySelectorAll("#wsModeSeg .opt").forEach(b => b.setAttribute("aria-pressed", b.dataset.mode === wsCfg.mode));
+  $("wsLettersBox").classList.toggle("hidden", wsCfg.mode !== "letters");
+  $("wsCategoriesBox").classList.toggle("hidden", wsCfg.mode !== "category");
+  document.querySelectorAll("#wsLetters .letter").forEach(b => b.setAttribute("aria-pressed", wsCfg.letters.has(b.dataset.l)));
+  document.querySelectorAll("#wsCategories .opt").forEach(b => b.setAttribute("aria-pressed", wsCfg.categories.has(b.dataset.cat)));
+  const n = wsPool().length;
+  $("wsPoolInfo").textContent = n < 4
+    ? `Solo ${n} palabras válidas — elige más letras o temas (hacen falta al menos 4).`
+    : `${n} palabras disponibles`;
+  $("wsStartBtn").disabled = n < 4;
+}
+document.querySelectorAll("#wsModeSeg .opt").forEach(b => b.onclick = () => { wsCfg.mode = b.dataset.mode; refreshWsConfig(); });
+function wsShowConfig() {
+  $("wsPuzzleBox").classList.add("hidden");
+  $("wsConfig").classList.remove("hidden");
+  refreshWsConfig();
+}
+$("wsBackBtn").onclick = wsShowConfig;
+
+// Intenta colocar `word` en `grid` (size x size) en una dirección (dr,dc) válida;
+// puede cruzarse con una palabra ya puesta si coincide la letra. Varios intentos al azar.
+function tryPlace(grid, size, word, dr, dc) {
+  const len = word.length;
+  const rMin = dr === 1 ? 0 : dr === -1 ? len - 1 : 0;
+  const rMax = dr === 1 ? size - len : dr === -1 ? size - 1 : size - 1;
+  const cMin = dc === 1 ? 0 : dc === -1 ? len - 1 : 0;
+  const cMax = dc === 1 ? size - len : dc === -1 ? size - 1 : size - 1;
+  if (rMin > rMax || cMin > cMax) return null;
+  const r0 = rMin + (Math.random() * (rMax - rMin + 1) | 0);
+  const c0 = cMin + (Math.random() * (cMax - cMin + 1) | 0);
+  const cells = [];
+  for (let i = 0; i < len; i++) {
+    const r = r0 + dr * i, c = c0 + dc * i, existing = grid[r][c];
+    if (existing !== null && existing !== word[i]) return null;
+    cells.push([r, c]);
+  }
+  return cells;
+}
+function placeWord(grid, size, word) {
+  for (const [dr, dc] of shuffle(WS_DIRS.slice())) {
+    for (let attempt = 0; attempt < 30; attempt++) {
+      const cells = tryPlace(grid, size, word, dr, dc);
+      if (cells) { cells.forEach(([r, c], i) => grid[r][c] = word[i]); return cells; }
+    }
+  }
+  return null;
+}
+
+function startWordSearch() {
+  const chosen = shuffle(wsPool().slice()).slice(0, 8);
+  const longest = Math.max(...chosen.map(w => w.en[0].length));
+  const size = Math.min(15, Math.max(10, longest + 2));
+  const grid = Array.from({ length: size }, () => Array(size).fill(null));
+  const words = [];
+  shuffle(chosen.slice()).sort((a, b) => b.en[0].length - a.en[0].length).forEach(w => {
+    const word = w.en[0].toUpperCase();
+    const cells = placeWord(grid, size, word);
+    if (cells) words.push({ word, es: w.es.slice(0, 2).join(" / "), found: false, cells });
+  });
+  for (let r = 0; r < size; r++) for (let c = 0; c < size; c++) {
+    if (grid[r][c] === null) grid[r][c] = String.fromCharCode(65 + (Math.random() * 26 | 0));
+  }
+  wsState = { grid, size, words, selecting: false, start: null, curPath: null };
+  renderWsGrid();
+  renderWsWordList();
+  $("wsConfig").classList.add("hidden");
+  $("wsPuzzleBox").classList.remove("hidden");
+  window.scrollTo(0, 0);
+}
+$("wsStartBtn").onclick = startWordSearch;
+$("wsNewBtn").onclick = startWordSearch;
+
+function renderWsGrid() {
+  const el = $("wsGrid");
+  el.style.gridTemplateColumns = `repeat(${wsState.size}, 1fr)`;
+  el.textContent = "";
+  const cellEls = [];
+  for (let r = 0; r < wsState.size; r++) {
+    const row = [];
+    for (let c = 0; c < wsState.size; c++) {
+      const div = document.createElement("div");
+      div.className = "ws-cell"; div.textContent = wsState.grid[r][c];
+      div.dataset.r = r; div.dataset.c = c;
+      el.append(div); row.push(div);
+    }
+    cellEls.push(row);
+  }
+  wsState.cellEls = cellEls;
+}
+function renderWsWordList() {
+  const ul = $("wsWordList"); ul.textContent = "";
+  wsState.words.forEach(w => {
+    const li = document.createElement("li");
+    if (w.found) li.className = "found";
+    li.textContent = w.es;
+    ul.append(li);
+  });
+  $("wsFoundCount").textContent = wsState.words.filter(w => w.found).length;
+  $("wsTotalCount").textContent = wsState.words.length;
+}
+
+function wsStraightPath(start, end) {
+  const [r0, c0] = start, [r1, c1] = end;
+  const dr = Math.sign(r1 - r0), dc = Math.sign(c1 - c0);
+  if (dr === 0 && dc === 0) return [start];
+  if (dr !== 0 && dc !== 0 && Math.abs(r1 - r0) !== Math.abs(c1 - c0)) return null;
+  const len = Math.max(Math.abs(r1 - r0), Math.abs(c1 - c0)) + 1;
+  const path = [];
+  for (let i = 0; i < len; i++) path.push([r0 + dr * i, c0 + dc * i]);
+  return path;
+}
+function wsClearHighlight() {
+  wsState.cellEls.flat().forEach(el => el.classList.remove("sel"));
+}
+function wsUpdateSelection(current) {
+  wsClearHighlight();
+  const path = wsStraightPath(wsState.start, current);
+  wsState.curPath = path;
+  if (!path) return;
+  path.forEach(([r, c]) => wsState.cellEls[r][c].classList.add("sel"));
+}
+function wsFinalizeSelection() {
+  const path = wsState.curPath;
+  wsClearHighlight();
+  wsState.curPath = null;
+  if (!path || path.length < 2) return;
+  const letters = path.map(([r, c]) => wsState.grid[r][c]).join("");
+  const reversed = letters.split("").reverse().join("");
+  const match = wsState.words.find(w => !w.found && (w.word === letters || w.word === reversed));
+  if (!match) return;
+  match.found = true;
+  path.forEach(([r, c]) => wsState.cellEls[r][c].classList.add("found"));
+  renderWsWordList();
+  sndOk();
+  if (wsState.words.every(w => w.found)) {
+    const pts = wsState.words.length * 5;
+    const d = today(); d.points += pts; db.days[dayKey()] = d; db.total += pts; save();
+    sndWin(); confetti();
+  }
+}
+$("wsGrid").addEventListener("pointerdown", e => {
+  const cell = e.target.closest(".ws-cell");
+  if (!cell || !wsState) return;
+  e.preventDefault();
+  $("wsGrid").setPointerCapture(e.pointerId);
+  wsState.selecting = true;
+  wsState.start = [+cell.dataset.r, +cell.dataset.c];
+  wsUpdateSelection(wsState.start);
+});
+$("wsGrid").addEventListener("pointermove", e => {
+  if (!wsState || !wsState.selecting) return;
+  const el = document.elementFromPoint(e.clientX, e.clientY);
+  const cell = el && el.closest(".ws-cell");
+  if (!cell) return;
+  wsUpdateSelection([+cell.dataset.r, +cell.dataset.c]);
+});
+$("wsGrid").addEventListener("pointerup", () => {
+  if (!wsState || !wsState.selecting) return;
+  wsState.selecting = false;
+  wsFinalizeSelection();
+});
+
 /* ====================== Arranque ====================== */
-buildLetters(); buildCategories(); buildGrammarTopics(); refreshHome();
+buildLetters(); buildCategories(); buildGrammarTopics(); buildWsLetters(); buildWsCategories(); refreshWsConfig(); refreshHome();
 </script>
 </body>
 </html>
