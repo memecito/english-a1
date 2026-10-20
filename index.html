@@ -324,6 +324,11 @@ canvas#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:non
         <button class="opt" data-mode="letters" aria-pressed="true">🔤 Por letra</button>
         <button class="opt" data-mode="category" aria-pressed="false">🏷️ Por tema</button>
       </div>
+      <div class="seg" id="wsDifficultySeg">
+        <button class="opt" data-diff="easy" aria-pressed="false">🙂 Fácil<small>5 palabras</small></button>
+        <button class="opt" data-diff="normal" aria-pressed="true">😐 Normal<small>8 palabras</small></button>
+        <button class="opt" data-diff="hard" aria-pressed="false">🤓 Difícil<small>12 palabras</small></button>
+      </div>
       <div id="wsLettersBox">
         <div class="letters" id="wsLetters"></div>
       </div>
@@ -921,8 +926,20 @@ $("vocabWordsBack").onclick = () => renderVocabBlocks(vocabCurLetter);
 
 /* ====================== Sopa de letras ====================== */
 // Config propia (wsCfg), separada de cfg de Ejercicios para no interferir.
-const wsCfg = { mode: "letters", letters: new Set(["A"]), categories: new Set(CATEGORIES.slice(0, 1)) };
+const wsCfg = { mode: "letters", difficulty: "normal", letters: new Set(["A"]), categories: new Set(CATEGORIES.slice(0, 1)) };
 const WS_DIRS = [[1, 0], [-1, 0], [0, 1], [0, -1], [1, 1], [-1, -1], [1, -1], [-1, 1]];
+// Dificultad: más palabras + rejilla más grande = más difícil.
+const WS_DIFFICULTY = {
+  easy: { words: 5, minSize: 8, maxSize: 9 },
+  normal: { words: 8, minSize: 10, maxSize: 12 },
+  hard: { words: 12, minSize: 12, maxSize: 14 },
+};
+// El tamaño nunca puede ser menor que la palabra más larga + 1 (si no, no cabría nunca) —
+// por eso maxSize es un techo "blando", no absoluto.
+function wsGridSize(diff, longest) {
+  const size = Math.min(diff.maxSize, Math.max(diff.minSize, longest + 2));
+  return Math.max(size, longest + 1);
+}
 let wsState = null;
 
 // Solo palabras de una sola palabra (sin espacios) y de longitud razonable para la rejilla.
@@ -961,16 +978,19 @@ function buildWsCategories() {
 }
 function refreshWsConfig() {
   document.querySelectorAll("#wsModeSeg .opt").forEach(b => b.setAttribute("aria-pressed", b.dataset.mode === wsCfg.mode));
+  document.querySelectorAll("#wsDifficultySeg .opt").forEach(b => b.setAttribute("aria-pressed", b.dataset.diff === wsCfg.difficulty));
   $("wsLettersBox").classList.toggle("hidden", wsCfg.mode !== "letters");
   $("wsCategoriesBox").classList.toggle("hidden", wsCfg.mode !== "category");
   document.querySelectorAll("#wsLetters .letter").forEach(b => b.setAttribute("aria-pressed", wsCfg.letters.has(b.dataset.l)));
   document.querySelectorAll("#wsCategories .opt").forEach(b => b.setAttribute("aria-pressed", wsCfg.categories.has(b.dataset.cat)));
   const n = wsPool().length;
+  const target = WS_DIFFICULTY[wsCfg.difficulty].words;
   $("wsPoolInfo").textContent = n < 4
     ? `Solo ${n} palabras válidas — elige más letras o temas (hacen falta al menos 4).`
-    : `${n} palabras disponibles`;
+    : `${n} palabras disponibles · esta sopa usará ${Math.min(n, target)}`;
   $("wsStartBtn").disabled = n < 4;
 }
+document.querySelectorAll("#wsDifficultySeg .opt").forEach(b => b.onclick = () => { wsCfg.difficulty = b.dataset.diff; refreshWsConfig(); });
 document.querySelectorAll("#wsModeSeg .opt").forEach(b => b.onclick = () => { wsCfg.mode = b.dataset.mode; refreshWsConfig(); });
 function wsShowConfig() {
   $("wsPuzzleBox").classList.add("hidden");
@@ -1009,9 +1029,10 @@ function placeWord(grid, size, word) {
 }
 
 function startWordSearch() {
-  const chosen = shuffle(wsPool().slice()).slice(0, 8);
+  const diff = WS_DIFFICULTY[wsCfg.difficulty];
+  const chosen = shuffle(wsPool().slice()).slice(0, diff.words);
   const longest = Math.max(...chosen.map(w => w.en[0].length));
-  const size = Math.min(15, Math.max(10, longest + 2));
+  const size = wsGridSize(diff, longest);
   const grid = Array.from({ length: size }, () => Array(size).fill(null));
   const words = [];
   shuffle(chosen.slice()).sort((a, b) => b.en[0].length - a.en[0].length).forEach(w => {
