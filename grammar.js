@@ -300,5 +300,50 @@ const GRAMMAR = {
       { id: "q7", text: "I've got ___ money, so let's go to the cinema.", answers: ["a lot of"] },
       { id: "q8", text: "There are ___ biscuits left — just two.", answers: ["a few"] },
     ]
+  },
+  presentSimpleContinuous: {
+    title: "Present simple vs. Present continuous",
+    emoji: "🔀",
+    topicId: "presentSimpleContinuous",
+    items: [
+      { id: "ps1", text: "Listen! Sophie ___ (play) the guitar.", answers: ["is playing"] },
+      { id: "ps2", text: "I usually ___ (walk) to school.", answers: ["walk"] },
+      { id: "ps3", text: "I ___ (not/understand) this exercise.", answers: ["don't understand"] },
+      { id: "ps4", text: "Thiago ___ (love) chocolate.", answers: ["loves"] },
+      { id: "ps5", text: "We ___ (have) a party at the moment.", answers: ["are having"] },
+      { id: "ps6", text: "I ___ (have) two sisters.", answers: ["have"] },
+      { id: "ps7", text: "Look! It ___ (start) to rain.", answers: ["is starting"] },
+      { id: "ps8", text: "Laura and I ___ (go) to school by bus every day.", answers: ["go"] },
+      { id: "ps9", text: "Chloe can't come out. She ___ (do) her homework.", answers: ["is doing"] },
+      { id: "ps10", text: "Ellie and her sister ___ (play) tennis every Saturday.", answers: ["play"] },
+      { id: "ps11", text: "In our family, we ___ (have) a dog and three cats.", answers: ["have"] },
+      { id: "ps12", text: "Ssh! I ___ (listen) to the news on the radio.", answers: ["am listening"] },
+      { id: "ps13", text: "Everyone in my family ___ (hate) cold weather.", answers: ["hates"] },
+      { id: "ps14", text: "Thiago ___ (have) a shower at the moment.", answers: ["is having"] },
+      { id: "ps15", text: "I like tea but I ___ (hate) coffee.", answers: ["hate"] },
+      { id: "ps16", text: "My brother ___ (not/do) his homework now — he's watching TV.", answers: ["isn't doing", "is not doing"] },
+    ]
+  },
+  tooEnough: {
+    title: "too y enough",
+    emoji: "⚖️",
+    topicId: "tooEnough",
+    items: [
+      { id: "te1", text: "This food is ___ hot for me.", answers: ["too"] },
+      { id: "te2", text: "The sea isn't warm ___ for a swim.", answers: ["enough"] },
+      { id: "te3", text: "I'm not going swimming because the water is ___ cold.", answers: ["too"] },
+      { id: "te4", text: "This T-shirt isn't big ___ for me.", answers: ["enough"] },
+      { id: "te5", text: "My bike is ___ slow.", answers: ["too"] },
+      { id: "te6", text: "Tom's coat is ___ small.", answers: ["too"] },
+      { id: "te7", text: "This exercise is ___ easy.", answers: ["too"] },
+      { id: "te8", text: "I'm ___ young to drive.", answers: ["too"] },
+      { id: "te9", text: "Those jeans are ___ expensive for me.", answers: ["too"] },
+      { id: "te10", text: "That bag isn't light ___ for me.", answers: ["enough"] },
+      { id: "te11", text: "Those plates aren't clean ___.", answers: ["enough"] },
+      { id: "te12", text: "My computer isn't fast ___.", answers: ["enough"] },
+      { id: "te13", text: "I'm not tall ___ for basketball.", answers: ["enough"] },
+      { id: "te14", text: "We don't have ___ money for a new car.", answers: ["enough"] },
+      { id: "te15", text: "There aren't ___ drinks for everyone.", answers: ["enough"] },
+    ]
   }
 };

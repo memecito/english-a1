@@ -391,5 +391,64 @@ const TOPICS = [
 
       <p><b>Truco para no liarte:</b> <i>many</i> va con cosas que se pueden contar (como "muchos/as" en plural); <i>much</i> va con lo que no se cuenta. Si dudas, piensa si podrías decir "two" delante de la palabra — si sí, es contable (many/a few); si no, es incontable (much/a little).</p>
     `
+  },
+  {
+    id: "presentSimpleContinuous",
+    emoji: "🔀",
+    title: "Present simple vs. Present continuous",
+    html: `
+      <p>Ya conoces los dos por separado — lo que hay que aprender ahora es <b>cuándo usar cada uno</b>, porque los dos existen a la vez y a veces se confunden.</p>
+
+      <h3>Present continuous — ahora mismo</h3>
+      <p>Para cosas que están pasando en este momento, mientras hablas.</p>
+      <p><i>We<b>'re watching</b> television at the moment.</i> · <i>Listen! Olivia <b>is playing</b> the guitar.</i></p>
+
+      <h3>Present simple — cosas habituales</h3>
+      <p>Para cosas que haces regularmente, no solo ahora.</p>
+      <p><i>I <b>usually watch</b> television in the evening.</i> · <i>I <b>walk</b> to school.</i></p>
+
+      <h3>Verbos de estado — nunca van en continuo ⚠️</h3>
+      <p>Hay un grupo de verbos que describen <b>estados</b> (cosas que no cambian de un momento a otro), no acciones. Estos verbos casi nunca se usan en present continuous, aunque estés hablando de "ahora":</p>
+      <table>
+        <thead><tr><th colspan="7">be, like, hate, have, want, love, know, understand</th></tr></thead>
+      </table>
+      <p><i>I <b>understand</b> German and Spanish.</i> ✅ — <s>I am understanding German and Spanish.</s> ❌</p>
+      <p><i>I <b>like</b> tea but I <b>hate</b> coffee.</i> · <i>I <b>have</b> three brothers, and I <b>love</b> them all.</i></p>
+
+      <h3>El caso especial de "have"</h3>
+      <p><b>Have</b> es un verbo de estado cuando habla de algo que no cambia (posesión, familia) — ahí nunca va en continuo:</p>
+      <p><i>I <b>have</b> two brothers.</i> (no "I am having two brothers")</p>
+      <p>Pero <b>have</b> también puede ser una acción (desayunar, ducharse...) — ahí SÍ puede ir en continuo:</p>
+      <p><i>We<b>'re having</b> breakfast.</i> · <i>He<b>'s having</b> a wash.</i></p>
+
+      <p><b>Truco para no liarte:</b> antes de usar "-ing", pregúntate si el verbo describe algo que cambia ahora mismo (acción) o algo que simplemente ES así (estado). Si es un verbo de estado de la lista de arriba, casi seguro que necesitas el present simple.</p>
+    `
+  },
+  {
+    id: "tooEnough",
+    emoji: "⚖️",
+    title: "too y enough",
+    html: `
+      <p><b>Too</b> y <b>enough</b> se usan con adjetivos para hablar de cantidad — pero van en <b>orden contrario</b>, y ese es el error más típico de examen.</p>
+
+      <h3>too + adjetivo — "demasiado"</h3>
+      <p><b>Too</b> va ANTES del adjetivo. Significa "más de lo que hace falta" o "más de lo posible" — casi siempre algo negativo.</p>
+      <p><i>This food is <b>too hot</b>.</i> (no me gusta, o no puedo comérmela)</p>
+      <p><i>I'm not going swimming because the water is <b>too cold</b>.</i></p>
+
+      <h3>adjetivo + enough — "suficientemente"</h3>
+      <p><b>Enough</b> va DESPUÉS del adjetivo — justo al revés que "too". Con "not", significa "menos de lo que hace falta":</p>
+      <p><i>I'm <b>not warm enough</b>.</i> (= tengo frío, quiero estar más caliente)</p>
+      <p><i>This T-shirt is <b>not big enough</b> for me.</i></p>
+
+      <h3>not enough + nombre</h3>
+      <p>También se usa con un nombre detrás (contable en plural, o incontable):</p>
+      <p><i>There <b>aren't enough drinks</b> for everyone.</i> · <i>We <b>don't have enough money</b> for a new car.</i></p>
+
+      <p><b>Truco para no liarte — el orden es la trampa:</b></p>
+      <p>✅ <i>I'm not warm enough.</i> — ❌ <s>I'm not enough warm.</s></p>
+      <p>✅ <i>We don't have enough money.</i> — ❌ <s>We don't have money enough.</s></p>
+      <p>Recuerda: <b>too</b> se "adelanta" al adjetivo, <b>enough</b> siempre va detrás (del adjetivo o del nombre).</p>
+    `
   }
 ];

@@ -157,8 +157,9 @@ body|cuerpo
 boil|hervir
 boiled|hervido,cocido
 book|libro
-bookcase|librería,estantería
+bookcase|estantería,librero
 bookshelf|estantería
+bookshop|librería|shops
 boot|bota|clothes
 bored|aburrido
 boring|aburrido
@@ -251,11 +252,11 @@ change|cambiar,cambio
 channel|canal
 chat|charlar,charla,chatear
 chatroom|sala de chat
-cheap|barato
+cheap|barato|adjectives
 check|comprobar,revisar
 cheese|queso|food
 chef|cocinero,chef
-chemist|farmacéutico,farmacia
+chemist|farmacéutico,farmacia|shops
 chemistry|química
 cheque|cheque,talón
 chess|ajedrez
@@ -273,7 +274,7 @@ class|clase
 classical|clásico,clásica
 classmate|compañero de clase,compañera de clase
 classroom|aula,clase
-clean|limpio,limpiar
+clean|limpio,limpiar|adjectives
 cleaner|limpiador,persona de la limpieza
 clear|claro,despejado
 clearly|claramente
@@ -368,7 +369,7 @@ delay|retraso
 delicious|delicioso,rico
 dentist|dentista
 department|departamento,sección
-department store|grandes almacenes
+department store|grandes almacenes|shops
 describe|describir
 desert|desierto
 desk|escritorio,pupitre
@@ -387,7 +388,7 @@ dinner|cena
 dinosaur|dinosaurio
 diploma|diploma
 directions|indicaciones,direcciones
-dirty|sucio
+dirty|sucio|adjectives
 disco|discoteca,disco
 discount|descuento
 discuss|discutir,hablar de
@@ -473,7 +474,7 @@ excuse|excusa,disculpar
 exercise|ejercicio
 exhibition|exposición
 exit|salida
-expensive|caro
+expensive|caro|adjectives
 experience|experiencia
 explain|explicar
 explore|explorar
@@ -644,7 +645,7 @@ healthy|sano,saludable
 hear|oír,escuchar
 heart|corazón
 heating|calefacción
-heavy|pesado
+heavy|pesado|adjectives
 helicopter|helicóptero
 hello|hola
 help|ayuda,ayudar
@@ -748,7 +749,7 @@ know|saber,conocer
 lake|lago
 lamp|lámpara
 language|idioma,lengua
-large|grande
+large|grande|adjectives
 last|último,pasado
 late|tarde
 later|más tarde
@@ -776,7 +777,7 @@ licence|licencia,permiso
 lie down|acostarse,tumbarse
 life|vida
 lift|ascensor,levantar
-light|luz,ligero
+light|ligero,luz|adjectives
 like|gustar,como
 line|línea,fila
 lion|león|animals
@@ -786,7 +787,7 @@ little|pequeño,poco
 live|vivir
 living room|sala de estar,salón|house
 local|local
-long|largo
+long|largo|adjectives
 look|mirar
 look after|cuidar
 look at|mirar
@@ -899,7 +900,7 @@ need|necesitar
 neighbour|vecino,vecina
 net|red
 never|nunca
-new|nuevo
+new|nuevo|adjectives
 news|noticias
 newspaper|periódico
 next|siguiente,próximo
@@ -934,7 +935,7 @@ oh|oh,ah
 oh dear!|¡vaya!,¡ay, madre!
 oil|aceite,petróleo
 OK/okay|vale,de acuerdo,bien
-old|viejo,mayor
+old|viejo,mayor|adjectives
 Olympic|olímpico
 omelette|tortilla
 on|sobre,encima de,en
@@ -1177,7 +1178,7 @@ shoe|zapato|clothes
 shop|tienda
 shop assistant|dependiente,dependienta
 shopping|compras
-short|corto,bajo
+short|corto,bajo|adjectives
 shorts|pantalones cortos
 should|debería
 shout|gritar
@@ -1215,7 +1216,7 @@ slice|rebanada,trozo,loncha
 slim|delgado
 slow|lento
 slowly|despacio,lentamente
-small|pequeño
+small|pequeño|adjectives
 smoke|humo,fumar
 smoking|fumar
 snack|tentempié,aperitivo,merienda
@@ -1297,9 +1298,9 @@ suit|traje
 suitcase|maleta
 summer|verano
 sun|sol
-sunglasses|gafas de sol
+sunglasses|gafas de sol|clothes
 sunny|soleado
-supermarket|supermercado
+supermarket|supermercado|shops
 supper|cena
 suppose|suponer
 sure|seguro
