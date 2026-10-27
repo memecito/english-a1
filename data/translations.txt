@@ -80,6 +80,7 @@ ask|preguntar,pedir
 assistant|ayudante,asistente
 attractive|atractivo,atractiva
 aunt|tía|family
+australian|australiano,australiana|nationalities
 autumn|otoño
 available|disponible
 away|lejos,fuera
@@ -90,7 +91,7 @@ back|espalda,atrás,de vuelta
 backpack|mochila
 bad|malo,mala
 badly|mal
-badminton|bádminton
+badminton|bádminton|sport
 bag|bolsa,bolso
 bake|hornear
 ball|pelota,balón
@@ -99,7 +100,7 @@ banana|plátano,banana|food
 band|banda,grupo
 bank|banco
 barbecue/ barbeque|barbacoa
-baseball|béisbol
+baseball|béisbol|sport
 basketball|baloncesto|sport
 bat|bate
 bath|baño,bañera
@@ -150,7 +151,7 @@ blog|blog
 blood|sangre
 blouse|blusa
 blue|azul|colours
-board|pizarra,tablero
+board|pizarra,tablero|school
 board game|juego de mesa
 boat|barco,bote
 body|cuerpo
@@ -185,6 +186,7 @@ bright|brillante,luminoso
 brilliant|genial,brillante
 bring|traer
 bring back|devolver,traer de vuelta
+british|británico,británica|nationalities
 broken|roto
 brother|hermano|family
 brown|marrón,café|colours
@@ -263,6 +265,7 @@ chess|ajedrez
 chicken|pollo|food
 child|niño,niña
 chilli|chile,guindilla
+chinese|chino,china|nationalities
 chips|patatas fritas,papas fritas
 chocolate|chocolate|food
 choose|elegir
@@ -281,7 +284,7 @@ clearly|claramente
 clever|listo,inteligente
 click|hacer clic,clic
 climb|escalar,trepar
-climbing|escalada
+climbing|escalada|sport
 clock|reloj
 close|cerrar,cerca
 close to|cerca de
@@ -335,7 +338,7 @@ cow|vaca|animals
 crazy|loco
 cream|nata,crema
 credit card|tarjeta de crédito
-cricket|críquet,grillo
+cricket|críquet,grillo|sport
 cross|cruz,cruzar
 crossing|cruce,paso de peatones
 crowd|multitud
@@ -372,11 +375,11 @@ department|departamento,sección
 department store|grandes almacenes|shops
 describe|describir
 desert|desierto
-desk|escritorio,pupitre
+desk|escritorio,pupitre|school
 dessert|postre
 details|detalles
 diary|diario
-dictionary|diccionario
+dictionary|diccionario|school
 die|morir
 difference|diferencia
 different|diferente,distinto
@@ -484,7 +487,7 @@ eye|ojo
 face|cara,rostro
 fact|hecho,dato
 factory|fábrica
-fail|suspender,fallar
+fail|suspender,fallar|school
 fair|justo,feria
 fall|caer,caída,otoño
 family|familia|family
@@ -521,7 +524,7 @@ first|primero
 first name|nombre de pila,nombre
 first of all|en primer lugar,antes que nada
 fish|pez,pescado|animals
-fishing|pesca
+fishing|pesca|sport
 fit|en forma,ajustarse
 flat|piso,apartamento,plano|house
 flight|vuelo
@@ -543,6 +546,7 @@ forget|olvidar
 fork|tenedor
 form|formulario,forma
 free|gratis,libre
+french|francés,francesa|nationalities
 fresh|fresco
 fridge|nevera,frigorífico
 fried|frito
@@ -607,6 +611,7 @@ granny|abuela
 grape|uva
 grass|hierba,césped
 great|genial,estupendo,gran
+greek|griego,griega|nationalities
 green|verde|colours
 grilled|a la parrilla,a la plancha
 group|grupo
@@ -621,6 +626,7 @@ guidebook|guía de viaje
 guitar|guitarra
 guy|chico,tío
 gym|gimnasio|sport
+gymnastics|gimnasia|sport
 hair|pelo,cabello
 half|mitad,medio
 half-price|mitad de precio
@@ -689,7 +695,7 @@ husband|marido,esposo|family
 I|yo
 ice|hielo
 ice cream|helado|food
-ice skating|patinaje sobre hielo
+ice skating|patinaje sobre hielo|sport
 ID|identificación,documento de identidad
 ID card|carné de identidad,documento de identidad
 idea|idea
@@ -703,6 +709,7 @@ in|en,dentro
 in front of|delante de,enfrente de
 include|incluir
 including|incluyendo,incluido
+indian|indio,india|nationalities
 indoor|de interior,cubierto
 indoors|dentro,en interior
 information|información
@@ -718,22 +725,27 @@ internet|internet
 into|en,dentro de
 invitation|invitación
 invite|invitar
+irish|irlandés,irlandesa|nationalities
 island|isla
 it|ello,lo
+italian|italiano,italiana|nationalities
 its|su
 itself|sí mismo,se
 jacket|chaqueta|clothes
 jam|mermelada|food
+japanese|japonés,japonesa|nationalities
 jazz|jazz
 jeans|vaqueros,jeans|clothes
 job|trabajo,empleo
 join|unirse,juntar
 journalist|periodista
 journey|viaje
+judo|judo|sport
 juice|zumo,jugo|food
 jump|saltar|sport
 jumper|jersey,suéter|clothes
 just|justo,solo,solamente
+karate|kárate|sport
 keep|guardar,mantener,quedarse
 key|llave,tecla
 keyboard|teclado
@@ -756,7 +768,7 @@ later|más tarde
 latest|último,más reciente
 laugh|reír,risa
 lazy|perezoso,vago
-learn|aprender
+learn|aprender|school
 least|menos
 leather|cuero,piel
 leave|dejar,salir,irse
@@ -839,6 +851,7 @@ memory|memoria,recuerdo
 menu|menú,carta
 message|mensaje
 metal|metal
+mexican|mexicano,mexicana|nationalities
 midday|mediodía
 middle|medio,centro
 midnight|medianoche
@@ -918,7 +931,7 @@ north|norte
 nose|nariz
 not|no
 note|nota,apunte
-notebook|cuaderno,libreta
+notebook|cuaderno,libreta|school
 nothing|nada
 notice|darse cuenta,fijarse,aviso
 now|ahora
@@ -981,7 +994,7 @@ park|parque,aparcar
 part|parte
 partner|pareja,compañero,socio
 party|fiesta
-pass|pasar,aprobar
+pass|pasar,aprobar|school
 passenger|pasajero
 passport|pasaporte
 password|contraseña
@@ -990,10 +1003,10 @@ pasta|pasta|food
 path|camino,sendero
 pay|pagar
 pear|pera
-pen|bolígrafo
+pen|bolígrafo|school
 pence|peniques
-pencil|lápiz
-pencil case|estuche
+pencil|lápiz|school
+pencil case|estuche|school
 penfriend|amigo por correspondencia
 penny|penique
 people|gente,personas
@@ -1047,6 +1060,7 @@ poor|pobre
 pop|pop
 popular|popular
 port|puerto
+portuguese|portugués,portuguesa|nationalities
 possible|posible
 possibly|posiblemente
 post|correo,enviar por correo
@@ -1124,9 +1138,9 @@ roof|tejado,techo
 room|habitación,sala
 round|redondo,alrededor
 roundabout|rotonda
-rubber|goma,caucho
+rubber|goma,caucho|school
 rugby|rugby|sport
-ruler|regla
+ruler|regla|school
 run|correr|sport
 runner|corredor,corredora
 running|correr,carrera|sport
@@ -1206,7 +1220,7 @@ size|tamaño,talla
 skate|patinar,patín|sport
 skateboard|monopatín,skate|sport
 skateboarding|monopatín,skate
-skating|patinaje
+skating|patinaje|sport
 ski|esquiar,esquí|sport
 skiing|esquí|sport
 skirt|falda|clothes
@@ -1246,6 +1260,7 @@ sound|sonido,sonar
 soup|sopa|food
 south|sur
 space|espacio
+spanish|español,española|nationalities
 spare|de repuesto,libre
 speak|hablar
 speaker|altavoz,hablante
@@ -1286,7 +1301,7 @@ stripes|rayas
 strong|fuerte
 student|estudiante,alumno
 studies|estudios
-study|estudiar
+study|estudiar|school
 stuff|cosas
 subject|asignatura,tema
 success|éxito
@@ -1306,11 +1321,12 @@ suppose|suponer
 sure|seguro
 surf|surfear
 surfboard|tabla de surf
-surfing|surf
+surfing|surf|sport
 surname|apellido
 surprise|sorpresa,sorprender
 surprised|sorprendido
 sweater|suéter,jersey|clothes
+swedish|sueco,sueca|nationalities
 sweet|dulce,caramelo
 swim|nadar|sport
 swimming|natación|sport
@@ -1318,7 +1334,7 @@ swimming pool|piscina
 swimsuit|bañador,traje de baño
 T-shirt|camiseta|clothes
 table|mesa|house
-table tennis|tenis de mesa,ping pong
+table tennis|tenis de mesa,ping pong|sport
 tablet|tableta,pastilla
 take|coger,tomar,llevar
 take off|quitarse,despegar
@@ -1327,7 +1343,7 @@ talk|hablar,charla
 tall|alto
 taxi|taxi
 tea|té|food
-teach|enseñar
+teach|enseñar|school
 teacher|profesor,profesora,maestro,maestra
 team|equipo|sport
 teenager|adolescente
@@ -1341,7 +1357,7 @@ terrible|terrible
 test|prueba,examen
 text|texto
 text message|mensaje de texto
-textbook|libro de texto
+textbook|libro de texto|school
 than|que
 thank|agradecer
 thank you|gracias
@@ -1373,7 +1389,7 @@ tiger|tigre|animals
 tights|medias,leotardos
 till|hasta
 time|tiempo,hora,vez
-timetable|horario
+timetable|horario|school
 tired|cansado
 title|título
 to|a,para
@@ -1536,6 +1552,7 @@ yellow|amarillo|colours
 yes|sí
 yesterday|ayer
 yet|todavía,aún,ya
+yoga|yoga|sport
 yogurt|yogur
 you|tú,usted,vosotros,ustedes
 young|joven

@@ -450,5 +450,160 @@ const TOPICS = [
       <p>✅ <i>We don't have enough money.</i> — ❌ <s>We don't have money enough.</s></p>
       <p>Recuerda: <b>too</b> se "adelanta" al adjetivo, <b>enough</b> siempre va detrás (del adjetivo o del nombre).</p>
     `
+  },
+  {
+    id: "pastContinuous",
+    emoji: "🎬",
+    title: "Pasado continuo (Past Continuous)",
+    html: `
+      <p>El <b>pasado continuo</b> (<i>was/were + verbo-ing</i>) se usa para acciones que estaban "en marcha" en un momento del pasado — como una foto a mitad de la acción.</p>
+
+      <table>
+        <thead><tr><th>Sujeto</th><th>Afirmativa</th><th>Negativa</th></tr></thead>
+        <tbody>
+          <tr><td>I / he / she / it</td><td><b>was</b> listening</td><td>wasn't listening</td></tr>
+          <tr><td>you / we / they</td><td><b>were</b> listening</td><td>weren't listening</td></tr>
+        </tbody>
+      </table>
+      <p><i>Was she listening to music? Yes, she <b>was</b>. / No, she <b>wasn't</b>.</i></p>
+
+      <h3>1. Algo que duraba un rato en el pasado</h3>
+      <p><i>We <b>were watching</b> a film at 8 o'clock last night.</i> (no dice cuándo empezó o acabó, solo que ESTABA pasando a esa hora)</p>
+
+      <h3>2. Dos cosas pasando a la vez — con "while"</h3>
+      <p><i>They <b>were watching</b> the film <b>while</b> I <b>was doing</b> my homework.</i></p>
+
+      <h3>3. Una acción larga interrumpida por otra corta — con "when"</h3>
+      <p>La acción larga va en <b>pasado continuo</b>, la que la interrumpe va en <b>pasado simple</b>:</p>
+      <p><i>When I <b>left</b> home, my brother <b>was eating</b> his breakfast.</i></p>
+      <p><i>While I <b>was walking</b> into town, it <b>started</b> to rain.</i></p>
+
+      <p><b>Truco para no liarte:</b> si puedes imaginarte la escena "a mitad de hacerse" (como pausar un vídeo), es pasado continuo. Si es una acción completa y puntual, es pasado simple — por eso en las frases con "when"/"while" casi siempre hay una de cada.</p>
+    `
+  },
+  {
+    id: "canCould",
+    emoji: "💪",
+    title: "can / could — habilidad",
+    html: `
+      <p><b>Can</b> y <b>could</b> se usan para hablar de lo que alguien <b>sabe o puede hacer</b> — no cambian nunca de forma (no existe "cans" ni "coulds"), y el verbo que va detrás es infinitivo <b>sin "to"</b>.</p>
+
+      <h3>can / can't — habilidad en el presente</h3>
+      <p><i>I <b>can play</b> the piano.</i> · <i>I <b>can't play</b> the guitar.</i> · <i><b>Can</b> you speak French?</i></p>
+      <p>Respuesta corta: <i>Yes, I <b>can</b>. / No, I <b>can't</b>.</i></p>
+
+      <h3>could / couldn't — habilidad en el pasado</h3>
+      <p><i>My sister <b>could talk</b> before she <b>could walk</b>.</i> · <i>I <b>couldn't sleep</b> last night.</i> · <i><b>Could</b> you hear what I said?</i></p>
+      <p>Respuesta corta: <i>Yes, I <b>could</b>. / No, I <b>couldn't</b>.</i></p>
+
+      <h3>El infinitivo va SIN "to"</h3>
+      <p>✅ <i>I can swim.</i> — ❌ <s>I can to swim.</s></p>
+      <p>Y la forma no cambia nunca con "he/she/it": ✅ <i>She can swim.</i> — ❌ <s>She cans swim.</s></p>
+
+      <p><b>Truco para no liarte:</b> <b>can</b> es "ahora, en general" (sé nadar); <b>could</b> es "en el pasado" (sabía nadar cuando era pequeño). Y nunca, nunca "to" después de can/could.</p>
+    `
+  },
+  {
+    id: "comparatives",
+    emoji: "📊",
+    title: "Comparativos y superlativos",
+    html: `
+      <p>Los <b>comparativos</b> comparan dos personas o cosas; los <b>superlativos</b> comparan una con todo un grupo (tres o más).</p>
+
+      <table>
+        <thead><tr><th>Tipo de adjetivo</th><th>Comparativo</th><th>Superlativo</th></tr></thead>
+        <tbody>
+          <tr><td>Una sílaba (small, cold)</td><td>small<b>er</b> than</td><td>the small<b>est</b></td></tr>
+          <tr><td>Una sílaba, acaba en "-e" (large, nice)</td><td>larg<b>er</b> than</td><td>the larg<b>est</b></td></tr>
+          <tr><td>Una sílaba, vocal+consonante (big, thin)</td><td>bi<b>gger</b> than</td><td>the bi<b>ggest</b></td></tr>
+          <tr><td>Acaba en "-y" (heavy, pretty)</td><td>heav<b>ier</b> than</td><td>the heav<b>iest</b></td></tr>
+          <tr><td>Dos sílabas o más (difficult, important)</td><td><b>more</b> difficult than</td><td>the <b>most</b> difficult</td></tr>
+          <tr><td>Irregulares (good, bad)</td><td><b>better</b>, <b>worse</b> than</td><td>the <b>best</b>, the <b>worst</b></td></tr>
+        </tbody>
+      </table>
+
+      <h3>Con qué palabra van</h3>
+      <p>Después de un comparativo usamos <b>than</b>: <i>Hannah is <b>younger than</b> her sister.</i></p>
+      <p>Antes de un superlativo usamos <b>the</b>: <i>Hannah is <b>the youngest</b> child in the family.</i></p>
+      <p>Después de un superlativo usamos <b>in</b> (no "of"): <i>She's the tallest student <b>in</b> the class.</i> ✅ — <s>in the class</s>... <s>of the class</s> ❌</p>
+
+      <p><b>Truco para no liarte:</b> cuenta las sílabas del adjetivo. 1 sílaba → añade "-er"/"-est". 3 o más → "more"/"most" delante. 2 sílabas acabadas en "-y" → cambian a "-ier"/"-iest" como si fueran cortas. Y memoriza good/bad aparte, no siguen ninguna regla.</p>
+    `
+  },
+  {
+    id: "prepositionsTime",
+    emoji: "🕐",
+    title: "Preposiciones de tiempo: at, in, on",
+    html: `
+      <p>Para decir <b>cuándo</b> pasa algo, el inglés usa una preposición distinta según el tipo de tiempo del que hablas.</p>
+
+      <table>
+        <thead><tr><th>Preposición</th><th>Se usa con...</th><th>Ejemplo</th></tr></thead>
+        <tbody>
+          <tr><td rowspan="4"><b>at</b></td><td>horas exactas</td><td>I get up <b>at</b> six o'clock.</td></tr>
+          <tr><td>algunas festividades</td><td>We have parties <b>at</b> New Year.</td></tr>
+          <tr><td>weekend / night</td><td>What do you do <b>at</b> the weekend? I work <b>at</b> night.</td></tr>
+          <tr><td>expresiones especiales</td><td>I'm studying <b>at</b> the moment.</td></tr>
+          <tr><td rowspan="3"><b>in</b></td><td>partes del día</td><td>I go to school <b>in</b> the morning.</td></tr>
+          <tr><td>meses, estaciones</td><td>My birthday is <b>in</b> May. We go on holiday <b>in</b> summer.</td></tr>
+          <tr><td>años</td><td>I was born <b>in</b> 2015.</td></tr>
+          <tr><td rowspan="2"><b>on</b></td><td>días de la semana</td><td>I play football <b>on</b> Saturdays.</td></tr>
+          <tr><td>fechas</td><td>School starts <b>on</b> 4 September.</td></tr>
+        </tbody>
+      </table>
+
+      <p><b>Truco para no liarte:</b> piensa en el tamaño del tiempo del que hablas — <b>at</b> para un punto exacto (una hora), <b>in</b> para un periodo largo que te "envuelve" (un mes, un año, una parte del día), <b>on</b> para un día concreto (un día de la semana o una fecha).</p>
+    `
+  },
+  {
+    id: "sportsCollocations",
+    emoji: "🏸",
+    title: "do, play y go con deportes",
+    html: `
+      <p>Para decir qué deporte practicas, el inglés no usa siempre el mismo verbo — depende del tipo de deporte.</p>
+
+      <table>
+        <thead><tr><th>Verbo</th><th>Se usa con...</th><th>Ejemplos</th></tr></thead>
+        <tbody>
+          <tr><td><b>play</b></td><td>deportes de pelota y de equipo</td><td><b>play</b> football, <b>play</b> basketball, <b>play</b> cricket, <b>play</b> volleyball</td></tr>
+          <tr><td><b>do</b></td><td>deportes/actividades sin equipo ni pelota</td><td><b>do</b> karate, <b>do</b> judo, <b>do</b> gymnastics, <b>do</b> yoga</td></tr>
+          <tr><td><b>go</b></td><td>deportes/actividades que acaban en "-ing"</td><td><b>go</b> climbing, <b>go</b> skating, <b>go</b> running, <b>go</b> surfing, <b>go</b> swimming</td></tr>
+        </tbody>
+      </table>
+
+      <p><i>We <b>play</b> cricket in the summer.</i> · <i>They're <b>doing</b> karate.</i> · <i>She <b>goes</b> climbing every weekend.</i></p>
+
+      <p><b>Truco para no liarte:</b> si el nombre del deporte en inglés acaba en "-ing" (running, skating, swimming…), casi siempre va con <b>go</b>. Si no acaba en "-ing", pregúntate si se juega con pelota/en equipo (<b>play</b>) o no (<b>do</b>).</p>
+    `
+  },
+  {
+    id: "haveTo",
+    emoji: "📋",
+    title: "have to / don't have to",
+    html: `
+      <p><b>Have to</b> se usa para hablar de cosas que son <b>necesarias</b> — una obligación, no una elección.</p>
+
+      <table>
+        <thead><tr><th>Sujeto</th><th>Afirmativa</th><th>Negativa</th></tr></thead>
+        <tbody>
+          <tr><td>I / you / we / they</td><td><b>have to</b></td><td><b>don't have to</b></td></tr>
+          <tr><td>he / she / it</td><td><b>has to</b></td><td><b>doesn't have to</b></td></tr>
+        </tbody>
+      </table>
+      <p><i>I <b>have to</b> get up early every morning.</i> · <i>Does everyone <b>have to</b> wear the uniform?</i></p>
+
+      <h3>have to — es necesario</h3>
+      <p><i>I <b>have to</b> get a bus to school.</i> (no hay otra opción, es necesario)</p>
+
+      <h3>don't have to — NO es necesario (pero puedes si quieres)</h3>
+      <p>¡Cuidado! <b>don't have to</b> no significa "no puedes" — significa que es opcional.</p>
+      <p><i>You <b>don't have to</b> get up early — it's Saturday.</i> (puedes, pero no hace falta)</p>
+      <p><i>In the summer, we <b>don't have to</b> wear a tie.</i></p>
+
+      <h3>Pronunciación: have (= tener) vs. have to (= obligación)</h3>
+      <p>Cuando "have" significa "tener", suena con /v/: <i>I <b>have</b> a new phone.</i> Pero en "have to" suena como /f/: <i>I <b>have to</b> work.</i></p>
+
+      <p><b>Truco para no liarte:</b> "have to" = obligación (como "tener que" en español). "don't have to" NO es una prohibición, es "no hace falta" — para prohibir se usa "mustn't", que es otra cosa.</p>
+    `
   }
 ];
