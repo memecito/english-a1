@@ -2,12 +2,13 @@ a.m.|de la mañana,am
 able|capaz
 about|sobre,acerca de,alrededor de
 above|encima,por encima de,arriba
+accept|aceptar
 accident|accidente
 across|a través de,al otro lado
 act|actuar,acto
 action|acción
 activity|actividad
-actor|actor
+actor|actor|entertainment
 actually|en realidad,realmente
 ad|anuncio
 add|añadir,sumar,agregar
@@ -95,9 +96,10 @@ badminton|bádminton|sport
 bag|bolsa,bolso
 bake|hornear
 ball|pelota,balón
+ballet|ballet|entertainment
 balloon|globo
 banana|plátano,banana|food
-band|banda,grupo
+band|banda,grupo|entertainment
 bank|banco
 barbecue/ barbeque|barbacoa
 baseball|béisbol|sport
@@ -269,7 +271,7 @@ chinese|chino,china|nationalities
 chips|patatas fritas,papas fritas
 chocolate|chocolate|food
 choose|elegir
-cinema|cine
+cinema|cine|entertainment
 circle|círculo
 circus|circo
 city|ciudad
@@ -293,7 +295,7 @@ closet|armario
 clothes|ropa
 cloud|nube
 cloudy|nublado
-clown|payaso
+clown|payaso|entertainment
 club|club
 coach|entrenador,autocar
 coat|abrigo|clothes
@@ -311,10 +313,10 @@ comedy|comedia
 comfortable|cómodo
 comic|cómic,tebeo
 company|empresa,compañía
-competition|competición,concurso,competencia
+competition|competición,concurso,competencia|entertainment
 complete|completo,completar
 computer|ordenador,computadora
-concert|concierto
+concert|concierto|entertainment
 congratulations!|¡felicidades!,¡enhorabuena!,felicidades,enhorabuena
 contact|contacto,contactar
 continue|continuar,seguir
@@ -355,7 +357,7 @@ cycling|ciclismo|sport
 dad|papá
 daily|diario,diariamente
 dance|bailar,baile
-dancer|bailarín,bailarina
+dancer|bailarín,bailarina|entertainment
 dancing|baile,bailar
 danger|peligro
 dangerous|peligroso
@@ -475,7 +477,7 @@ excited|emocionado,entusiasmado
 exciting|emocionante
 excuse|excusa,disculpar
 exercise|ejercicio
-exhibition|exposición
+exhibition|exposición|entertainment
 exit|salida
 expensive|caro|adjectives
 experience|experiencia
@@ -511,7 +513,7 @@ field|campo
 file|archivo,carpeta
 fill|llenar
 fill in|rellenar
-film|película
+film|película|entertainment
 final|final
 finally|finalmente,por fin
 find|encontrar
@@ -742,6 +744,7 @@ journalist|periodista
 journey|viaje
 judo|judo|sport
 juice|zumo,jugo|food
+juggle|hacer malabares
 jump|saltar|sport
 jumper|jersey,suéter|clothes
 just|justo,solo,solamente
@@ -866,6 +869,7 @@ minus|menos
 minute|minuto
 mirror|espejo
 Miss|señorita
+miss|perder,echar de menos
 missing|perdido,desaparecido,que falta
 mistake|error,fallo
 mix|mezclar
@@ -1021,7 +1025,7 @@ petrol|gasolina
 petrol station|gasolinera
 pharmacy|farmacia
 phone|teléfono
-photographer|fotógrafo
+photographer|fotógrafo|entertainment
 photography|fotografía
 physics|física
 piano|piano
@@ -1041,7 +1045,7 @@ plant|planta
 plastic|plástico
 plate|plato
 platform|andén,plataforma
-play|jugar,tocar
+play|jugar,tocar,obra de teatro|entertainment
 player|jugador,jugadora
 playground|patio de recreo,parque infantil
 pleasant|agradable
@@ -1066,7 +1070,7 @@ possibly|posiblemente
 post|correo,enviar por correo
 post office|oficina de correos,correos
 postcard|postal
-poster|póster,cartel
+poster|póster,cartel|entertainment
 potato|patata,papa|food
 practise|practicar
 prepare|preparar
@@ -1075,7 +1079,7 @@ pretty|bonito,guapa
 price|precio
 print|imprimir
 printer|impresora
-prize|premio
+prize|premio|entertainment
 probably|probablemente
 problem|problema
 program|programa
@@ -1117,6 +1121,7 @@ receptionist|recepcionista
 record|grabar,récord,disco
 red|rojo|colours
 refrigerator|nevera,frigorífico
+refuse|rehusar,negarse
 remember|recordar
 rent|alquilar,alquiler
 repair|reparar,arreglar
@@ -1196,7 +1201,7 @@ short|corto,bajo|adjectives
 shorts|pantalones cortos
 should|debería
 shout|gritar
-show|mostrar,enseñar,espectáculo
+show|mostrar,enseñar,espectáculo|entertainment
 shower|ducha
 shut|cerrar
 sick|enfermo
@@ -1309,6 +1314,7 @@ successful|exitoso,con éxito
 such|tal,tan
 suddenly|de repente,de pronto
 sugar|azúcar|food
+suggest|sugerir
 suit|traje
 suitcase|maleta
 summer|verano
@@ -1348,6 +1354,7 @@ teacher|profesor,profesora,maestro,maestra
 team|equipo|sport
 teenager|adolescente
 telephone|teléfono
+television|televisión|entertainment
 tell|decir,contar
 temperature|temperatura
 tennis|tenis|sport

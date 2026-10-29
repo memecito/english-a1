@@ -605,5 +605,62 @@ const TOPICS = [
 
       <p><b>Truco para no liarte:</b> "have to" = obligación (como "tener que" en español). "don't have to" NO es una prohibición, es "no hace falta" — para prohibir se usa "mustn't", que es otra cosa.</p>
     `
+  },
+  {
+    id: "ingToInfinitive",
+    emoji: "🔀",
+    title: "Verbos + -ing o to + infinitivo",
+    html: `
+      <p>Después de algunos verbos (o adjetivos, o preposiciones) hay que decidir si el verbo que viene después va en forma <b>to + infinitivo</b> (to go, to see...) o en forma <b>-ing</b> (going, seeing...). No hay una regla única — depende de la palabra anterior, así que hay que aprenderse los grupos.</p>
+
+      <h3>to + infinitivo</h3>
+      <table>
+        <thead><tr><th>Va después de...</th><th>Ejemplos</th><th>Frase</th></tr></thead>
+        <tbody>
+          <tr><td>algunos verbos: <b>choose, help, hope, learn, offer, want, decide, need</b></td><td>want <b>to go</b></td><td><i>I <b>hope to go</b> to university next year.</i></td></tr>
+          <tr><td>adjetivos: <b>happy, difficult, pleased, surprised...</b></td><td>difficult <b>to do</b></td><td><i>This exercise isn't difficult <b>to do</b>.</i></td></tr>
+          <tr><td><b>would like / would love / would hate</b></td><td>'d like <b>to come</b></td><td><i>We'<b>d like to come</b> and see you later.</i></td></tr>
+        </tbody>
+      </table>
+
+      <h3>-ing</h3>
+      <table>
+        <thead><tr><th>Va después de...</th><th>Ejemplos</th><th>Frase</th></tr></thead>
+        <tbody>
+          <tr><td>algunos verbos: <b>enjoy, finish, keep, mind, miss, suggest</b></td><td>enjoy <b>watching</b></td><td><i>I <b>enjoy watching</b> all sports.</i></td></tr>
+          <tr><td>preposición (excepto "to"): <b>for, of, about...</b></td><td>thanks <b>for helping</b></td><td><i>Thanks <b>for helping</b> me.</i></td></tr>
+        </tbody>
+      </table>
+
+      <p><b>Truco para no liarte:</b> si tienes dudas con un verbo en concreto, memorízalo en pareja con su verbo "modelo": <i>enjoy watching</i>, <i>hope to go</i>, <i>finish doing</i>. Y recuerda: después de una preposición (for, of, about...) siempre va <b>-ing</b>, nunca "to + infinitivo".</p>
+    `
+  },
+  {
+    id: "future",
+    emoji: "🔮",
+    title: "El futuro: will, present continuous y present simple",
+    html: `
+      <p>En inglés no hay una única forma de hablar del futuro — se elige según el <b>tipo</b> de futuro del que se habla.</p>
+
+      <h3>will — decisiones en el momento, predicciones</h3>
+      <table>
+        <thead><tr><th>Sujeto</th><th>Afirmativa</th><th>Negativa</th><th>Pregunta</th></tr></thead>
+        <tbody>
+          <tr><td>I / you / he / she / it / we / they</td><td><b>will / 'll</b> + infinitivo</td><td><b>will not / won't</b> + infinitivo</td><td><b>Will</b> + sujeto + infinitivo?</td></tr>
+        </tbody>
+      </table>
+      <p><i>The phone's ringing. I<b>'ll answer</b> it.</i> (decisión en el momento de hablar) · <i>I think it <b>will be</b> warm tomorrow.</i> (predicción)</p>
+      <p>Suele ir con <b>I think / I don't think</b>, <b>I'm sure</b>, <b>maybe / probably / perhaps</b>: <i>Maybe they<b>'ll be</b> late.</i> · <i>I'm sure you <b>won't be</b> late.</i></p>
+
+      <h3>present continuous — planes ya organizados</h3>
+      <p>Se usa para algo que ya está decidido o acordado, muchas veces con otra persona.</p>
+      <p><i>My parents <b>are picking</b> me up from the theatre tonight.</i> · <i>We<b>'re meeting</b> our friends at the cinema.</i></p>
+
+      <h3>present simple — horarios fijos</h3>
+      <p>Se usa para cosas con horario fijo: trenes, autobuses, el cine, el colegio...</p>
+      <p><i>The film <b>starts</b> at 7 pm.</i> · <i>School <b>finishes</b> at 3 o'clock on Fridays.</i></p>
+
+      <p><b>Truco para no liarte:</b> pregúntate "¿esto tiene un horario que no cambia?" → present simple. "¿Ya está organizado con alguien?" → present continuous. "¿Lo estoy decidiendo/prediciendo ahora mismo?" → will.</p>
+    `
   }
 ];

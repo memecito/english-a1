@@ -472,5 +472,51 @@ const GRAMMAR = {
       { id: "ht11", text: "She ___ (have to) take exams in June.", answers: ["has to"] },
       { id: "ht12", text: "We ___ (not/have to) turn off our phones in class — we don't have any.", answers: ["don't have to"] },
     ]
+  },
+  ingToInfinitive: {
+    title: "Verbos + -ing o to + infinitivo",
+    emoji: "🔀",
+    topicId: "ingToInfinitive",
+    items: [
+      { id: "ii1", text: "I hope ___ (go) to the concert tonight.", answers: ["to go"] },
+      { id: "ii2", text: "We enjoy ___ (watch) films at the cinema.", answers: ["watching"] },
+      { id: "ii3", text: "She wants ___ (become) a photographer.", answers: ["to become"] },
+      { id: "ii4", text: "They finished ___ (do) their homework before dinner.", answers: ["doing"] },
+      { id: "ii5", text: "I'd like ___ (see) that new film.", answers: ["to see"] },
+      { id: "ii6", text: "He doesn't mind ___ (wait) for his friends.", answers: ["waiting"] },
+      { id: "ii7", text: "Thank you for ___ (help) me with the costumes.", answers: ["helping"] },
+      { id: "ii8", text: "My parents offered ___ (buy) me tickets for the play.", answers: ["to buy"] },
+      { id: "ii9", text: "I'm learning ___ (play) the guitar in the band.", answers: ["to play"] },
+      { id: "ii10", text: "This exhibition isn't difficult ___ (understand).", answers: ["to understand"] },
+      { id: "ii11", text: "We're thinking about ___ (go) to the theatre.", answers: ["going"] },
+      { id: "ii12", text: "She was surprised ___ (hear) the news about the competition.", answers: ["to hear"] },
+      { id: "ii13", text: "I hate ___ (miss) the beginning of a film.", answers: ["missing"] },
+      { id: "ii14", text: "Don't forget ___ (bring) your camera to the exhibition.", answers: ["to bring"] },
+      { id: "ii15", text: "He's good at ___ (juggle) — he practises every day.", answers: ["juggling"] },
+      { id: "ii16", text: "Would you like ___ (come) to the dance show with us?", answers: ["to come"] },
+    ]
+  },
+  future: {
+    title: "El futuro: will, present continuous y present simple",
+    emoji: "🔮",
+    topicId: "future",
+    items: [
+      { id: "fu1", text: "I think it ___ (be) warm tomorrow.", answers: ["will be"] },
+      { id: "fu2", text: "The film ___ (start) at 7 pm.", answers: ["starts"] },
+      { id: "fu3", text: "We ___ (meet) our friends at the cinema tonight.", answers: ["are meeting"] },
+      { id: "fu4", text: "I'm sure she ___ (win) the competition.", answers: ["will win"] },
+      { id: "fu5", text: "The concert ___ (finish) at 10 o'clock.", answers: ["finishes"] },
+      { id: "fu6", text: "A: The phone's ringing. B: I ___ (answer) it.", answers: ["will answer"] },
+      { id: "fu7", text: "We're having a party next Saturday — we ___ (invite) all our friends.", answers: ["are inviting"] },
+      { id: "fu8", text: "Maybe they ___ (be) late for the show.", answers: ["will be"] },
+      { id: "fu9", text: "The bus ___ (leave) at 2.45.", answers: ["leaves"] },
+      { id: "fu10", text: "I don't think it ___ (rain) tomorrow.", answers: ["will rain"] },
+      { id: "fu11", text: "My parents ___ (pick) me up from the theatre after the show.", answers: ["are picking"] },
+      { id: "fu12", text: "Perhaps we ___ (have) a picnic at the weekend.", answers: ["will have"] },
+      { id: "fu13", text: "I'm sure you ___ (not/be) late — the film starts in an hour.", answers: ["won't be"] },
+      { id: "fu14", text: "School ___ (finish) at 3 o'clock on Fridays.", answers: ["finishes"] },
+      { id: "fu15", text: "A: Have we got any milk? B: No, I ___ (buy) some.", answers: ["will buy"] },
+      { id: "fu16", text: "We ___ (not/have) time to go shopping before the film.", answers: ["won't have"] },
+    ]
   }
 };
